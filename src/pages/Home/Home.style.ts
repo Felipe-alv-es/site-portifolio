@@ -1,0 +1,5 @@
+const getBackgroundStyle = () => {
+  return (
+    ''
+  )
+}
