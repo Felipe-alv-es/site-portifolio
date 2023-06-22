@@ -13,20 +13,19 @@ export const getContentStyle = (): SxProps => ({
   maxWidth: "900px",
   "@media(max-width: 544px)": {
     gridTemplateAreas: `'image''title''content'`,
+    placeItems: "center",
   },
 });
 
 export const getTitleStyle = (): SxProps => ({
-  maxWidth: "500px",
-  minWidth: "300px",
-  background: "red",
+  maxWidth: "450px",
+  minWidth: "360px",
   gridArea: "title",
 });
 
 export const getSubtitleStyle = (): SxProps => ({
   maxWidth: "500px",
-  minWidth: "300px",
-  background: "green",
+  minWidth: "360px",
   gridArea: "content",
 });
 

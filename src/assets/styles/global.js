@@ -5,12 +5,12 @@ export default createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
 
     body {
         font-size: 16px;
-        background: #dedcdb;
-        color: #191617;
+        background: #e7e7e7;
+        color: #1a1a1a;
     }
 `;
