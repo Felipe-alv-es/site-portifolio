@@ -16,14 +16,14 @@ const Home = () => {
       <Box sx={getContentStyle}>
         <Box sx={getTitleStyle}>
           <Typography fontFamily={"roboto"} variant="h3">
-            Desenvolvedor Front-End React
+            Olá, sou o Felipe, Desenvolvedor Front-End React
           </Typography>
         </Box>
         <Box sx={getSubtitleStyle}>
           <Typography fontFamily={"sans-serif"} variant="subtitle2">
-            Olá, sou o Felipe. Apaixonado pelo desenvolvimento, trabalho a mais
-            de quatro anos na área de tecnologia, porém sempre aprendendo e me
-            dedicando principalmente a área de programação.
+            Apaixonado pelo desenvolvimento, trabalho a mais de quatro anos na
+            área de tecnologia, porém sempre aprendendo e me dedicando
+            principalmente a área de programação.
           </Typography>
         </Box>
         <Box
