@@ -5,8 +5,10 @@ import {
   getTitleStyle,
   getSubtitleStyle,
   getImageStyle,
+  getIconsStyle,
 } from "./Home.style.ts";
 import { Typography, Box, IconButton } from "@mui/material";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -30,11 +32,14 @@ const Home = () => {
           src="https://img.freepik.com/vetores-premium/perfil-de-avatar-de-homem-no-icone-redondo_24640-14044.jpg?w=740"
           alt="Man avatar generic image"
         />
-      </Box>
-      <Box>
-        <IconButton href="https://www.linkedin.com/in/felipe-alves-oliveira/">
-          t
-        </IconButton>
+        <Box sx={getIconsStyle}>
+          <IconButton href="https://www.linkedin.com/in/felipe-alves-oliveira/">
+            <FaLinkedin />
+          </IconButton>
+          <IconButton href="https://github.com/Felipe-alv-es">
+            <FaGithub />
+          </IconButton>
+        </Box>
       </Box>
     </Box>
   );
