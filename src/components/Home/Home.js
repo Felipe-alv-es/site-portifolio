@@ -1,4 +1,7 @@
 import React from "react";
+import { Typography, Box, IconButton } from "@mui/material";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import Navbar from "../Navbar/Navbar";
 import {
   getContentStyle,
   getContainerStyle,
@@ -7,12 +10,11 @@ import {
   getImageStyle,
   getIconsStyle,
 } from "./Home.style.ts";
-import { Typography, Box, IconButton } from "@mui/material";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Home = () => {
   return (
     <Box sx={getContainerStyle}>
+      <Navbar />
       <Box sx={getContentStyle}>
         <Box sx={getTitleStyle}>
           <Typography fontFamily={"roboto"} variant="h3">

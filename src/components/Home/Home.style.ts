@@ -35,7 +35,7 @@ export const getImageStyle = (): SxProps => ({
   maxHeight: "200px",
   minHeight: "150px",
   margin: "10px",
-  borderRadius: "300px",
+  borderRadius: "50%",
   gridArea: "image",
 });
 
