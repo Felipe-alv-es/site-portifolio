@@ -10,6 +10,7 @@ import {
   getImageStyle,
   getIconsStyle,
 } from "./Home.style.ts";
+import FelipeAlves from "../../assets/images/FelipeAlves.jpg";
 
 const Home = () => {
   return (
@@ -31,7 +32,7 @@ const Home = () => {
         <Box
           sx={getImageStyle}
           component="img"
-          src="https://img.freepik.com/vetores-premium/perfil-de-avatar-de-homem-no-icone-redondo_24640-14044.jpg?w=740"
+          src={FelipeAlves}
           alt="Man avatar generic image"
         />
         <Box sx={getIconsStyle}>
