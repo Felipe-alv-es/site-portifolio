@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Box, Link, Typography, Drawer, IconButton, Icon } from "@mui/material";
+import {
+  Box,
+  Link,
+  Typography,
+  Drawer,
+  IconButton,
+  Icon,
+  Divider,
+} from "@mui/material";
 import { getNavbarStyles, getDrawerMenuStyle } from "./Navbar.styles.ts";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
@@ -64,10 +72,16 @@ const Navbar = () => {
               </IconButton>
               <ul>
                 {menuOptions.map((item) => (
-                  <li key={item.text}>
-                    <Icon>{item.icon}</Icon>
-                    <Link>{item.text}</Link>
-                  </li>
+                  <>
+                    <li key={item.text}>
+                      <Icon>{item.icon}</Icon>
+                      <Link>{item.text}</Link>
+                    </li>
+                    <Divider
+                      variant="inset"
+                      sx={{ marginLeft: "10px", marginRight: "10px" }}
+                    />
+                  </>
                 ))}
               </ul>
             </Box>
