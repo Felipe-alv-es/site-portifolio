@@ -14,6 +14,14 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  const menuOptions = [
+    { text: "Home", icon: <AiFillHome /> },
+    { text: "Sobre", icon: <AiFillDatabase /> },
+    { text: "Projetos", icon: <AiFillProject /> },
+    { text: "Curriculo", icon: <BsFillPeopleFill /> },
+    { text: "Contato", icon: <AiFillMessage /> },
+  ];
+
   const handleResize = () => {
     if (window.innerWidth < 665) {
       setIsMobile(true);
@@ -55,36 +63,12 @@ const Navbar = () => {
                 <GiHamburgerMenu />
               </IconButton>
               <ul>
-                <li>
-                  <Icon>
-                    <AiFillHome />
-                  </Icon>
-                  <Link>Home</Link>
-                </li>
-                <li>
-                  <Icon>
-                    <AiFillDatabase />
-                  </Icon>
-                  <Link>Sobre</Link>
-                </li>
-                <li>
-                  <Icon>
-                    <AiFillProject />
-                  </Icon>
-                  <Link>Projetos</Link>
-                </li>
-                <li>
-                  <Icon>
-                    <BsFillPeopleFill />
-                  </Icon>
-                  <Link>Curriculo</Link>
-                </li>
-                <li>
-                  <Icon>
-                    <AiFillMessage />
-                  </Icon>
-                  <Link>Contato</Link>
-                </li>
+                {menuOptions.map((item) => (
+                  <li key={item.text}>
+                    <Icon>{item.icon}</Icon>
+                    <Link>{item.text}</Link>
+                  </li>
+                ))}
               </ul>
             </Box>
           </Drawer>
@@ -99,21 +83,11 @@ const Navbar = () => {
             Felipe Alves
           </Typography>
           <ul>
-            <li>
-              <Link>Home</Link>
-            </li>
-            <li>
-              <Link>Sobre</Link>
-            </li>
-            <li>
-              <Link>Projetos</Link>
-            </li>
-            <li>
-              <Link>Curriculo</Link>
-            </li>
-            <li>
-              <Link>Contato</Link>
-            </li>
+            {menuOptions.map((item) => (
+              <li key={item.text}>
+                <Link>{item.text}</Link>
+              </li>
+            ))}
           </ul>
         </Box>
       )}
