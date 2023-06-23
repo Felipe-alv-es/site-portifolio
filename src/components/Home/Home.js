@@ -1,4 +1,7 @@
 import React from "react";
+import { Typography, Box, IconButton } from "@mui/material";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import Navbar from "../Navbar/Navbar";
 import {
   getContentStyle,
   getContainerStyle,
@@ -7,23 +10,22 @@ import {
   getImageStyle,
   getIconsStyle,
 } from "./Home.style.ts";
-import { Typography, Box, IconButton } from "@mui/material";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Home = () => {
   return (
     <Box sx={getContainerStyle}>
+      <Navbar />
       <Box sx={getContentStyle}>
         <Box sx={getTitleStyle}>
           <Typography fontFamily={"roboto"} variant="h3">
-            Desenvolvedor Front-End React
+            Olá, sou o Felipe, Desenvolvedor Front-End React
           </Typography>
         </Box>
         <Box sx={getSubtitleStyle}>
           <Typography fontFamily={"sans-serif"} variant="subtitle2">
-            Olá, sou o Felipe. Apaixonado pelo desenvolvimento, trabalho a mais
-            de quatro anos na área de tecnologia, porém sempre aprendendo e me
-            dedicando principalmente a área de programação.
+            Apaixonado pelo desenvolvimento, trabalho a mais de quatro anos na
+            área de tecnologia, porém sempre aprendendo e me dedicando
+            principalmente a área de programação.
           </Typography>
         </Box>
         <Box
