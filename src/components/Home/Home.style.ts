@@ -11,6 +11,8 @@ export const getContentStyle = (): SxProps => ({
   gridGap: "20px",
   marginTop: "10%",
   maxWidth: "900px",
+  marginLeft: "5%",
+  marginRight: "5%",
   "@media(max-width: 544px)": {
     gridTemplateAreas: `'image''title''content''icons'`,
     placeItems: "center",
@@ -30,13 +32,17 @@ export const getSubtitleStyle = (): SxProps => ({
 });
 
 export const getImageStyle = (): SxProps => ({
-  maxWidth: "200px",
+  maxWidth: "250px",
   minWidth: "150px",
-  maxHeight: "200px",
+  maxHeight: "250px",
   minHeight: "150px",
   margin: "10px",
   borderRadius: "50%",
   gridArea: "image",
+  boxShadow: "3px 3px 3px  #1a1a1a",
+  borderWidth: "1px",
+  borderColor: "#1a1a1a",
+  borderStyle: "solid",
 });
 
 export const getIconsStyle = (): SxProps => ({
