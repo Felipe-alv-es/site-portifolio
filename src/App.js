@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import Home from "./components/Home/Home";
-// import About from "./components/About/About";
+import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Home />
-        {/* <About /> */}
+        <About />
         <Projects />
       </div>
     </BrowserRouter>
