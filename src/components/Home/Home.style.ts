@@ -50,9 +50,13 @@ export const getIconsStyle = (): SxProps => ({
 });
 
 export const getTechnicalSkillsStyle = (): SxProps => ({
-  width: "100%",
   display: "flex",
   alignItems: "center",
   marginTop: "1em",
   justifyContent: "space-between",
+  "@media(max-width: 544px)": {
+    display: "grid",
+    gridTemplateAreas: `'skillsTitle''skillsIcons'`,
+    placeItems: "center",
+  },
 });

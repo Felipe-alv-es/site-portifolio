@@ -20,9 +20,24 @@ const About = () => {
         </Box>
         <Box sx={getSubtitleStyle}>
           <Typography fontFamily={"sans-serif"} variant="subtitle2">
-            Apaixonado pelo desenvolvimento, trabalho a mais de quatro anos na
-            área de tecnologia, porém sempre aprendendo e me dedicando
-            principalmente a área de programação.
+            Como um entusiasta em Tech, trabalho há mais de quatro anos na área
+            de tecnologia, sempre em constante aprendizado e focado
+            principalmente no desenvolvimento de software. <br />
+            <br />
+            Tenho ampla experiência no desenvolvimento web, utilizando
+            principalmente as tecnologias React e JavaScript. Além disso, possuo
+            conhecimento em outras linguagens de programação, como TypeScript,
+            Kotlin, C#, HTML, CSS e Python. <br />
+            <br />
+            Sou formado em Gestão de Tecnologia da Informação e possuo
+            conhecimentos em boas práticas de gestão de equipes, metodologias
+            ágeis e governança de TI, com especialização em Desenvolvimento
+            Front-End. <br />
+            <br />
+            Ao longo da minha carreira, adquiri experiência no desenvolvimento
+            de sites, Design System, criação de bibliotecas, além da
+            administração de servidores Linux e Windows e execução de testes
+            unitários.
           </Typography>
         </Box>
         <Box

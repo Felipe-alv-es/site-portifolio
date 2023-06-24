@@ -4,19 +4,16 @@ export const getContainerStyle = (): SxProps => ({
   marginTop: "10%",
   marginBottom: "10%",
   display: "grid",
-  justifyContent: "space-between",
-  gridTemplateAreas: `'image title''image content'`,
-  padding: "2%",
-  "@media(max-width: 544px)": {
-    gridTemplateAreas: `'title''content''image'`,
-    placeItems: "center",
-  },
+  placeItems: "center",
 });
 
 export const getContentStyle = (): SxProps => ({
-  marginLeft: "1em",
+  display: "grid",
+  gridTemplateAreas: `'image title''image content'`,
+  gridGap: "20px",
   "@media(max-width: 544px)": {
-    marginLeft: "0em",
+    gridTemplateAreas: `'title''content''image'`,
+    placeItems: "center",
   },
 });
 
@@ -35,6 +32,9 @@ export const getTitleStyle = (): SxProps => ({
   minWidth: "360px",
   gridArea: "title",
   marginBottom: "2em",
+  "@media(max-width: 544px)": {
+    marginLeft: "1em",
+  },
 });
 
 export const getSubtitleStyle = (): SxProps => ({
@@ -42,4 +42,7 @@ export const getSubtitleStyle = (): SxProps => ({
   minWidth: "360px",
   gridArea: "content",
   marginBottom: "2em",
+  "@media(max-width: 544px)": {
+    marginLeft: "1em",
+  },
 });

@@ -3,6 +3,8 @@ import { Typography, Box, IconButton, Divider, Icon } from "@mui/material";
 import { FaLinkedin, FaGithub, FaReact } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { SiNextdotjs } from "react-icons/si";
+import { AiFillHtml5 } from "react-icons/ai";
+import { IoLogoCss3 } from "react-icons/io";
 import Navbar from "../Navbar/Navbar";
 import {
   getContentStyle,
@@ -16,6 +18,15 @@ import {
 import FelipeAlves from "../../assets/images/FelipeAlves.jpg";
 
 const Home = () => {
+  const techSkillsOptions = [
+    { text: "React", icon: <FaReact /> },
+    { text: "JavaScript", icon: <BiLogoJavascript /> },
+    { text: "TypeScript", icon: <BiLogoTypescript /> },
+    { text: "NextJs", icon: <SiNextdotjs /> },
+    { text: "Html", icon: <AiFillHtml5 /> },
+    { text: "Css", icon: <IoLogoCss3 /> },
+  ];
+
   return (
     <Box sx={getContainerStyle}>
       <Navbar />
@@ -27,9 +38,10 @@ const Home = () => {
         </Box>
         <Box sx={getSubtitleStyle}>
           <Typography fontFamily={"sans-serif"} variant="subtitle2">
-            Apaixonado pelo desenvolvimento, trabalho a mais de quatro anos na
-            área de tecnologia, porém sempre aprendendo e me dedicando
-            principalmente a área de programação.
+            Sou apaixonado pelo mundo do desenvolvimento e atuo há mais de
+            quatro anos no setor de tecnologia. Minha trajetória tem sido uma
+            constante busca por aprendizado e aprimoramento, com foco especial
+            na área de programação.
           </Typography>
         </Box>
         <Box
@@ -54,18 +66,13 @@ const Home = () => {
             Perícias Técnicas
           </Typography>
           <Divider orientation="vertical" flexItem />
-          <Icon fontSize="large">
-            <FaReact />
-          </Icon>
-          <Icon fontSize="large">
-            <BiLogoJavascript />
-          </Icon>
-          <Icon fontSize="large">
-            <BiLogoTypescript />
-          </Icon>
-          <Icon fontSize="large">
-            <SiNextdotjs />
-          </Icon>
+          <Box>
+            {techSkillsOptions.map((item) => (
+              <Icon key={item.text} fontSize="large">
+                {item.icon}
+              </Icon>
+            ))}
+          </Box>
         </Box>
       </Box>
     </Box>
