@@ -39,7 +39,6 @@ export const getDrawerMenuStyle = (): SxProps => ({
     marginTop: "2em",
     "> li": {
       padding: "20px 4%",
-      marginBottom: "20px",
       transition: ".5s",
       ":active": {
         background: "#C4C4C4",
