@@ -10,7 +10,7 @@ import {
 
 const Projects = () => {
   return (
-    <Box sx={getContainerStyle}>
+    <Box sx={getContainerStyle} id="Projetos">
       <Box sx={getImageStyle}>
         <img
           alt=""

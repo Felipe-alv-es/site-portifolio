@@ -8,6 +8,7 @@ import {
   Icon,
   Divider,
 } from "@mui/material";
+import { HashLink } from "react-router-hash-link";
 import { getNavbarStyles, getDrawerMenuStyle } from "./Navbar.styles.ts";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
@@ -75,7 +76,13 @@ const Navbar = () => {
                   <>
                     <li key={item.text}>
                       <Icon>{item.icon}</Icon>
-                      <Link>{item.text}</Link>
+                      <HashLink
+                        onClick={() => setIsOpen(false)}
+                        smooth
+                        to={`#${item.text}`}
+                      >
+                        {item.text}
+                      </HashLink>
                     </li>
                     <Divider
                       variant="inset"
@@ -99,7 +106,9 @@ const Navbar = () => {
           <ul>
             {menuOptions.map((item) => (
               <li key={item.text}>
-                <Link>{item.text}</Link>
+                <HashLink smooth to={`#${item.text}`}>
+                  {item.text}
+                </HashLink>
               </li>
             ))}
           </ul>

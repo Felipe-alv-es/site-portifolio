@@ -6,7 +6,7 @@ export const getContainerStyle = (): SxProps => ({
   display: "grid",
   justifyContent: "space-between",
   gridTemplateAreas: `'image title''image content'`,
-  padding: "5%",
+  padding: "2%",
   "@media(max-width: 544px)": {
     gridTemplateAreas: `'title''content''image'`,
     placeItems: "center",
@@ -23,8 +23,11 @@ export const getContentStyle = (): SxProps => ({
 export const getImageStyle = (): SxProps => ({
   maxWidth: "700px",
   gridArea: "image",
-  overflow: "hidden",
-  minWidth: "430px",
+  minWidth: "350px",
+  position: "relative",
+  "@media(max-width: 544px)": {
+    width: "350px",
+  },
 });
 
 export const getTitleStyle = (): SxProps => ({
