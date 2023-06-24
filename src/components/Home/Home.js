@@ -1,5 +1,12 @@
 import React from "react";
-import { Typography, Box, IconButton, Divider, Icon } from "@mui/material";
+import {
+  Typography,
+  Box,
+  IconButton,
+  Divider,
+  Icon,
+  Tooltip,
+} from "@mui/material";
 import { FaLinkedin, FaGithub, FaReact } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { SiNextdotjs } from "react-icons/si";
@@ -23,8 +30,8 @@ const Home = () => {
     { text: "JavaScript", icon: <BiLogoJavascript /> },
     { text: "TypeScript", icon: <BiLogoTypescript /> },
     { text: "NextJs", icon: <SiNextdotjs /> },
-    { text: "Html", icon: <AiFillHtml5 /> },
-    { text: "Css", icon: <IoLogoCss3 /> },
+    { text: "Html5", icon: <AiFillHtml5 /> },
+    { text: "Css3", icon: <IoLogoCss3 /> },
   ];
 
   return (
@@ -63,14 +70,16 @@ const Home = () => {
         </Box>
         <Box sx={getTechnicalSkillsStyle}>
           <Typography fontFamily={"roboto"} variant="overline">
-            Perícias Técnicas
+            Habilidades Técnicas
           </Typography>
           <Divider orientation="vertical" flexItem />
           <Box>
             {techSkillsOptions.map((item) => (
-              <Icon key={item.text} fontSize="large">
-                {item.icon}
-              </Icon>
+              <Tooltip arrow title={item.text}>
+                <Icon key={item.text} fontSize="large">
+                  {item.icon}
+                </Icon>
+              </Tooltip>
             ))}
           </Box>
         </Box>
