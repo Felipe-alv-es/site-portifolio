@@ -1,6 +1,8 @@
 import React from "react";
-import { Typography, Box, IconButton } from "@mui/material";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { Typography, Box, IconButton, Divider, Icon } from "@mui/material";
+import { FaLinkedin, FaGithub, FaReact } from "react-icons/fa";
+import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
+import { SiNextdotjs } from "react-icons/si";
 import Navbar from "../Navbar/Navbar";
 import {
   getContentStyle,
@@ -9,6 +11,7 @@ import {
   getSubtitleStyle,
   getImageStyle,
   getIconsStyle,
+  getTechnicalSkillsStyle,
 } from "./Home.style.ts";
 import FelipeAlves from "../../assets/images/FelipeAlves.jpg";
 
@@ -36,12 +39,33 @@ const Home = () => {
           alt="Man avatar generic image"
         />
         <Box sx={getIconsStyle}>
-          <IconButton href="https://www.linkedin.com/in/felipe-alves-oliveira/">
+          <IconButton
+            fontSize="large"
+            href="https://www.linkedin.com/in/felipe-alves-oliveira/"
+          >
             <FaLinkedin />
           </IconButton>
           <IconButton href="https://github.com/Felipe-alv-es">
             <FaGithub />
           </IconButton>
+        </Box>
+        <Box sx={getTechnicalSkillsStyle}>
+          <Typography fontFamily={"roboto"} variant="overline">
+            Perícias Técnicas
+          </Typography>
+          <Divider orientation="vertical" flexItem />
+          <Icon fontSize="large">
+            <FaReact />
+          </Icon>
+          <Icon fontSize="large">
+            <BiLogoJavascript />
+          </Icon>
+          <Icon fontSize="large">
+            <BiLogoTypescript />
+          </Icon>
+          <Icon fontSize="large">
+            <SiNextdotjs />
+          </Icon>
         </Box>
       </Box>
     </Box>

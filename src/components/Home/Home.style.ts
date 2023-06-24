@@ -48,3 +48,11 @@ export const getImageStyle = (): SxProps => ({
 export const getIconsStyle = (): SxProps => ({
   gridArea: "icons",
 });
+
+export const getTechnicalSkillsStyle = (): SxProps => ({
+  width: "100%",
+  display: "flex",
+  alignItems: "center",
+  marginTop: "1em",
+  justifyContent: "space-between",
+});
