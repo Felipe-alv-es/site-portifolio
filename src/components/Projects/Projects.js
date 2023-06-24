@@ -20,7 +20,7 @@ const Projects = () => {
       </Box>
       <Box sx={getContentStyle}>
         <Box sx={getTitleStyle}>
-          <Typography fontFamily={"roboto"} variant="h3">
+          <Typography fontFamily={"roboto"} variant="h5">
             Olá, sou o Felipe, Desenvolvedor Front-End React
           </Typography>
         </Box>
