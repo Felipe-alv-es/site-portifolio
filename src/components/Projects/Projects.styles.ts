@@ -20,24 +20,21 @@ export const getContentStyle = (): SxProps => ({
 });
 
 export const getImageStyle = (): SxProps => ({
-  maxWidth: "700px",
+  maxWidth: "450px",
   gridArea: "image",
   minWidth: "296px",
   position: "relative",
-  "@media(max-width: 544px)": {
-    width: "300px",
-  },
 });
 
 export const getTitleStyle = (): SxProps => ({
-  maxWidth: "450px",
+  maxWidth: "300px",
   minWidth: "296px",
   gridArea: "title",
   marginBottom: "2em",
 });
 
 export const getSubtitleStyle = (): SxProps => ({
-  maxWidth: "450px",
+  maxWidth: "300px",
   minWidth: "296px",
   gridArea: "content",
 });
