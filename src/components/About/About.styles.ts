@@ -11,29 +11,28 @@ export const getContentStyle = (): SxProps => ({
   gridGap: "20px",
   marginTop: "10%",
   maxWidth: "900px",
-  marginLeft: "5%",
-  marginRight: "5%",
-
+  marginLeft: "2em",
+  marginRight: "2em",
   "@media(max-width: 544px)": {
     gridTemplateAreas: `'image''title''content''icons'`,
-    placeItems: "center",
   },
 });
 
 export const getTitleStyle = (): SxProps => ({
   maxWidth: "450px",
-  minWidth: "360px",
+  minWidth: "296px",
   gridArea: "title",
 });
 
 export const getSubtitleStyle = (): SxProps => ({
   maxWidth: "450px",
-  minWidth: "360px",
+  minWidth: "296px",
   gridArea: "content",
 });
 
 export const getImageStyle = (): SxProps => ({
-  width: "300px",
+  maxWidth: "300px",
+  minWidth: "296px",
   height: "300px",
   gridArea: "image",
 });
