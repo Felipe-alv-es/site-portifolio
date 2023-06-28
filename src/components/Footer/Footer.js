@@ -1,5 +1,5 @@
-import { Box, Button, Icon, Typography } from "@mui/material";
-import React from "react";
+import { Box, Button, Icon, Typography, Alert, Snackbar } from "@mui/material";
+import React, { useState } from "react";
 import {
   getContainerStyles,
   getSubtitleStyle,
@@ -11,6 +11,16 @@ import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { IoLogoCss3 } from "react-icons/io";
 
 const Footer = () => {
+  const [hasCopied, setHasCopied] = useState(false);
+
+  const handleOnClick = () => {
+    return () => {
+      navigator.clipboard.writeText("felipe.alv14@hotmail.com");
+      setHasCopied(true);
+      setTimeout(setHasCopied, 2000, false);
+    };
+  };
+
   return (
     <Box sx={getContainerStyles} id="Contato">
       <Box sx={getFooterContentStyle}>
@@ -50,13 +60,37 @@ const Footer = () => {
         >
           Segue meu E-mail e Currículo <br />
         </Typography>
-        <Button sx={getFooterButtonStyle} variant="outlined" size="small">
+        <Button
+          sx={getFooterButtonStyle}
+          onClick={handleOnClick()}
+          variant="outlined"
+          size="small"
+        >
+          <Snackbar open={hasCopied}>
+            <Alert>{"Copiado!"}</Alert>
+          </Snackbar>
           Email
         </Button>
-        <Button sx={getFooterButtonStyle} variant="outlined" size="small">
+        <Button
+          onClick={() =>
+            window.open("https://www.linkedin.com/in/felipe-alves-oliveira/")
+          }
+          sx={getFooterButtonStyle}
+          variant="outlined"
+          size="small"
+        >
           Linkedin
         </Button>
-        <Button sx={getFooterButtonStyle} variant="outlined" size="small">
+        <Button
+          onClick={() =>
+            window.open(
+              "https://drive.google.com/file/d/1vi46F-fWSLGxA0448YIl2bifRhM7yIl6/view?usp=sharing"
+            )
+          }
+          sx={getFooterButtonStyle}
+          variant="outlined"
+          size="small"
+        >
           Curriculo
         </Button>
       </Box>
