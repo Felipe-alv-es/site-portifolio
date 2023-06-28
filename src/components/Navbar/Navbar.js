@@ -16,7 +16,6 @@ import {
   AiFillProject,
   AiFillMessage,
 } from "react-icons/ai";
-import { BsFillPeopleFill } from "react-icons/bs";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -26,7 +25,6 @@ const Navbar = () => {
     { text: "Home", icon: <AiFillHome /> },
     { text: "Sobre", icon: <AiFillDatabase /> },
     { text: "Projetos", icon: <AiFillProject /> },
-    { text: "Curriculo", icon: <BsFillPeopleFill /> },
     { text: "Contato", icon: <AiFillMessage /> },
   ];
 

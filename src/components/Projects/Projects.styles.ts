@@ -15,7 +15,6 @@ export const getContentStyle = (): SxProps => ({
   marginRight: "2em",
   "@media(max-width: 544px)": {
     gridTemplateAreas: `'title''content''image'`,
-    placeItems: "center",
   },
 });
 
