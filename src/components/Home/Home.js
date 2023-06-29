@@ -59,12 +59,12 @@ const Home = () => {
         />
         <Box sx={getIconsStyle}>
           <IconButton
-            fontSize="large"
             href="https://www.linkedin.com/in/felipe-alves-oliveira/"
+            target="_blank"
           >
             <FaLinkedin />
           </IconButton>
-          <IconButton href="https://github.com/Felipe-alv-es">
+          <IconButton href="https://github.com/Felipe-alv-es" target="_blank">
             <FaGithub />
           </IconButton>
         </Box>
