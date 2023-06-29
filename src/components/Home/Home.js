@@ -6,12 +6,15 @@ import {
   Divider,
   Icon,
   Tooltip,
+  Fab,
 } from "@mui/material";
 import { FaLinkedin, FaGithub, FaReact } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { SiNextdotjs } from "react-icons/si";
 import { AiFillHtml5 } from "react-icons/ai";
 import { IoLogoCss3 } from "react-icons/io";
+import { BsChevronUp } from "react-icons/bs";
+import { HashLink } from "react-router-hash-link";
 import Navbar from "../Navbar/Navbar";
 import {
   getContentStyle,
@@ -35,7 +38,7 @@ const Home = () => {
   ];
 
   return (
-    <Box sx={getContainerStyle}>
+    <Box sx={getContainerStyle} id="Home">
       <Navbar />
       <Box sx={getContentStyle}>
         <Box sx={getTitleStyle}>
@@ -84,6 +87,29 @@ const Home = () => {
           </Box>
         </Box>
       </Box>
+      <Fab
+        sx={{
+          position: "fixed",
+          bottom: 0,
+          right: 0,
+          margin: "1em",
+        }}
+      >
+        <HashLink
+          smooth
+          to={"#Home"}
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            paddingBottom: "4px",
+          }}
+        >
+          <BsChevronUp style={{ height: "50%", width: "50%" }} fill="#1c1c1c" />
+        </HashLink>
+      </Fab>
     </Box>
   );
 };
