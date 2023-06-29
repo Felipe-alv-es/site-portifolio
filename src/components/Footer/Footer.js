@@ -33,7 +33,7 @@ const Footer = () => {
             variant="subtitle2"
             color={"#e7e7e7"}
           >
-            © 2023 by Felipe alves <br /> Criado com
+            © 2023 by Felipe Alves <br /> Criado com
             <Icon fontSize="small">
               <FaReact />
             </Icon>
@@ -52,13 +52,6 @@ const Footer = () => {
       <Box>
         <Typography fontFamily={"roboto"} variant="h5" color={"#e7e7e7"}>
           Venha conversar!
-        </Typography>
-        <Typography
-          fontFamily={"sans-serif"}
-          variant="subtitle2"
-          color={"#e7e7e7"}
-        >
-          Segue meu E-mail e Currículo <br />
         </Typography>
         <Button
           sx={getFooterButtonStyle}
