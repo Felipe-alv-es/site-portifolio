@@ -77,7 +77,7 @@ const Footer = () => {
         <Button
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/1vi46F-fWSLGxA0448YIl2bifRhM7yIl6/view?usp=sharing"
+              "https://drive.google.com/file/d/1vovf9y0WnbG-WpydjwhkRl1Vz1eBJJ-r/view?usp=sharing"
             )
           }
           sx={getFooterButtonStyle}

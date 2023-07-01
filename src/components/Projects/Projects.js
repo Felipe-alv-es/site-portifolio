@@ -18,17 +18,17 @@ import WorkInProgress from "../../assets/images/WorkInProgress.png";
 const Projects = () => {
   const bankSite = {
     title: "Site de Banco",
-    text: "Apaixonado pelo desenvolvimento, trabalho a mais de quatro anos na área de tecnologia, porém sempre aprendendo e me dedicando principalmente a área de programação.",
+    text: "O site do banco é uma plataforma online que permite aos usuários navegar pelas páginas de sua escolha, acessar suas contas existentes, criar uma nova conta e explorar as diversas opções oferecidas pelo banco.",
   };
 
   const cellphoneSite = {
     title: "Loja de Celulares",
-    text: "Apaixonado pelo desenvolvimento, trabalho a mais de quatro anos na área de tecnologia, porém sempre aprendendo e me dedicando principalmente a área de programação.",
+    text: "A loja de celulares online é uma plataforma na qual os usuários podem explorar uma variedade de opções, selecionar e comprar os celulares de sua escolha. Além disso, é possível verificar especificações técnicas, ler avaliações de clientes e aproveitar outras opções disponíveis na loja.",
   };
 
   const criptoSite = {
     title: "Corretora de Criptomoedas",
-    text: "Apaixonado pelo desenvolvimento, trabalho a mais de quatro anos na área de tecnologia, porém sempre aprendendo e me dedicando principalmente a área de programação.",
+    text: "A corretora de criptomoedas é uma plataforma online que oferece aos usuários a possibilidade de acompanhar o mercado de criptomoedas em tempo real. Através dela, é possível acessar informações atualizadas sobre diversas criptomoedas, como cotações, gráficos de desempenho, volumes de negociação e outras estatísticas relevantes.",
   };
 
   const technologyOfSite = "React | TypeScript | Css";
