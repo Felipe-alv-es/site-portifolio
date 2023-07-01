@@ -1,4 +1,5 @@
 import { SxProps } from "@mui/material/";
+import { ProjectProps } from "./Projects.types";
 
 export const getContainerStyle = (): SxProps => ({
   marginTop: "10%",
@@ -7,12 +8,15 @@ export const getContainerStyle = (): SxProps => ({
   placeItems: "center",
 });
 
-export const getContentStyle = (): SxProps => ({
+export const getContentStyle = (firstImage: ProjectProps): SxProps => ({
   display: "grid",
-  gridTemplateAreas: `'image title''image content'`,
+  gridTemplateAreas: firstImage
+    ? `'image title''image content'`
+    : `'title image''content image'`,
   gridGap: "20px",
   marginLeft: "2em",
   marginRight: "2em",
+  textAlign: "center",
   "@media(max-width: 544px)": {
     gridTemplateAreas: `'title''content''image'`,
   },
@@ -36,4 +40,9 @@ export const getSubtitleStyle = (): SxProps => ({
   maxWidth: "300px",
   minWidth: "296px",
   gridArea: "content",
+  textAlign: "justify",
+});
+
+export const getOverlineStyle = (): SxProps => ({
+  marginTop: "16px",
 });
