@@ -27,12 +27,14 @@ const Projects = () => {
     text: "Apaixonado pelo desenvolvimento, trabalho a mais de quatro anos na área de tecnologia, porém sempre aprendendo e me dedicando principalmente a área de programação.",
   };
 
+  // refatorar os componentes de typography, pra um styledComponent ja customizado
+
   return (
     <Box sx={getContainerStyle} id="Projetos">
       <Typography fontFamily={"roboto"} variant="h4">
         Portfólio
       </Typography>
-      <Box sx={{ m: 3 }} />
+      <Box sx={{ m: 2 }} />
       <Box sx={getContentStyle()}>
         <Box sx={getImageStyle}>
           <img
@@ -42,13 +44,13 @@ const Projects = () => {
           />
         </Box>
         <Box>
-          <Box sx={getTitleStyle}>
+          <Box sx={getTitleStyle} color={"#696969"}>
             <Typography fontFamily={"roboto"} variant="h6">
               {bankSite.title}
             </Typography>
           </Box>
           <Box sx={getSubtitleStyle}>
-            <Typography fontFamily={"sans-serif"} variant="subtitle2">
+            <Typography fontFamily={"sans-serif"} variant="body2">
               {bankSite.text}
             </Typography>
           </Box>
@@ -79,7 +81,7 @@ const Projects = () => {
           </Box>
         </Box>
       </Box>
-      <Box sx={{ m: 5 }} />
+      <Box sx={{ m: 6 }} />
       <Box sx={getContentStyle({ firstImage: true })}>
         <Box sx={getImageStyle}>
           <img
@@ -90,12 +92,12 @@ const Projects = () => {
         </Box>
         <Box>
           <Box sx={getTitleStyle}>
-            <Typography fontFamily={"roboto"} variant="h6">
+            <Typography fontFamily={"roboto"} variant="h6" color={"#696969"}>
               {cellphoneSite.title}
             </Typography>
           </Box>
           <Box sx={getSubtitleStyle}>
-            <Typography fontFamily={"sans-serif"} variant="subtitle2">
+            <Typography fontFamily={"sans-serif"} variant="body2">
               {cellphoneSite.text}
             </Typography>
           </Box>
@@ -126,7 +128,7 @@ const Projects = () => {
           </Box>
         </Box>
       </Box>
-      <Box sx={{ m: 5 }} />
+      <Box sx={{ m: 6 }} />
       <Box sx={getContentStyle()}>
         <Box sx={getImageStyle}>
           <img
@@ -137,12 +139,12 @@ const Projects = () => {
         </Box>
         <Box>
           <Box sx={getTitleStyle}>
-            <Typography fontFamily={"roboto"} variant="h6">
+            <Typography fontFamily={"roboto"} variant="h6" color={"#696969"}>
               {criptoSite.title}
             </Typography>
           </Box>
           <Box sx={getSubtitleStyle}>
-            <Typography fontFamily={"sans-serif"} variant="subtitle2">
+            <Typography fontFamily={"sans-serif"} variant="body2">
               {criptoSite.text}
             </Typography>
           </Box>

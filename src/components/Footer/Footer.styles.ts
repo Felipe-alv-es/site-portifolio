@@ -2,7 +2,6 @@ import { SxProps } from "@mui/material/";
 
 export const getContainerStyles = (): SxProps => ({
   background: "#1c1c1c",
-  marginBottom: "15px",
   padding: "1em 2em 1em 2em",
   display: "grid",
   placeItems: "center",
