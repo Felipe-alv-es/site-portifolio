@@ -7,18 +7,18 @@ import {
   getSubtitleStyle,
   getImageStyle,
 } from "./About.styles.ts";
-import programming from "../../assets/images/programming.png";
+import ImagemEscritorio from "../../assets/images/ImagemEscritorio.png";
 
 const About = () => {
   return (
     <Box sx={getContainerStyle} id="Sobre">
       <Box sx={getContentStyle}>
         <Box sx={getTitleStyle}>
-          <Typography fontFamily={"roboto"} variant="h5" color={"#e8847c"}>
+          <Typography fontFamily={"roboto"} variant="h5" color={"#089cd4"}>
             Sobre mim
           </Typography>
           <Typography fontFamily={"roboto"} variant="h6" color={"#4F4F4F"}>
-            Um entusiasta da programação em busca de um aprendizado contínuo
+            Um entusiasta da programação em busca de aprendizado contínuo
           </Typography>
         </Box>
         <Box sx={getSubtitleStyle}>
@@ -47,12 +47,14 @@ const About = () => {
             unitários.
           </Typography>
         </Box>
-        <Box
-          sx={getImageStyle}
-          component="img"
-          src={programming}
-          alt="Man avatar generic image"
-        />
+        <Box sx={getImageStyle}>
+          <img
+            component="img"
+            src={ImagemEscritorio}
+            alt="Notebook de escritório e um café"
+            style={{ alignSelf: "center" }}
+          />
+        </Box>
       </Box>
     </Box>
   );

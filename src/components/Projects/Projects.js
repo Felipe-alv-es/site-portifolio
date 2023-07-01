@@ -35,18 +35,26 @@ const Projects = () => {
 
   return (
     <Box sx={getContainerStyle} id="Projetos">
-      <Typography
-        fontFamily={"roboto"}
-        variant="h5"
-        color={"#e8847c"}
-        sx={{ textAlign: "center" }}
-      >
-        Portfólio
-      </Typography>
-      <Typography fontFamily={"roboto"} variant="h6" color={"#4F4F4F"}>
-        Cada projeto, uma jornada singular de aprendizado e evolução
-      </Typography>
-      <Box sx={{ m: 4 }} />
+      <Box sx={{ margin: "0 2em 0 2em" }}>
+        <Typography
+          fontFamily={"roboto"}
+          variant="h5"
+          color={"#089cd4"}
+          sx={{ textAlign: "center" }}
+        >
+          Portfólio
+        </Typography>
+        <Typography
+          fontFamily={"roboto"}
+          variant="h6"
+          color={"#4F4F4F"}
+          sx={{ marginBottom: "1em", textAlign: "center" }}
+        >
+          Cada projeto, uma jornada singular de aprendizado e evolução
+        </Typography>
+        <Divider />
+      </Box>
+      <Box sx={{ m: 2 }} />
       <Box sx={getContentStyle()}>
         <Box sx={getImageStyle}>
           <img alt="" src={WorkInProgress} style={{ width: "100%" }} />

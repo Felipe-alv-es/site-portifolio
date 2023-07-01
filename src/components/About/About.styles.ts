@@ -33,6 +33,13 @@ export const getSubtitleStyle = (): SxProps => ({
 export const getImageStyle = (): SxProps => ({
   maxWidth: "300px",
   minWidth: "296px",
-  height: "300px",
+
+  height: "500px",
   gridArea: "image",
+  borderRadius: "20px",
+  overflow: "hidden",
+  display: "flex",
+  "@media(max-width: 544px)": {
+    height: "300px",
+  },
 });
