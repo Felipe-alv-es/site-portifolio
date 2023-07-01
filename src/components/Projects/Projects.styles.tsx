@@ -1,5 +1,8 @@
 import { SxProps } from "@mui/material/";
 import { ProjectProps } from "./Projects.types";
+import type { TypographyProps, IconButtonProps } from "@mui/material";
+import React from "react";
+import { Typography, IconButton } from "@mui/material";
 
 export const getContainerStyle = (): SxProps => ({
   marginTop: "10%",
@@ -46,3 +49,29 @@ export const getSubtitleStyle = (): SxProps => ({
 export const getOverlineStyle = (): SxProps => ({
   marginTop: "16px",
 });
+
+export const StyledTitle = React.forwardRef<HTMLElement, TypographyProps>(
+  (props) => (
+    <Typography
+      fontFamily={"roboto"}
+      variant="h6"
+      color={"#696969"}
+      {...props}
+    />
+  )
+);
+
+export const StyledBody = React.forwardRef<HTMLElement, TypographyProps>(
+  (props) => <Typography fontFamily={"sans-serif"} variant="body2" {...props} />
+);
+
+export const StyledOverline = React.forwardRef<HTMLElement, TypographyProps>(
+  (props) => (
+    <Typography
+      fontFamily={"sans-serif"}
+      variant="overline"
+      fontWeight={"bold"}
+      {...props}
+    />
+  )
+);
