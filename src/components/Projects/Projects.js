@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, IconButton } from "@mui/material";
+import { Box, Typography, IconButton, Divider } from "@mui/material";
 import {
   getContainerStyle,
   getImageStyle,
@@ -13,7 +13,7 @@ import {
 } from "./Projects.styles.tsx";
 import { FaGithub } from "react-icons/fa";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
-import WorkInProgress from "../../assets/images/WorkInProgress.png";
+import WorkInProgress from "../../assets/images/WorkinProgress.png";
 
 const Projects = () => {
   const bankSite = {
@@ -35,10 +35,18 @@ const Projects = () => {
 
   return (
     <Box sx={getContainerStyle} id="Projetos">
-      <Typography fontFamily={"roboto"} variant="h4">
+      <Typography
+        fontFamily={"roboto"}
+        variant="h5"
+        color={"#e8847c"}
+        sx={{ textAlign: "center" }}
+      >
         Portfólio
       </Typography>
-      <Box sx={{ m: 2 }} />
+      <Typography fontFamily={"roboto"} variant="h6" color={"#4F4F4F"}>
+        Cada projeto, uma jornada singular de aprendizado e evolução
+      </Typography>
+      <Box sx={{ m: 4 }} />
       <Box sx={getContentStyle()}>
         <Box sx={getImageStyle}>
           <img alt="" src={WorkInProgress} style={{ width: "100%" }} />

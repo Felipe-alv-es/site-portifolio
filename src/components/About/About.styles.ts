@@ -7,7 +7,7 @@ export const getContainerStyle = (): SxProps => ({
 
 export const getContentStyle = (): SxProps => ({
   display: "grid",
-  gridTemplateAreas: `'title image''content image''icons image'`,
+  gridTemplateAreas: `'image title'' image content'`,
   gridGap: "20px",
   marginTop: "10%",
   maxWidth: "900px",

@@ -47,7 +47,11 @@ const Home = () => {
           </Typography>
         </Box>
         <Box sx={getSubtitleStyle}>
-          <Typography fontFamily={"sans-serif"} variant="subtitle2">
+          <Typography
+            fontFamily={"Open Sans"}
+            variant="subtitle2"
+            color={"#4F4F4F"}
+          >
             Sou apaixonado pelo mundo do desenvolvimento e atuo há mais de
             quatro anos no setor de tecnologia. Minha trajetória tem sido uma
             constante busca por aprendizado e aprimoramento, com foco especial
