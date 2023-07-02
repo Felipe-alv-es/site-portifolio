@@ -76,7 +76,11 @@ const Home = () => {
           </IconButton>
         </Box>
         <Box sx={getTechnicalSkillsStyle}>
-          <Typography fontFamily={"roboto"} variant="overline">
+          <Typography
+            fontFamily={"roboto"}
+            variant="overline"
+            sx={{ display: "flex" }}
+          >
             Habilidades Técnicas
           </Typography>
           <Divider orientation="vertical" flexItem />
