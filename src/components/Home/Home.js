@@ -29,12 +29,12 @@ import FelipeAlves from "../../assets/images/FelipeAlves.jpg";
 
 const Home = () => {
   const techSkillsOptions = [
-    { text: "React", icon: <FaReact color="#4BA4BD" /> },
-    { text: "JavaScript", icon: <BiLogoJavascript color="#B5AA14" /> },
+    { text: "React", icon: <FaReact color="#326D7D" /> },
     { text: "TypeScript", icon: <BiLogoTypescript color="#266DAB" /> },
+    { text: "JavaScript", icon: <BiLogoJavascript color="#B5AA14" /> },
     { text: "NextJs", icon: <SiNextdotjs color="#51948E" /> },
-    { text: "Html5", icon: <AiFillHtml5 color="#B5491B" /> },
-    { text: "Css3", icon: <IoLogoCss3 color="#2464f4" /> },
+    { text: "Html5", icon: <AiFillHtml5 color="#9C3F17" /> },
+    { text: "Css3", icon: <IoLogoCss3 color="#123075" /> },
   ];
 
   return (
