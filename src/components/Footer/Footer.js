@@ -22,7 +22,7 @@ const Footer = () => {
   };
 
   return (
-    <Box sx={getContainerStyles} id="Contato">
+    <Box sx={getContainerStyles}>
       <Box sx={getFooterContentStyle}>
         <Typography fontFamily={"roboto"} variant="h5" color={"#e7e7e7"}>
           Obrigado pela atenção!
@@ -77,7 +77,7 @@ const Footer = () => {
         <Button
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/1vi46F-fWSLGxA0448YIl2bifRhM7yIl6/view?usp=sharing"
+              "https://drive.google.com/file/d/1vovf9y0WnbG-WpydjwhkRl1Vz1eBJJ-r/view?usp=sharing"
             )
           }
           sx={getFooterButtonStyle}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, IconButton } from "@mui/material";
+import { Box, Typography, IconButton, Divider } from "@mui/material";
 import {
   getContainerStyle,
   getImageStyle,
@@ -7,61 +7,67 @@ import {
   getTitleStyle,
   getContentStyle,
   getOverlineStyle,
-} from "./Projects.styles.ts";
+  StyledTitle,
+  StyledBody,
+  StyledOverline,
+} from "./Projects.styles.tsx";
 import { FaGithub } from "react-icons/fa";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
+import WorkInProgress from "../../assets/images/WorkInProgress.png";
 
 const Projects = () => {
   const bankSite = {
     title: "Site de Banco",
-    text: "Apaixonado pelo desenvolvimento, trabalho a mais de quatro anos na área de tecnologia, porém sempre aprendendo e me dedicando principalmente a área de programação.",
+    text: "O site do banco é uma plataforma online que permite aos usuários navegar pelas páginas de sua escolha, acessar suas contas existentes, criar uma nova conta e explorar as diversas opções oferecidas pelo banco.",
   };
 
   const cellphoneSite = {
     title: "Loja de Celulares",
-    text: "Apaixonado pelo desenvolvimento, trabalho a mais de quatro anos na área de tecnologia, porém sempre aprendendo e me dedicando principalmente a área de programação.",
+    text: "A loja de celulares online é uma plataforma na qual os usuários podem explorar uma variedade de opções, selecionar e comprar os celulares de sua escolha. Além disso, é possível verificar especificações técnicas, ler avaliações de clientes e aproveitar outras opções disponíveis na loja.",
   };
 
   const criptoSite = {
     title: "Corretora de Criptomoedas",
-    text: "Apaixonado pelo desenvolvimento, trabalho a mais de quatro anos na área de tecnologia, porém sempre aprendendo e me dedicando principalmente a área de programação.",
+    text: "A corretora de criptomoedas é uma plataforma online que oferece aos usuários a possibilidade de acompanhar o mercado de criptomoedas em tempo real. Através dela, é possível acessar informações atualizadas sobre diversas criptomoedas, como cotações, gráficos de desempenho, volumes de negociação e outras estatísticas relevantes.",
   };
 
-  // refatorar os componentes de typography, pra um styledComponent ja customizado
+  const technologyOfSite = "React | TypeScript | Css";
 
   return (
     <Box sx={getContainerStyle} id="Projetos">
-      <Typography fontFamily={"roboto"} variant="h4">
-        Portfólio
-      </Typography>
+      <Box sx={{ margin: "0 2em 0 2em" }}>
+        <Typography
+          fontFamily={"roboto"}
+          variant="h5"
+          color={"#089cd4"}
+          sx={{ textAlign: "center" }}
+        >
+          Portfólio
+        </Typography>
+        <Typography
+          fontFamily={"roboto"}
+          variant="h6"
+          color={"#4F4F4F"}
+          sx={{ marginBottom: "1em", textAlign: "center" }}
+        >
+          Cada projeto, uma jornada singular de aprendizado e evolução
+        </Typography>
+        <Divider />
+      </Box>
       <Box sx={{ m: 2 }} />
       <Box sx={getContentStyle()}>
         <Box sx={getImageStyle}>
-          <img
-            alt=""
-            src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29ya3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
-            style={{ width: "100%" }}
-          />
+          <img alt="" src={WorkInProgress} style={{ width: "100%" }} />
         </Box>
         <Box>
-          <Box sx={getTitleStyle} color={"#696969"}>
-            <Typography fontFamily={"roboto"} variant="h6">
-              {bankSite.title}
-            </Typography>
+          <Box sx={getTitleStyle}>
+            <StyledTitle>{bankSite.title}</StyledTitle>
           </Box>
           <Box sx={getSubtitleStyle}>
-            <Typography fontFamily={"sans-serif"} variant="body2">
-              {bankSite.text}
-            </Typography>
+            <StyledBody>{bankSite.text}</StyledBody>
           </Box>
           <Box sx={getOverlineStyle}>
-            <Typography
-              fontFamily={"sans-serif"}
-              variant="overline"
-              fontWeight={"bold"}
-            >
-              React | TypeScript | Css
-            </Typography>
+            <StyledOverline>{technologyOfSite}</StyledOverline>
           </Box>
           <Box>
             <IconButton
@@ -84,31 +90,17 @@ const Projects = () => {
       <Box sx={{ m: 6 }} />
       <Box sx={getContentStyle({ firstImage: true })}>
         <Box sx={getImageStyle}>
-          <img
-            alt=""
-            src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29ya3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
-            style={{ width: "100%" }}
-          />
+          <img alt="" src={WorkInProgress} style={{ width: "100%" }} />
         </Box>
         <Box>
           <Box sx={getTitleStyle}>
-            <Typography fontFamily={"roboto"} variant="h6" color={"#696969"}>
-              {cellphoneSite.title}
-            </Typography>
+            <StyledTitle>{cellphoneSite.title}</StyledTitle>
           </Box>
           <Box sx={getSubtitleStyle}>
-            <Typography fontFamily={"sans-serif"} variant="body2">
-              {cellphoneSite.text}
-            </Typography>
+            <StyledBody>{cellphoneSite.text}</StyledBody>
           </Box>
           <Box sx={getOverlineStyle}>
-            <Typography
-              fontFamily={"sans-serif"}
-              variant="overline"
-              fontWeight={"bold"}
-            >
-              React | TypeScript | Css
-            </Typography>
+            <StyledOverline>{technologyOfSite}</StyledOverline>
           </Box>
           <Box>
             <IconButton
@@ -131,31 +123,17 @@ const Projects = () => {
       <Box sx={{ m: 6 }} />
       <Box sx={getContentStyle()}>
         <Box sx={getImageStyle}>
-          <img
-            alt=""
-            src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29ya3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
-            style={{ width: "100%" }}
-          />
+          <img alt="" src={WorkInProgress} style={{ width: "100%" }} />
         </Box>
         <Box>
           <Box sx={getTitleStyle}>
-            <Typography fontFamily={"roboto"} variant="h6" color={"#696969"}>
-              {criptoSite.title}
-            </Typography>
+            <StyledTitle>{criptoSite.title}</StyledTitle>
           </Box>
           <Box sx={getSubtitleStyle}>
-            <Typography fontFamily={"sans-serif"} variant="body2">
-              {criptoSite.text}
-            </Typography>
+            <StyledBody>{criptoSite.text}</StyledBody>
           </Box>
           <Box sx={getOverlineStyle}>
-            <Typography
-              fontFamily={"sans-serif"}
-              variant="overline"
-              fontWeight={"bold"}
-            >
-              React | TypeScript | Css
-            </Typography>
+            <StyledOverline>{technologyOfSite}</StyledOverline>
           </Box>
           <Box>
             <IconButton
