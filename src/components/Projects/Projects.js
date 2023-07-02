@@ -13,7 +13,7 @@ import {
 } from "./Projects.styles.tsx";
 import { FaGithub } from "react-icons/fa";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
-import workInProgress from "../../assets/images/workinprogress.png";
+import WorkInProgress from "../../assets/images/WorkInProgress.png";
 
 const Projects = () => {
   const bankSite = {
@@ -57,7 +57,7 @@ const Projects = () => {
       <Box sx={{ m: 2 }} />
       <Box sx={getContentStyle()}>
         <Box sx={getImageStyle}>
-          <img alt="" src={workInProgress} style={{ width: "100%" }} />
+          <img alt="" src={WorkInProgress} style={{ width: "100%" }} />
         </Box>
         <Box>
           <Box sx={getTitleStyle}>
@@ -90,7 +90,7 @@ const Projects = () => {
       <Box sx={{ m: 6 }} />
       <Box sx={getContentStyle({ firstImage: true })}>
         <Box sx={getImageStyle}>
-          <img alt="" src={workInProgress} style={{ width: "100%" }} />
+          <img alt="" src={WorkInProgress} style={{ width: "100%" }} />
         </Box>
         <Box>
           <Box sx={getTitleStyle}>
@@ -123,7 +123,7 @@ const Projects = () => {
       <Box sx={{ m: 6 }} />
       <Box sx={getContentStyle()}>
         <Box sx={getImageStyle}>
-          <img alt="" src={workInProgress} style={{ width: "100%" }} />
+          <img alt="" src={WorkInProgress} style={{ width: "100%" }} />
         </Box>
         <Box>
           <Box sx={getTitleStyle}>
