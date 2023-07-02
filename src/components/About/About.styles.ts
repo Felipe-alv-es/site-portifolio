@@ -14,7 +14,7 @@ export const getContentStyle = (): SxProps => ({
   marginLeft: "2em",
   marginRight: "2em",
   "@media(max-width: 544px)": {
-    gridTemplateAreas: `'image''title''content''icons'`,
+    gridTemplateAreas: `'title''content''icons''image'`,
   },
 });
 
@@ -22,6 +22,9 @@ export const getTitleStyle = (): SxProps => ({
   maxWidth: "450px",
   minWidth: "296px",
   gridArea: "title",
+  "@media(max-width: 544px)": {
+    textAlign: "center",
+  },
 });
 
 export const getSubtitleStyle = (): SxProps => ({

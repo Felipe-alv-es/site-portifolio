@@ -22,7 +22,7 @@ const Footer = () => {
   };
 
   return (
-    <Box sx={getContainerStyles} id="Contato">
+    <Box sx={getContainerStyles}>
       <Box sx={getFooterContentStyle}>
         <Typography fontFamily={"roboto"} variant="h5" color={"#e7e7e7"}>
           Obrigado pela atenção!

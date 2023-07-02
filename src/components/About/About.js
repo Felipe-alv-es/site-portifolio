@@ -18,7 +18,7 @@ const About = () => {
             Sobre mim
           </Typography>
           <Typography fontFamily={"roboto"} variant="h6" color={"#4F4F4F"}>
-            Um entusiasta da programação em busca de aprendizado contínuo
+            Um entusiasta da programação em busca de aprendizado contínuo.
           </Typography>
         </Box>
         <Box sx={getSubtitleStyle}>
