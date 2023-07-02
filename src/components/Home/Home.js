@@ -29,12 +29,12 @@ import FelipeAlves from "../../assets/images/FelipeAlves.jpg";
 
 const Home = () => {
   const techSkillsOptions = [
-    { text: "React", icon: <FaReact /> },
-    { text: "JavaScript", icon: <BiLogoJavascript /> },
-    { text: "TypeScript", icon: <BiLogoTypescript /> },
-    { text: "NextJs", icon: <SiNextdotjs /> },
-    { text: "Html5", icon: <AiFillHtml5 /> },
-    { text: "Css3", icon: <IoLogoCss3 /> },
+    { text: "React", icon: <FaReact color="#4BA4BD" /> },
+    { text: "JavaScript", icon: <BiLogoJavascript color="#B5AA14" /> },
+    { text: "TypeScript", icon: <BiLogoTypescript color="#266DAB" /> },
+    { text: "NextJs", icon: <SiNextdotjs color="#51948E" /> },
+    { text: "Html5", icon: <AiFillHtml5 color="#B5491B" /> },
+    { text: "Css3", icon: <IoLogoCss3 color="#2464f4" /> },
   ];
 
   return (
@@ -69,10 +69,10 @@ const Home = () => {
             href="https://www.linkedin.com/in/felipe-alves-oliveira/"
             target="_blank"
           >
-            <FaLinkedin />
+            <FaLinkedin color="#0474b4" />
           </IconButton>
           <IconButton href="https://github.com/Felipe-alv-es" target="_blank">
-            <FaGithub />
+            <FaGithub color="#141414" />
           </IconButton>
         </Box>
         <Box sx={getTechnicalSkillsStyle}>
@@ -83,7 +83,11 @@ const Home = () => {
           <Box>
             {techSkillsOptions.map((item) => (
               <Tooltip arrow title={item.text}>
-                <Icon key={item.text} fontSize="large">
+                <Icon
+                  key={item.text}
+                  fontSize="large"
+                  sx={{ marginRight: "4px" }}
+                >
                   {item.icon}
                 </Icon>
               </Tooltip>

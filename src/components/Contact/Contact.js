@@ -24,7 +24,7 @@ export const Contact = () => {
         }}
       >
         <Box>
-          <Typography fontFamily={"roboto"} variant="h7">
+          <Typography fontFamily={"roboto"} variant="h7" color={"#089cd4"}>
             Cidade
           </Typography>
           <Typography
@@ -36,7 +36,7 @@ export const Contact = () => {
           </Typography>
         </Box>
         <Box>
-          <Typography fontFamily={"roboto"} variant="h7">
+          <Typography fontFamily={"roboto"} variant="h7" color={"#089cd4"}>
             Email
           </Typography>
           <Typography
