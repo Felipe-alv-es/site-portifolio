@@ -18,8 +18,21 @@ import {
 } from "react-icons/ai";
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
 
   const menuOptions = [
     { text: "Home", icon: <AiFillHome /> },
@@ -27,18 +40,6 @@ const Navbar = () => {
     { text: "Projetos", icon: <AiFillProject /> },
     { text: "Contato", icon: <AiFillMessage /> },
   ];
-
-  const handleResize = () => {
-    if (window.innerWidth < 665) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  React.useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  });
 
   return (
     <>

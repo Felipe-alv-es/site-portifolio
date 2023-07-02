@@ -30,6 +30,9 @@ export const getImageStyle = (): SxProps => ({
   gridArea: "image",
   minWidth: "296px",
   position: "relative",
+  "@media(max-width: 544px)": {
+    width: "300px",
+  },
 });
 
 export const getTitleStyle = (): SxProps => ({
