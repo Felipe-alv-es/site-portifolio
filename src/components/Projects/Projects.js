@@ -13,7 +13,7 @@ import {
 } from "./Projects.styles.tsx";
 import { FaGithub } from "react-icons/fa";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
-import workInProgress from "../../assets/images/workinProgress.png";
+import workInProgress from "../../assets/images/workinprogress.png";
 
 const Projects = () => {
   const bankSite = {
