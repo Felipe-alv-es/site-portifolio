@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, IconButton, Divider } from "@mui/material";
+import { Box, Typography, IconButton, Divider, Tooltip } from "@mui/material";
 import {
   getContainerStyle,
   getImageStyle,
@@ -11,9 +11,10 @@ import {
   StyledBody,
   StyledOverline,
 } from "./Projects.styles.tsx";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaFigma } from "react-icons/fa";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
 import WorkInProgress from "../../assets/images/WorkInProgress.png";
+import SiteBank from "../../assets/images/SiteBank.jpg";
 
 const Projects = () => {
   const bankSite = {
@@ -57,7 +58,7 @@ const Projects = () => {
       <Box sx={{ m: 2 }} />
       <Box sx={getContentStyle()}>
         <Box sx={getImageStyle}>
-          <img alt="" src={WorkInProgress} style={{ width: "100%" }} />
+          <img alt="" src={SiteBank} style={{ width: "100%" }} />
         </Box>
         <Box>
           <Box sx={getTitleStyle}>
@@ -71,17 +72,19 @@ const Projects = () => {
           </Box>
           <Box>
             <IconButton
-              href="https://www.linkedin.com/in/felipe-alves-oliveira/"
+              href="https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=5-2&mode=design&t=atufu4IbXhBXYOkT-4"
               target="_blank"
               size="small"
+              sx={{ borderRadius: "8px" }}
             >
-              Código <FaGithub style={{ marginLeft: "4px" }} />
+              Design <FaFigma style={{ marginLeft: "4px" }} />
             </IconButton>
-            <IconButton
-              href="https://www.linkedin.com/in/felipe-alves-oliveira/"
-              target="_blank"
-              size="small"
-            >
+            <Tooltip arrow title="Em Breve">
+              <IconButton size="small" sx={{ borderRadius: "8px" }}>
+                Código <FaGithub style={{ marginLeft: "4px" }} />
+              </IconButton>
+            </Tooltip>
+            <IconButton size="small" sx={{ borderRadius: "8px" }}>
               Demo <BsBoxArrowInUpRight style={{ marginLeft: "4px" }} />
             </IconButton>
           </Box>
@@ -107,6 +110,15 @@ const Projects = () => {
               href="https://www.linkedin.com/in/felipe-alves-oliveira/"
               target="_blank"
               size="small"
+              sx={{ borderRadius: "8px" }}
+            >
+              Design <FaFigma style={{ marginLeft: "4px" }} />
+            </IconButton>
+            <IconButton
+              href="https://www.linkedin.com/in/felipe-alves-oliveira/"
+              target="_blank"
+              size="small"
+              sx={{ borderRadius: "8px" }}
             >
               Código <FaGithub style={{ marginLeft: "4px" }} />
             </IconButton>
@@ -114,6 +126,7 @@ const Projects = () => {
               href="https://www.linkedin.com/in/felipe-alves-oliveira/"
               target="_blank"
               size="small"
+              sx={{ borderRadius: "8px" }}
             >
               Demo <BsBoxArrowInUpRight style={{ marginLeft: "4px" }} />
             </IconButton>
@@ -140,6 +153,15 @@ const Projects = () => {
               href="https://www.linkedin.com/in/felipe-alves-oliveira/"
               target="_blank"
               size="small"
+              sx={{ borderRadius: "8px" }}
+            >
+              Design <FaFigma style={{ marginLeft: "4px" }} />
+            </IconButton>
+            <IconButton
+              href="https://www.linkedin.com/in/felipe-alves-oliveira/"
+              target="_blank"
+              size="small"
+              sx={{ borderRadius: "8px" }}
             >
               Código <FaGithub style={{ marginLeft: "4px" }} />
             </IconButton>
@@ -147,6 +169,7 @@ const Projects = () => {
               href="https://www.linkedin.com/in/felipe-alves-oliveira/"
               target="_blank"
               size="small"
+              sx={{ borderRadius: "8px" }}
             >
               Demo <BsBoxArrowInUpRight style={{ marginLeft: "4px" }} />
             </IconButton>
