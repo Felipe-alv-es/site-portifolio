@@ -6,7 +6,6 @@ import { Typography } from "@mui/material";
 
 export const getContainerStyle = (): SxProps => ({
   marginTop: "10%",
-  marginBottom: "10%",
   display: "grid",
   placeItems: "center",
 });
