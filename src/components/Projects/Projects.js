@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, IconButton, Divider, Tooltip } from "@mui/material";
+import { Box, Typography, IconButton, Divider } from "@mui/material";
 import {
   getContainerStyle,
   getImageStyle,
