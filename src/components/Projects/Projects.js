@@ -15,6 +15,7 @@ import { FaGithub, FaFigma } from "react-icons/fa";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
 import WorkInProgress from "../../assets/images/WorkInProgress.png";
 import SiteBank from "../../assets/images/SiteBank.jpg";
+import SiteMobileStore from "../../assets/images/MobileSite.png";
 
 const Projects = () => {
   const techSkillsOptions = [
@@ -33,10 +34,11 @@ const Projects = () => {
     {
       title: "Loja de Celulares",
       text: "A loja de celulares online é uma plataforma na qual os usuários podem explorar uma variedade de opções, selecionar e comprar os celulares de sua escolha. Além disso, é possível verificar especificações técnicas, ler avaliações de clientes e aproveitar outras opções disponíveis na loja.",
-      imageSrc: WorkInProgress,
+      imageSrc: SiteMobileStore,
       imageAlt: "Home page from cellphone Store Site",
       siteTechnology: "React | TypeScript | Css",
-      designButtonHref: "",
+      designButtonHref:
+        "https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=55-27&mode=design&t=OchPONd8XUukFPKi-4",
       codeButtonHref: "",
       previewButtonHref: "",
       firstImage: "Right",
