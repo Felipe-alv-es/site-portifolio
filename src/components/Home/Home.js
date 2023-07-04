@@ -8,7 +8,7 @@ import {
   Tooltip,
   Fab,
 } from "@mui/material";
-import { FaLinkedin, FaGithub, FaReact, FaFigma } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaReact } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { SiNextdotjs } from "react-icons/si";
 import { AiFillHtml5 } from "react-icons/ai";
