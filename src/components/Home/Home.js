@@ -26,6 +26,7 @@ import {
   getTechnicalSkillsStyle,
 } from "./Home.style.ts";
 import FelipeAlves from "../../assets/images/FelipeAlves.jpg";
+import Figma from "../../assets/images/Figma.png";
 
 const Home = () => {
   const techSkillsOptions = [
@@ -73,6 +74,12 @@ const Home = () => {
           </IconButton>
           <IconButton href="https://github.com/Felipe-alv-es" target="_blank">
             <FaGithub color="#141414" />
+          </IconButton>
+          <IconButton
+            href="https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=0%3A1&mode=design&t=MWrf8t55LaFENlq3-1"
+            target="_blank"
+          >
+            <img src={Figma} alt="Figma Icon" style={{ width: "24px" }} />
           </IconButton>
         </Box>
         <Box sx={getTechnicalSkillsStyle}>
