@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, IconButton, Divider } from "@mui/material";
+import { Box, Typography, IconButton, Divider, Tooltip } from "@mui/material";
 import {
   getContainerStyle,
   getImageStyle,
@@ -13,7 +13,7 @@ import {
 } from "./Projects.styles.tsx";
 import { FaGithub, FaFigma } from "react-icons/fa";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
-import WorkInProgress from "../../assets/images/WorkInProgress.png";
+import SiteCripto from "../../assets/images/CriptoStoreSite.png";
 import SiteBank from "../../assets/images/SiteBank.jpg";
 import SiteMobileStore from "../../assets/images/MobileSite.png";
 
@@ -30,6 +30,8 @@ const Projects = () => {
       codeButtonHref: "",
       previewButtonHref: "",
       firstImage: "",
+      tooltipCode: "Em Breve",
+      tooltipDemo: "Em Breve",
     },
     {
       title: "Loja de Celulares",
@@ -42,17 +44,22 @@ const Projects = () => {
       codeButtonHref: "",
       previewButtonHref: "",
       firstImage: "Right",
+      tooltipCode: "Em Breve",
+      tooltipDemo: "Em Breve",
     },
     {
       title: "Corretora de Criptomoedas",
       text: "A corretora de criptomoedas é uma plataforma online que oferece aos usuários a possibilidade de acompanhar o mercado de criptomoedas em tempo real. Através dela, é possível acessar informações atualizadas sobre diversas criptomoedas, como cotações, gráficos de desempenho, volumes de negociação e outras estatísticas relevantes.",
-      imageSrc: WorkInProgress,
+      imageSrc: SiteCripto,
       imageAlt: "Home page from criptoStore Site",
       siteTechnology: "React | TypeScript | Css",
-      designButtonHref: "",
+      designButtonHref:
+        "https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=102-38&mode=design&t=3M0vzoGxrlyJAbrP-4",
       codeButtonHref: "",
       previewButtonHref: "",
       firstImage: "",
+      tooltipCode: "Em Breve",
+      tooltipDemo: "Em Breve",
     },
   ];
 
@@ -107,20 +114,24 @@ const Projects = () => {
                 >
                   Design <FaFigma style={{ marginLeft: "4px" }} />
                 </IconButton>
-                <IconButton
-                  href={item.codeButtonHref}
-                  size="small"
-                  sx={{ borderRadius: "8px" }}
-                >
-                  Código <FaGithub style={{ marginLeft: "4px" }} />
-                </IconButton>
-                <IconButton
-                  href={item.previewButtonHref}
-                  size="small"
-                  sx={{ borderRadius: "8px" }}
-                >
-                  Demo <BsBoxArrowInUpRight style={{ marginLeft: "4px" }} />
-                </IconButton>
+                <Tooltip arrow title={item.tooltipCode}>
+                  <IconButton
+                    href={item.codeButtonHref}
+                    size="small"
+                    sx={{ borderRadius: "8px" }}
+                  >
+                    Código <FaGithub style={{ marginLeft: "4px" }} />
+                  </IconButton>
+                </Tooltip>
+                <Tooltip arrow title={item.tooltipDemo}>
+                  <IconButton
+                    href={item.previewButtonHref}
+                    size="small"
+                    sx={{ borderRadius: "8px" }}
+                  >
+                    Demo <BsBoxArrowInUpRight style={{ marginLeft: "4px" }} />
+                  </IconButton>
+                </Tooltip>
               </Box>
             </Box>
           </Box>
