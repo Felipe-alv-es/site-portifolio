@@ -27,11 +27,11 @@ const Projects = () => {
       siteTechnology: "React | TypeScript | Css",
       designButtonHref:
         "https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=5-2&mode=design&t=atufu4IbXhBXYOkT-4",
-      codeButtonHref: "",
-      previewButtonHref: "",
+      codeButtonHref: "https://github.com/Felipe-alv-es/bank-website",
+      previewButtonHref: "https://fictionalbank.netlify.app",
       firstImage: "",
-      tooltipCode: "Em Breve",
-      tooltipDemo: "Em Breve",
+      tooltipCode: "",
+      tooltipDemo: "",
     },
     {
       title: "Loja de Celulares",
@@ -117,6 +117,7 @@ const Projects = () => {
                 <Tooltip arrow title={item.tooltipCode}>
                   <IconButton
                     href={item.codeButtonHref}
+                    target="_blank"
                     size="small"
                     sx={{ borderRadius: "8px" }}
                   >
@@ -126,6 +127,7 @@ const Projects = () => {
                 <Tooltip arrow title={item.tooltipDemo}>
                   <IconButton
                     href={item.previewButtonHref}
+                    target="_blank"
                     size="small"
                     sx={{ borderRadius: "8px" }}
                   >
