@@ -1,12 +1,12 @@
 import SiteCripto from "../../assets/images/CriptoStoreSite.png";
 import SiteBank from "../../assets/images/SiteBank.jpg";
-import SiteMobileStore from "../../assets/images/MobileSite.png";
+import FictionalMobile from "../../assets/images/ProjectsImages/FictionalMobile.png";
 
 export const techSkillsOptions = [
   {
     title: "Loja de Celulares",
     text: "A loja de celulares online é uma plataforma na qual os usuários podem explorar uma variedade de opções, selecionar e comprar os celulares de sua escolha. Além disso, é possível verificar especificações técnicas, ler avaliações de clientes e aproveitar outras opções disponíveis na loja.",
-    imageSrc: SiteMobileStore,
+    imageSrc: FictionalMobile,
     imageAlt: "Home page from cellphone Store Site",
     siteTechnology: "React | TypeScript | Css",
     designButtonHref:
@@ -14,8 +14,8 @@ export const techSkillsOptions = [
     codeButtonHref: "https://github.com/Felipe-alv-es/smartphone-store",
     previewButtonHref: "https://fictionalmobile.netlify.app/",
     firstImage: "Right",
-    tooltipCode: "Em Breve",
-    tooltipDemo: "Em Breve",
+    tooltipCode: "",
+    tooltipDemo: "",
   },
   {
     title: "Site de Banco",
