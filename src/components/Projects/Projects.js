@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Laptop from "../../assets/images/CommumImages/Laptop.png";
-import { Box, Typography, Divider, IconButton } from "@mui/material";
+import { Box, Typography, Divider } from "@mui/material";
 import { techSkillsOptions } from "../../assets/utils/projectOptions.tsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
@@ -8,7 +8,11 @@ import {
   getContainerStyle,
   getTitleStyle,
   getSubtitleStyle,
-} from "./Projects.styles.ts";
+  getContentStyle,
+  getSwiperStyle,
+  getSwiperTitleContainerStyle,
+  StyledButtonIcon,
+} from "./Projects.styles.tsx";
 
 const Projects = () => {
   const [swiper, setSwiper] = useState();
@@ -51,36 +55,14 @@ const Projects = () => {
         <Divider />
       </Box>
       <Box sx={{ m: 4 }} />
-      <Box
-        sx={{
-          justifyContent: "center",
-          display: "flex",
-        }}
-      >
+      <Box sx={getContentStyle}>
         <Box
           component="img"
           src={Laptop}
           alt="Man avatar generic image"
-          sx={{ width: "70%", zIndex: "2" }}
+          sx={{ width: "70%" }}
         />
-        <Box
-          sx={{
-            width: "45%",
-            position: "absolute",
-            marginTop: "3.5%",
-            "> div > div": {
-              "> .swiper-slide": {
-                transition: "250ms",
-                transform: "scale(0.95)",
-                marginTop: "2px",
-              },
-              "> .swiper-slide-active": {
-                transition: "250ms",
-                transform: "scale(1.01)",
-              },
-            },
-          }}
-        >
+        <Box sx={getSwiperStyle}>
           <Swiper {...params}>
             {techSkillsOptions.map((item) => (
               <SwiperSlide key={item.id}>
@@ -96,25 +78,11 @@ const Projects = () => {
         </Box>
       </Box>
       <Box sx={{ m: 2 }} />
-      <Box
-        sx={{
-          display: "flex",
-          width: "100%",
-          textAlign: "center",
-          justifyContent: "center",
-        }}
-      >
+      <Box sx={getSwiperTitleContainerStyle}>
         <Box sx={{ display: "flex", width: "30%" }}>
-          <IconButton
-            onClick={NavPrev}
-            sx={{
-              background: "#D9D9D9",
-              borderRadius: "32px",
-              height: "fit-content",
-            }}
-          >
+          <StyledButtonIcon onClick={NavPrev}>
             <BsChevronLeft />
-          </IconButton>
+          </StyledButtonIcon>
           <Swiper {...paramsTitle}>
             {techSkillsOptions.map((item) => (
               <SwiperSlide key={item.id}>
@@ -124,16 +92,9 @@ const Projects = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <IconButton
-            onClick={NavNext}
-            sx={{
-              background: "#D9D9D9",
-              borderRadius: "32px",
-              height: "fit-content",
-            }}
-          >
+          <StyledButtonIcon onClick={NavNext}>
             <BsChevronRight />
-          </IconButton>
+          </StyledButtonIcon>
         </Box>
       </Box>
     </Box>
