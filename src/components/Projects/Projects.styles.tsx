@@ -30,12 +30,22 @@ export const getSwiperStyle = (): SxProps => ({
   "> div > div": {
     "> .swiper-slide": {
       transition: "250ms",
-      transform: "scale(0.97)",
+      transform: "scale(0.95)",
       marginTop: "2px",
+      opacity: "80%",
     },
     "> .swiper-slide-active": {
       transition: "250ms",
       transform: "scale(1.01)",
+      opacity: "100%",
+    },
+    ":hover": {
+      ".swiper-slide": {
+        transform: "scale(0.90)",
+      },
+      ".swiper-slide-active": {
+        transform: "scale(1.02)",
+      },
     },
   },
 });

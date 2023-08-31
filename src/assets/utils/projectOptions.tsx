@@ -13,9 +13,6 @@ export const techSkillsOptions = [
       "https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=55-27&mode=design&t=OchPONd8XUukFPKi-4",
     codeButtonHref: "https://github.com/Felipe-alv-es/smartphone-store",
     previewButtonHref: "https://fictionalmobile.netlify.app/",
-    firstImage: "Right",
-    tooltipCode: "",
-    tooltipDemo: "",
   },
   {
     title: "Site de Banco",
@@ -27,9 +24,6 @@ export const techSkillsOptions = [
       "https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=5-2&mode=design&t=atufu4IbXhBXYOkT-4",
     codeButtonHref: "https://github.com/Felipe-alv-es/bank-website",
     previewButtonHref: "https://fictionalbank.netlify.app",
-    firstImage: "",
-    tooltipCode: "",
-    tooltipDemo: "",
   },
   {
     title: "Corretora de Criptomoedas",
@@ -41,8 +35,5 @@ export const techSkillsOptions = [
       "https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=102-38&mode=design&t=3M0vzoGxrlyJAbrP-4",
     codeButtonHref: "",
     previewButtonHref: "",
-    firstImage: "",
-    tooltipCode: "Em Breve",
-    tooltipDemo: "Em Breve",
   },
 ];

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Laptop from "../../assets/images/CommumImages/Laptop.png";
+import LaptopBackground from "../../assets/images/CommumImages/LaptopBackground.png";
 import { Box, Typography, Divider } from "@mui/material";
 import { techSkillsOptions } from "../../assets/utils/projectOptions.tsx";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -58,7 +59,7 @@ const Projects = () => {
       <Box sx={getContentStyle}>
         <Box
           component="img"
-          src={Laptop}
+          src={LaptopBackground}
           alt="Man avatar generic image"
           sx={{ width: "70%" }}
         />
