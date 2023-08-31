@@ -3,8 +3,6 @@ import { SxProps } from "@mui/material/";
 export const getContainerStyle = (): SxProps => ({
   marginTop: "10%",
   marginBottom: "10%",
-  display: "grid",
-  placeItems: "center",
 });
 
 export const getTitleStyle = (): SxProps => ({
