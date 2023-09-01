@@ -1,98 +1,126 @@
-import React from "react";
-import { Box, Typography, IconButton, Divider, Tooltip } from "@mui/material";
-import { FaGithub, FaFigma } from "react-icons/fa";
-import { BsBoxArrowInUpRight } from "react-icons/bs";
+import React, { useState } from "react";
+import LaptopBackground from "../../assets/images/CommumImages/LaptopBackground.png";
+import { Box, Typography, Divider } from "@mui/material";
 import { techSkillsOptions } from "../../assets/utils/projectOptions.tsx";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import {
   getContainerStyle,
-  getImageStyle,
-  getSubtitleStyle,
   getTitleStyle,
+  getSubtitleStyle,
   getContentStyle,
-  getOverlineStyle,
-  StyledTitle,
-  StyledBody,
-  StyledOverline,
+  getSwiperStyle,
+  getSwiperTitleContainerStyle,
+  StyledButtonIcon,
+  StyledTypography,
+  StyledOutlinedButton,
+  getOverlayStyle,
+  getProjectNameStyle,
 } from "./Projects.styles.tsx";
 
 const Projects = () => {
+  const [swiper, setSwiper] = useState();
+  const swipePreviousPage = () => swiper.slidePrev();
+  const swipeNextPage = () => swiper.slideNext();
+
+  const params = {
+    onSwiper: setSwiper,
+    slidesPerView: 1.1,
+    spaceBetween: "0px",
+    centeredSlides: true,
+    allowTouchMove: false,
+  };
+
+  const [swiperTitle, setSwiperTitle] = useState();
+  const swipePreviousTitle = () => swiperTitle.slidePrev();
+  const swipeNextTitle = () => swiperTitle.slideNext();
+
+  const paramsTitle = {
+    onSwiper: setSwiperTitle,
+    slidesPerView: 1,
+    allowTouchMove: false,
+  };
+
+  function NavNext() {
+    swipeNextPage();
+    swipeNextTitle();
+  }
+
+  function NavPrev() {
+    swipePreviousPage();
+    swipePreviousTitle();
+  }
+
   return (
     <Box sx={getContainerStyle} id="Projetos">
       <Box sx={{ margin: "0 2em 0 2em" }}>
-        <Typography
-          fontFamily={"roboto"}
-          variant="h5"
-          color={"#089cd4"}
-          sx={{ textAlign: "center" }}
-        >
-          Portfólio
-        </Typography>
-        <Typography
-          fontFamily={"roboto"}
-          variant="h6"
-          color={"#4F4F4F"}
-          sx={{ marginBottom: "1em", textAlign: "center" }}
-        >
+        <Typography sx={getTitleStyle}>Portfólio</Typography>
+        <Typography sx={getSubtitleStyle}>
           Cada projeto, uma jornada singular de aprendizado e evolução
         </Typography>
         <Divider />
       </Box>
       <Box sx={{ m: 4 }} />
-      {techSkillsOptions.map((item) => (
-        <>
-          <Box sx={getContentStyle(item.firstImage)}>
-            <Box sx={getImageStyle}>
-              <img
-                alt={item.imageAlt}
-                src={item.imageSrc}
-                style={{ width: "100%" }}
-              />
-            </Box>
-            <Box>
-              <Box sx={getTitleStyle}>
-                <StyledTitle>{item.title}</StyledTitle>
-              </Box>
-              <Box sx={getSubtitleStyle}>
-                <StyledBody>{item.text}</StyledBody>
-              </Box>
-              <Box sx={getOverlineStyle}>
-                <StyledOverline>{item.siteTechnology}</StyledOverline>
-              </Box>
-              <Box>
-                <IconButton
-                  href={item.designButtonHref}
-                  target="_blank"
-                  size="small"
-                  sx={{ borderRadius: "8px" }}
-                >
-                  Design <FaFigma style={{ marginLeft: "4px" }} />
-                </IconButton>
-                <Tooltip arrow title={item.tooltipCode}>
-                  <IconButton
-                    href={item.codeButtonHref}
-                    target="_blank"
-                    size="small"
-                    sx={{ borderRadius: "8px" }}
-                  >
-                    Código <FaGithub style={{ marginLeft: "4px" }} />
-                  </IconButton>
-                </Tooltip>
-                <Tooltip arrow title={item.tooltipDemo}>
-                  <IconButton
-                    href={item.previewButtonHref}
-                    target="_blank"
-                    size="small"
-                    sx={{ borderRadius: "8px" }}
-                  >
-                    Demo <BsBoxArrowInUpRight style={{ marginLeft: "4px" }} />
-                  </IconButton>
-                </Tooltip>
-              </Box>
-            </Box>
-          </Box>
-          <Box sx={{ m: 6 }} />
-        </>
-      ))}
+      <Box sx={getContentStyle}>
+        <Box
+          component="img"
+          src={LaptopBackground}
+          alt="Man avatar generic image"
+          sx={{ width: "70%" }}
+        />
+        <Box sx={getSwiperStyle}>
+          <Swiper {...params}>
+            {techSkillsOptions.map((item) => (
+              <SwiperSlide key={item.id} style={{ display: "flex" }}>
+                <Box
+                  component="img"
+                  src={item.imageSrc}
+                  alt={item.imageAlt}
+                  sx={{
+                    width: "100%",
+                    borderRadius: "16px",
+                  }}
+                />
+                <Box className="slide-overlay" sx={getOverlayStyle}>
+                  <Box sx={{ textAlign: "left", margin: "24px" }}>
+                    <Typography sx={getProjectNameStyle}>
+                      {item.title}
+                    </Typography>
+                    <Box sx={{ display: "flex", marginBottom: "8px" }}>
+                      <StyledTypography>React</StyledTypography>
+                      <StyledTypography>TypeScript</StyledTypography>
+                      <StyledTypography>JavaScript</StyledTypography>
+                    </Box>
+                    <StyledOutlinedButton>
+                      Ver detalhes do Projeto
+                    </StyledOutlinedButton>
+                  </Box>
+                </Box>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Box>
+      </Box>
+      <Box sx={{ m: 2 }} />
+      <Box sx={getSwiperTitleContainerStyle}>
+        <Box sx={{ display: "flex", width: "30%" }}>
+          <StyledButtonIcon onClick={NavPrev}>
+            <BsChevronLeft />
+          </StyledButtonIcon>
+          <Swiper {...paramsTitle}>
+            {techSkillsOptions.map((item) => (
+              <SwiperSlide key={item.id}>
+                <Typography variant="h6" color={"#089cd4"}>
+                  {item.title}
+                </Typography>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <StyledButtonIcon onClick={NavNext}>
+            <BsChevronRight />
+          </StyledButtonIcon>
+        </Box>
+      </Box>
     </Box>
   );
 };

@@ -1,80 +1,127 @@
-import { SxProps } from "@mui/material/";
-import { ProjectProps } from "./Projects.types";
-import type { TypographyProps } from "@mui/material";
 import React from "react";
-import { Typography } from "@mui/material";
+import { SxProps, IconButton, Typography, Button } from "@mui/material/";
 
 export const getContainerStyle = (): SxProps => ({
   marginTop: "10%",
-  display: "grid",
-  placeItems: "center",
-});
-
-export const getContentStyle = (firstImage: ProjectProps): SxProps => ({
-  display: "grid",
-  gridTemplateAreas: firstImage
-    ? `'image title''image content'`
-    : `'title image''content image'`,
-  gridGap: "20px",
-  marginLeft: "2em",
-  marginRight: "2em",
-  textAlign: "center",
-  "@media(max-width: 544px)": {
-    gridTemplateAreas: `'title''content''image'`,
-  },
-});
-
-export const getImageStyle = (): SxProps => ({
-  maxWidth: "450px",
-  gridArea: "image",
-  minWidth: "296px",
-  position: "relative",
-  "@media(max-width: 544px)": {
-    width: "300px",
-  },
+  marginBottom: "10%",
 });
 
 export const getTitleStyle = (): SxProps => ({
-  maxWidth: "300px",
-  minWidth: "296px",
-  gridArea: "title",
-  marginBottom: "2em",
+  textAlign: "center",
+  typography: "h5",
+  color: "#089cd4",
 });
 
 export const getSubtitleStyle = (): SxProps => ({
-  maxWidth: "300px",
-  minWidth: "296px",
-  gridArea: "content",
-  textAlign: "justify",
+  marginBottom: "1em",
+  textAlign: "center",
+  typography: "h6",
+  color: "#4F4F4F",
 });
 
-export const getOverlineStyle = (): SxProps => ({
-  marginTop: "16px",
+export const getContentStyle = (): SxProps => ({
+  justifyContent: "center",
+  display: "flex",
+});
+export const getSwiperStyle = (): SxProps => ({
+  width: "44.5%",
+  position: "absolute",
+  marginTop: "3.5%",
+  "> div > div": {
+    "> .swiper-slide": {
+      transition: "350ms",
+      transform: "scale(0.95)",
+      marginTop: "2px",
+      opacity: "80%",
+    },
+    "> .swiper-slide-active": {
+      transition: "350ms",
+      transform: "scale(1.01)",
+      opacity: "100%",
+    },
+    ":hover": {
+      ".swiper-slide": {
+        transform: "scale(0.90)",
+      },
+      ".swiper-slide-active": {
+        transform: "scale(1.02)",
+      },
+    },
+  },
 });
 
-export const StyledTitle = React.forwardRef<HTMLElement, TypographyProps>(
-  (props) => <Typography fontFamily={"roboto"} variant="h6" {...props} />
-);
+export const getSwiperTitleContainerStyle = (): SxProps => ({
+  display: "flex",
+  width: "100%",
+  textAlign: "center",
+  justifyContent: "center",
+});
 
-export const StyledBody = React.forwardRef<HTMLElement, TypographyProps>(
-  (props) => (
-    <Typography
-      fontFamily={"Open Sans"}
-      variant="body2"
-      color={"#4F4F4F"}
+export const getProjectNameStyle = (): SxProps => ({
+  color: "white",
+  typography: "h5",
+  marginBottom: "4px",
+});
+
+export const getOverlayStyle = (): SxProps => ({
+  height: "100%",
+  width: "100%",
+  background: "rgba(0,0,0,0.5)",
+  position: "fixed",
+  borderRadius: "16px",
+  opacity: "0",
+  transition: "500ms",
+  display: "grid",
+  placeItems: "end start",
+  ":hover": {
+    opacity: "100%",
+  },
+});
+
+export const StyledButtonIcon = (props) => {
+  return (
+    <IconButton
+      sx={{
+        background: "#D9D9D9",
+        borderRadius: "32px",
+        height: "fit-content",
+      }}
       {...props}
     />
-  )
-);
+  );
+};
 
-export const StyledOverline = React.forwardRef<HTMLElement, TypographyProps>(
-  (props) => (
+export const StyledTypography = (props) => {
+  return (
     <Typography
-      fontFamily={"sans-serif"}
-      variant="overline"
-      fontWeight={"bold"}
-      color={"#4F4F4F"}
+      sx={{
+        borderRadius: "36px",
+        background: "#089cd4",
+        color: "white",
+        padding: "8px",
+        fontSize: "12px",
+        marginRight: "8px",
+      }}
       {...props}
     />
-  )
-);
+  );
+};
+
+export const StyledOutlinedButton = (props) => {
+  return (
+    <Button
+      variant="outlined"
+      sx={{
+        color: "white",
+        borderColor: "white",
+        height: "fit-content",
+        borderRadius: "36px",
+        textTransform: "none",
+        ":hover": {
+          borderColor: "white",
+        },
+      }}
+      {...props}
+    />
+  );
+};
