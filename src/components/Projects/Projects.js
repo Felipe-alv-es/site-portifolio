@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Laptop from "../../assets/images/CommumImages/Laptop.png";
 import LaptopBackground from "../../assets/images/CommumImages/LaptopBackground.png";
 import { Box, Typography, Divider } from "@mui/material";
 import { techSkillsOptions } from "../../assets/utils/projectOptions.tsx";
@@ -13,6 +12,10 @@ import {
   getSwiperStyle,
   getSwiperTitleContainerStyle,
   StyledButtonIcon,
+  StyledTypography,
+  StyledOutlinedButton,
+  getOverlayStyle,
+  getProjectNameStyle,
 } from "./Projects.styles.tsx";
 
 const Projects = () => {
@@ -25,6 +28,7 @@ const Projects = () => {
     slidesPerView: 1.1,
     spaceBetween: "0px",
     centeredSlides: true,
+    allowTouchMove: false,
   };
 
   const [swiperTitle, setSwiperTitle] = useState();
@@ -34,6 +38,7 @@ const Projects = () => {
   const paramsTitle = {
     onSwiper: setSwiperTitle,
     slidesPerView: 1,
+    allowTouchMove: false,
   };
 
   function NavNext() {
@@ -66,13 +71,31 @@ const Projects = () => {
         <Box sx={getSwiperStyle}>
           <Swiper {...params}>
             {techSkillsOptions.map((item) => (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={item.id} style={{ display: "flex" }}>
                 <Box
                   component="img"
                   src={item.imageSrc}
                   alt={item.imageAlt}
-                  sx={{ width: "100%", borderRadius: "16px" }}
+                  sx={{
+                    width: "100%",
+                    borderRadius: "16px",
+                  }}
                 />
+                <Box className="slide-overlay" sx={getOverlayStyle}>
+                  <Box sx={{ textAlign: "left", margin: "24px" }}>
+                    <Typography sx={getProjectNameStyle}>
+                      {item.title}
+                    </Typography>
+                    <Box sx={{ display: "flex", marginBottom: "8px" }}>
+                      <StyledTypography>React</StyledTypography>
+                      <StyledTypography>TypeScript</StyledTypography>
+                      <StyledTypography>JavaScript</StyledTypography>
+                    </Box>
+                    <StyledOutlinedButton>
+                      Ver detalhes do Projeto
+                    </StyledOutlinedButton>
+                  </Box>
+                </Box>
               </SwiperSlide>
             ))}
           </Swiper>

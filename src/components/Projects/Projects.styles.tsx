@@ -1,5 +1,5 @@
 import React from "react";
-import { SxProps, IconButton } from "@mui/material/";
+import { SxProps, IconButton, Typography, Button } from "@mui/material/";
 
 export const getContainerStyle = (): SxProps => ({
   marginTop: "10%",
@@ -29,13 +29,13 @@ export const getSwiperStyle = (): SxProps => ({
   marginTop: "3.5%",
   "> div > div": {
     "> .swiper-slide": {
-      transition: "250ms",
+      transition: "350ms",
       transform: "scale(0.95)",
       marginTop: "2px",
       opacity: "80%",
     },
     "> .swiper-slide-active": {
-      transition: "250ms",
+      transition: "350ms",
       transform: "scale(1.01)",
       opacity: "100%",
     },
@@ -57,7 +57,26 @@ export const getSwiperTitleContainerStyle = (): SxProps => ({
   justifyContent: "center",
 });
 
-export const getTitleStyleaaa = (): SxProps => ({});
+export const getProjectNameStyle = (): SxProps => ({
+  color: "white",
+  typography: "h5",
+  marginBottom: "4px",
+});
+
+export const getOverlayStyle = (): SxProps => ({
+  height: "100%",
+  width: "100%",
+  background: "rgba(0,0,0,0.5)",
+  position: "fixed",
+  borderRadius: "16px",
+  opacity: "0",
+  transition: "500ms",
+  display: "grid",
+  placeItems: "end start",
+  ":hover": {
+    opacity: "100%",
+  },
+});
 
 export const StyledButtonIcon = (props) => {
   return (
@@ -66,6 +85,41 @@ export const StyledButtonIcon = (props) => {
         background: "#D9D9D9",
         borderRadius: "32px",
         height: "fit-content",
+      }}
+      {...props}
+    />
+  );
+};
+
+export const StyledTypography = (props) => {
+  return (
+    <Typography
+      sx={{
+        borderRadius: "36px",
+        background: "#089cd4",
+        color: "white",
+        padding: "8px",
+        fontSize: "12px",
+        marginRight: "8px",
+      }}
+      {...props}
+    />
+  );
+};
+
+export const StyledOutlinedButton = (props) => {
+  return (
+    <Button
+      variant="outlined"
+      sx={{
+        color: "white",
+        borderColor: "white",
+        height: "fit-content",
+        borderRadius: "36px",
+        textTransform: "none",
+        ":hover": {
+          borderColor: "white",
+        },
       }}
       {...props}
     />
