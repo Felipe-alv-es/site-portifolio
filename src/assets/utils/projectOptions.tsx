@@ -1,6 +1,5 @@
 import SiteCripto from "../../assets/images/CriptoStoreSite.png";
 import SiteBank from "../../assets/images/SiteBank.jpg";
-import FictionalMobile from "../../assets/images/ProjectsImages/FictionalMobile.png";
 
 export const techSkillsOptions = [
   {
