@@ -41,7 +41,7 @@ const Projects = () => {
   const params = {
     onSwiper: setSwiper,
     slidesPerView: isMobile ? 1.15 : 1.1,
-    spaceBetween: isMobile ? "8px" : "0px",
+    spaceBetween: isMobile ? "0px" : "-2%",
     centeredSlides: true,
     allowTouchMove: false,
   };
