@@ -43,7 +43,7 @@ export const getSwiperStyle = (): SxProps => ({
       ".swiper-slide": {
         transform: "scale(0.90)",
         "@media(max-width: 544px)": {
-          transform: "scale(0.89)",
+          transform: "scale(0.85)",
         },
       },
       ".swiper-slide-active": {
@@ -52,7 +52,7 @@ export const getSwiperStyle = (): SxProps => ({
     },
   },
   "@media(max-width: 544px)": {
-    marginTop: "25%",
+    marginTop: "23%",
     width: "72.1%",
   },
 });
