@@ -25,8 +25,8 @@ import {
   getIconsStyle,
   getTechnicalSkillsStyle,
 } from "./Home.style.ts";
-import FelipeAlves from "../../assets/images/FelipeAlves.jpg";
-import Figma from "../../assets/images/Figma.png";
+import FelipeAlves from "../../assets/images/CommumImages/FelipeAlves.jpg";
+import Figma from "../../assets/images/CommumImages/Figma.png";
 
 const Home = () => {
   const techSkillsOptions = [

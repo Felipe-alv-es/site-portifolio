@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LaptopBackground from "../../assets/images/CommumImages/LaptopBackground.png";
+import SmartphoneBackground from "../../assets/images/CommumImages/Smartphone.png";
 import { Box, Typography, Divider } from "@mui/material";
 import { techSkillsOptions } from "../../assets/utils/projectOptions.tsx";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,14 +20,28 @@ import {
 } from "./Projects.styles.tsx";
 
 const Projects = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  const isMobile = width <= 768;
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
   const [swiper, setSwiper] = useState();
   const swipePreviousPage = () => swiper.slidePrev();
   const swipeNextPage = () => swiper.slideNext();
 
   const params = {
     onSwiper: setSwiper,
-    slidesPerView: 1.1,
-    spaceBetween: "0px",
+    slidesPerView: isMobile ? 1.2 : 1.1,
+    spaceBetween: isMobile ? "8px" : "0px",
     centeredSlides: true,
     allowTouchMove: false,
   };
@@ -62,19 +77,31 @@ const Projects = () => {
       </Box>
       <Box sx={{ m: 4 }} />
       <Box sx={getContentStyle}>
-        <Box
-          component="img"
-          src={LaptopBackground}
-          alt="Man avatar generic image"
-          sx={{ width: "70%" }}
-        />
+        {isMobile ? (
+          <Box
+            component="img"
+            src={SmartphoneBackground}
+            alt="Man avatar generic image"
+            sx={{ width: "80%", userSelect: "none" }}
+          />
+        ) : (
+          <Box
+            component="img"
+            src={LaptopBackground}
+            alt="Man avatar generic image"
+            sx={{ width: "70%", userSelect: "none" }}
+          />
+        )}
         <Box sx={getSwiperStyle}>
           <Swiper {...params}>
             {techSkillsOptions.map((item) => (
-              <SwiperSlide key={item.id} style={{ display: "flex" }}>
+              <SwiperSlide
+                key={item.id}
+                style={{ display: "flex", userSelect: "none" }}
+              >
                 <Box
                   component="img"
-                  src={item.imageSrc}
+                  src={isMobile ? item.imageSrcMobile : item.imageSrc}
                   alt={item.imageAlt}
                   sx={{
                     width: "100%",
@@ -86,7 +113,15 @@ const Projects = () => {
                     <Typography sx={getProjectNameStyle}>
                       {item.title}
                     </Typography>
-                    <Box sx={{ display: "flex", marginBottom: "8px" }}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        marginBottom: "8px",
+                        "@media(max-width: 544px)": {
+                          marginBottom: "16px",
+                        },
+                      }}
+                    >
                       <StyledTypography>React</StyledTypography>
                       <StyledTypography>TypeScript</StyledTypography>
                       <StyledTypography>JavaScript</StyledTypography>
@@ -103,14 +138,26 @@ const Projects = () => {
       </Box>
       <Box sx={{ m: 2 }} />
       <Box sx={getSwiperTitleContainerStyle}>
-        <Box sx={{ display: "flex", width: "30%" }}>
+        <Box
+          sx={{
+            display: "flex",
+            width: "30%",
+            "@media(max-width: 544px)": {
+              width: "70%",
+            },
+          }}
+        >
           <StyledButtonIcon onClick={NavPrev}>
             <BsChevronLeft />
           </StyledButtonIcon>
           <Swiper {...paramsTitle}>
             {techSkillsOptions.map((item) => (
               <SwiperSlide key={item.id}>
-                <Typography variant="h6" color={"#089cd4"}>
+                <Typography
+                  variant="h6"
+                  color={"#089cd4"}
+                  sx={{ userSelect: "none" }}
+                >
                   {item.title}
                 </Typography>
               </SwiperSlide>

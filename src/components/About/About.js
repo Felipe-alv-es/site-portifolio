@@ -7,7 +7,7 @@ import {
   getSubtitleStyle,
   getImageStyle,
 } from "./About.styles.ts";
-import ImagemEscritorio from "../../assets/images/ImagemEscritorio.png";
+import ImagemEscritorio from "../../assets/images/CommumImages/ImagemEscritorio.png";
 
 const About = () => {
   return (
