@@ -48,10 +48,22 @@ const Footer = () => {
           <Box sx={getListStyle}>
             <ul>
               <li>
-                <HashLink>Linkedin</HashLink>
+                <Link
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.linkedin.com/in/felipe-alves-oliveira/"
+                >
+                  Linkedin
+                </Link>
               </li>
               <li>
-                <HashLink>Github</HashLink>
+                <Link
+                  target="_blank"
+                  rel="noopener"
+                  href="https://github.com/Felipe-alv-es"
+                >
+                  Github
+                </Link>
               </li>
               <li>
                 <Link
