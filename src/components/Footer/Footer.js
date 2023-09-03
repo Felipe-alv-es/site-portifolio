@@ -82,10 +82,10 @@ const Footer = () => {
           <Box sx={getListStyle}>
             <ul>
               <li>
-                <HashLink>{"(11) 98166-9996"}</HashLink>
+                <p>{"(11) 98166-9996"}</p>
               </li>
               <li>
-                <HashLink>felipe.alv14@hotmail.com</HashLink>
+                <p>felipe.alv14@hotmail.com</p>
               </li>
             </ul>
           </Box>
