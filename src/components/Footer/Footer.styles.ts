@@ -5,7 +5,7 @@ export const getContainerStyles = (): SxProps => ({
   borderStyle: "solid",
   borderColor: "#089cd4",
   borderWidth: "5px 0px 0px 0px",
-  padding: "3% 20% 10% 20%",
+  padding: "3% 20% 3% 20%",
 });
 
 export const getTitleStyle = () => ({

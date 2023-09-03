@@ -46,6 +46,7 @@ export const StyledTextField = (props) => {
         borderStyle: "none",
         "> div": {
           borderRadius: "32px",
+          color: "#1a1a1a",
         },
       }}
       {...props}
