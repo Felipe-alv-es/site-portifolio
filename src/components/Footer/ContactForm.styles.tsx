@@ -1,5 +1,5 @@
 import React from "react";
-import { TextField, Typography } from "@mui/material";
+import { TextField, Typography, keyframes } from "@mui/material";
 
 export const getTextfieldContainerStyle = () => ({
   display: "flex",
@@ -26,6 +26,19 @@ export const getButtonStyle = () => ({
     width: "50%",
     ":hover": {
       background: "#078ABA",
+      "> span": {
+        transform: "translateY(-10%)",
+        animation: "floater 1.5s infinite",
+        transition: "ease 0.5s",
+      },
+    },
+    "> span": {
+      display: "flex",
+      marginLeft: "8px",
+      "@keyframes floater": {
+        "0%": { transform: "translateY(-10%);transition: ease 0.5s" },
+        "50%": { transform: "translateY(10%);transition: ease 0.5s" },
+      },
     },
   },
 });

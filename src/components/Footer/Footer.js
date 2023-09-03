@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Divider, Link, Typography } from "@mui/material";
 import ContactForm from "./ContactForm.js";
 import { navbarOptions } from "../../assets/utils/navbarOptions.tsx";
 import { HashLink } from "react-router-hash-link";
@@ -8,19 +8,12 @@ import {
   getContainerStyles,
   getTitleStyle,
   getSubtitleStyle,
+  getFooterMenuStyle,
+  getListStyle,
+  getlistTitleStyle,
 } from "./Footer.styles.ts";
 
 const Footer = () => {
-  // const [hasCopied, setHasCopied] = useState(false);
-
-  // const handleOnClick = () => {
-  //   return () => {
-  //     navigator.clipboard.writeText("felipe.alv14@hotmail.com");
-  //     setHasCopied(true);
-  //     setTimeout(setHasCopied, 2000, false);
-  //   };
-  // };
-
   return (
     <Box sx={getContainerStyles}>
       <Typography sx={getTitleStyle}>Fale Comigo</Typography>
@@ -31,38 +24,15 @@ const Footer = () => {
       <ContactForm />
       <Box sx={{ m: 5 }} />
       <Divider sx={{ background: "white" }} />
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Box sx={getFooterMenuStyle}>
         <Box
           sx={{ width: "35%", height: "fit-content" }}
           component="img"
           src={Logo}
           alt="Man avatar generic image"
         />
-        <Box
-          sx={{
-            padding: "32px",
-            "> ul": {
-              listStyle: "none",
-              "> li": {
-                margin: "16px 0px 16px 0px",
-                "> *": {
-                  textDecoration: "none",
-                  color: "white",
-                },
-              },
-            },
-          }}
-        >
-          <Typography
-            sx={{
-              color: "#089cd4",
-              typography: "h6",
-              fontWeight: "bold",
-              marginBottom: "16px",
-            }}
-          >
-            Menu
-          </Typography>
+        <Box sx={getListStyle}>
+          <Typography sx={getlistTitleStyle}>Menu</Typography>
           <ul>
             {navbarOptions.map((item) => (
               <li key={item.text}>
@@ -74,70 +44,30 @@ const Footer = () => {
           </ul>
         </Box>
         <Box>
-          <Typography
-            sx={{
-              color: "#089cd4",
-              typography: "h6",
-              fontWeight: "bold",
-              marginBottom: "16px",
-              padding: "32px 0px 0px 0px",
-            }}
-          >
-            Redes Sociais
-          </Typography>
-          <Box
-            sx={{
-              "> ul": {
-                listStyle: "none",
-                "> li": {
-                  margin: "16px 0px 16px 0px",
-                  ">*": {
-                    textDecoration: "none",
-                    color: "white",
-                  },
-                },
-              },
-            }}
-          >
+          <Typography sx={getlistTitleStyle}>Meus Links</Typography>
+          <Box sx={getListStyle}>
             <ul>
               <li>
                 <HashLink>Linkedin</HashLink>
               </li>
               <li>
-                <HashLink>WhatsApp</HashLink>
+                <HashLink>Github</HashLink>
               </li>
               <li>
-                <HashLink>Tiktok</HashLink>
+                <Link
+                  target="_blank"
+                  rel="noopener"
+                  href="https://drive.google.com/file/d/1vovf9y0WnbG-WpydjwhkRl1Vz1eBJJ-r/view?usp=sharing"
+                >
+                  Curriculo
+                </Link>
               </li>
             </ul>
           </Box>
         </Box>
-        <Box sx={{ marginLeft: "16px" }}>
-          <Typography
-            sx={{
-              color: "#089cd4",
-              typography: "h6",
-              fontWeight: "bold",
-              marginBottom: "16px",
-              padding: "32px 0px 0px 0px",
-            }}
-          >
-            Contato
-          </Typography>
-          <Box
-            sx={{
-              "> ul": {
-                listStyle: "none",
-                "> li": {
-                  margin: "16px 0px 16px 0px",
-                  ">*": {
-                    textDecoration: "none",
-                    color: "white",
-                  },
-                },
-              },
-            }}
-          >
+        <Box>
+          <Typography sx={getlistTitleStyle}>Contato</Typography>
+          <Box sx={getListStyle}>
             <ul>
               <li>
                 <HashLink>{"(11) 98166-9996"}</HashLink>
