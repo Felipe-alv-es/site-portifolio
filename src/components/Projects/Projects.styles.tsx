@@ -10,6 +10,7 @@ export const getTitleStyle = (): SxProps => ({
   textAlign: "center",
   typography: "h5",
   color: "#089cd4",
+  fontWeight: "bold",
 });
 
 export const getSubtitleStyle = (): SxProps => ({
@@ -17,6 +18,7 @@ export const getSubtitleStyle = (): SxProps => ({
   textAlign: "center",
   typography: "h6",
   color: "#4F4F4F",
+  fontWeight: "bold",
 });
 
 export const getContentStyle = (): SxProps => ({
@@ -69,6 +71,7 @@ export const getProjectNameStyle = (): SxProps => ({
   typography: "h5",
   marginBottom: "4px",
   userSelect: "none",
+  fontWeight: "bold",
   "@media(max-width: 544px)": {
     marginBottom: "12px",
   },

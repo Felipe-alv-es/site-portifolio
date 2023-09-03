@@ -26,7 +26,7 @@ import {
   getTechnicalSkillsStyle,
 } from "./Home.style.ts";
 import FelipeAlves from "../../assets/images/CommumImages/FelipeAlves.jpg";
-import Figma from "../../assets/images/CommumImages/Figma.png";
+import Figma from "../../assets/images/Icons/Figma.png";
 
 const Home = () => {
   const techSkillsOptions = [
@@ -43,15 +43,19 @@ const Home = () => {
       <Navbar />
       <Box sx={getContentStyle}>
         <Box sx={getTitleStyle}>
-          <Typography fontFamily={"roboto"} variant="h3">
+          <Typography
+            fontFamily={"roboto"}
+            variant="h3"
+            sx={{ fontWeight: "bold" }}
+          >
             Olá, sou o Felipe, Desenvolvedor Front-End React
           </Typography>
         </Box>
         <Box sx={getSubtitleStyle}>
           <Typography
-            fontFamily={"Open Sans"}
             variant="subtitle2"
             color={"#4F4F4F"}
+            sx={{ fontWeight: "normal" }}
           >
             Sou apaixonado pelo mundo do desenvolvimento e atuo há mais de
             quatro anos no setor de tecnologia. Minha trajetória tem sido uma
@@ -86,7 +90,7 @@ const Home = () => {
           <Typography
             fontFamily={"roboto"}
             variant="overline"
-            sx={{ display: "flex" }}
+            sx={{ display: "flex", fontWeight: "bold" }}
           >
             Habilidades Técnicas
           </Typography>

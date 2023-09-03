@@ -1,91 +1,153 @@
-import { Box, Button, Icon, Typography, Alert, Snackbar } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
+import { Box, Divider, Typography } from "@mui/material";
+import ContactForm from "./ContactForm.js";
+import { navbarOptions } from "../../assets/utils/navbarOptions.tsx";
+import { HashLink } from "react-router-hash-link";
+import Logo from "../../assets/images/Logos/FelitLogo.png";
 import {
   getContainerStyles,
+  getTitleStyle,
   getSubtitleStyle,
-  getFooterContentStyle,
-  getFooterButtonStyle,
 } from "./Footer.styles.ts";
-import { FaReact } from "react-icons/fa";
-import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
-import { IoLogoCss3 } from "react-icons/io";
 
 const Footer = () => {
-  const [hasCopied, setHasCopied] = useState(false);
+  // const [hasCopied, setHasCopied] = useState(false);
 
-  const handleOnClick = () => {
-    return () => {
-      navigator.clipboard.writeText("felipe.alv14@hotmail.com");
-      setHasCopied(true);
-      setTimeout(setHasCopied, 2000, false);
-    };
-  };
+  // const handleOnClick = () => {
+  //   return () => {
+  //     navigator.clipboard.writeText("felipe.alv14@hotmail.com");
+  //     setHasCopied(true);
+  //     setTimeout(setHasCopied, 2000, false);
+  //   };
+  // };
 
   return (
     <Box sx={getContainerStyles}>
-      <Box sx={getFooterContentStyle}>
-        <Typography fontFamily={"roboto"} variant="h5" color={"#e7e7e7"}>
-          Obrigado pela atenção!
-        </Typography>
-        <Box sx={getSubtitleStyle}>
+      <Typography sx={getTitleStyle}>Fale Comigo</Typography>
+      <Typography sx={getSubtitleStyle}>
+        Sobrou alguma dúvida? Preencha os campos abaixo com os seguintes dados
+        que em breve entraremos em contato.
+      </Typography>
+      <ContactForm />
+      <Box sx={{ m: 5 }} />
+      <Divider sx={{ background: "white" }} />
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box
+          sx={{ width: "35%", height: "fit-content" }}
+          component="img"
+          src={Logo}
+          alt="Man avatar generic image"
+        />
+        <Box
+          sx={{
+            padding: "32px",
+            "> ul": {
+              listStyle: "none",
+              "> li": {
+                margin: "16px 0px 16px 0px",
+                "> *": {
+                  textDecoration: "none",
+                  color: "white",
+                },
+              },
+            },
+          }}
+        >
           <Typography
-            fontFamily={"sans-serif"}
-            variant="subtitle2"
-            color={"#e7e7e7"}
+            sx={{
+              color: "#089cd4",
+              typography: "h6",
+              fontWeight: "bold",
+              marginBottom: "16px",
+            }}
           >
-            © 2023 by Felipe Alves <br /> Criado com
-            <Icon fontSize="small">
-              <FaReact />
-            </Icon>
-            <Icon fontSize="small">
-              <BiLogoJavascript />
-            </Icon>
-            <Icon fontSize="small">
-              <BiLogoTypescript />
-            </Icon>
-            <Icon fontSize="small">
-              <IoLogoCss3 />
-            </Icon>
+            Menu
           </Typography>
+          <ul>
+            {navbarOptions.map((item) => (
+              <li key={item.text}>
+                <HashLink smooth to={`#${item.text}`}>
+                  {item.text}
+                </HashLink>
+              </li>
+            ))}
+          </ul>
         </Box>
-      </Box>
-      <Box>
-        <Typography fontFamily={"roboto"} variant="h5" color={"#e7e7e7"}>
-          Venha conversar!
-        </Typography>
-        <Button
-          sx={getFooterButtonStyle}
-          onClick={handleOnClick()}
-          variant="outlined"
-          size="small"
-        >
-          <Snackbar open={hasCopied}>
-            <Alert>{"Copiado!"}</Alert>
-          </Snackbar>
-          Email
-        </Button>
-        <Button
-          onClick={() =>
-            window.open("https://www.linkedin.com/in/felipe-alves-oliveira/")
-          }
-          sx={getFooterButtonStyle}
-          variant="outlined"
-          size="small"
-        >
-          Linkedin
-        </Button>
-        <Button
-          onClick={() =>
-            window.open(
-              "https://drive.google.com/file/d/1vovf9y0WnbG-WpydjwhkRl1Vz1eBJJ-r/view?usp=sharing"
-            )
-          }
-          sx={getFooterButtonStyle}
-          variant="outlined"
-          size="small"
-        >
-          Curriculo
-        </Button>
+        <Box>
+          <Typography
+            sx={{
+              color: "#089cd4",
+              typography: "h6",
+              fontWeight: "bold",
+              marginBottom: "16px",
+              padding: "32px 0px 0px 0px",
+            }}
+          >
+            Redes Sociais
+          </Typography>
+          <Box
+            sx={{
+              "> ul": {
+                listStyle: "none",
+                "> li": {
+                  margin: "16px 0px 16px 0px",
+                  ">*": {
+                    textDecoration: "none",
+                    color: "white",
+                  },
+                },
+              },
+            }}
+          >
+            <ul>
+              <li>
+                <HashLink>Linkedin</HashLink>
+              </li>
+              <li>
+                <HashLink>WhatsApp</HashLink>
+              </li>
+              <li>
+                <HashLink>Tiktok</HashLink>
+              </li>
+            </ul>
+          </Box>
+        </Box>
+        <Box sx={{ marginLeft: "16px" }}>
+          <Typography
+            sx={{
+              color: "#089cd4",
+              typography: "h6",
+              fontWeight: "bold",
+              marginBottom: "16px",
+              padding: "32px 0px 0px 0px",
+            }}
+          >
+            Contato
+          </Typography>
+          <Box
+            sx={{
+              "> ul": {
+                listStyle: "none",
+                "> li": {
+                  margin: "16px 0px 16px 0px",
+                  ">*": {
+                    textDecoration: "none",
+                    color: "white",
+                  },
+                },
+              },
+            }}
+          >
+            <ul>
+              <li>
+                <HashLink>{"(11) 98166-9996"}</HashLink>
+              </li>
+              <li>
+                <HashLink>felipe.alv14@hotmail.com</HashLink>
+              </li>
+            </ul>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

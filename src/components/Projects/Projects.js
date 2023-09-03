@@ -156,7 +156,7 @@ const Projects = () => {
                 <Typography
                   variant="h6"
                   color={"#089cd4"}
-                  sx={{ userSelect: "none" }}
+                  sx={{ userSelect: "none", fontWeight: "bold" }}
                 >
                   {item.title}
                 </Typography>

@@ -14,19 +14,25 @@ const About = () => {
     <Box sx={getContainerStyle} id="Sobre">
       <Box sx={getContentStyle}>
         <Box sx={getTitleStyle}>
-          <Typography fontFamily={"roboto"} variant="h5" color={"#089cd4"}>
+          <Typography
+            fontFamily={"roboto"}
+            variant="h5"
+            color={"#089cd4"}
+            sx={{ fontWeight: "bold" }}
+          >
             Sobre mim
           </Typography>
-          <Typography fontFamily={"roboto"} variant="h6" color={"#4F4F4F"}>
+          <Typography
+            fontFamily={"roboto"}
+            variant="h6"
+            color={"#4F4F4F"}
+            sx={{ fontWeight: "bold" }}
+          >
             Um entusiasta da programação em busca de aprendizado contínuo.
           </Typography>
         </Box>
         <Box sx={getSubtitleStyle}>
-          <Typography
-            fontFamily={"Open Sans"}
-            variant="body2"
-            color={"#4F4F4F"}
-          >
+          <Typography variant="body2" color={"#4F4F4F"}>
             Como um entusiasta em Tech, trabalho há mais de quatro anos na área
             de tecnologia, sempre em constante aprendizado e focado
             principalmente no desenvolvimento de software. <br />
