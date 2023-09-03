@@ -20,6 +20,10 @@ const ContactForm = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isEmpty, setIsEmpty] = useState(false);
 
+  const ServiceID = process.env.REACT_APP_SERVICE_ID;
+  const TemplateID = process.env.REACT_APP_TEMPLATE_ID;
+  const PublicKey = process.env.REACT_APP_PUBLIC_KEY;
+
   React.useEffect(() => {
     document
       .querySelector("#phonenumber-id")
@@ -55,31 +59,24 @@ const ContactForm = () => {
       number: formNumber,
     };
 
-    emailjs
-      .send(
-        "service_pvwdm5c",
-        "template_ndwklxu",
-        templaceParams,
-        "NYLnS6euywlCHsXKC"
-      )
-      .then(
-        (response) => {
-          console.log("Email Enviado", response.status, response.text);
-          setFormName("");
-          setformEmail("");
-          setformSubject("");
-          setformMessage("");
-          setformNumber("");
-          setIsOpen(true);
-          setTimeout(setIsOpen, 2000, false);
-        },
-        (error) => {
-          console.log("Erro", error);
-          alert(
-            "Falha no envio, por favor, envie o contato pelo endereço de email: felipe.alv14@hotmail.com ou pelo WhatsApp: 11981669996"
-          );
-        }
-      );
+    emailjs.send(ServiceID, TemplateID, templaceParams, PublicKey).then(
+      (response) => {
+        console.log("Email Enviado", response.status, response.text);
+        setFormName("");
+        setformEmail("");
+        setformSubject("");
+        setformMessage("");
+        setformNumber("");
+        setIsOpen(true);
+        setTimeout(setIsOpen, 2000, false);
+      },
+      (error) => {
+        console.log("Erro", error);
+        alert(
+          "Falha no envio, por favor, envie o contato pelo endereço de email: felipe.alv14@hotmail.com ou pelo WhatsApp: 11981669996"
+        );
+      }
+    );
   }
 
   return (

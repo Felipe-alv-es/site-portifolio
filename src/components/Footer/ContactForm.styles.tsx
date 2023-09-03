@@ -1,5 +1,5 @@
 import React from "react";
-import { TextField, Typography, keyframes } from "@mui/material";
+import { TextField, Typography } from "@mui/material";
 
 export const getTextfieldContainerStyle = () => ({
   display: "flex",
