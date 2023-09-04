@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Alert, Box, Button, Icon, Snackbar } from "@mui/material";
+import {
+  Alert,
+  Box,
+  Button,
+  CircularProgress,
+  Icon,
+  Snackbar,
+} from "@mui/material";
 import emailjs from "@emailjs/browser";
 import { FaRegPaperPlane } from "react-icons/fa";
 import {
@@ -19,6 +26,7 @@ const ContactForm = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isEmpty, setIsEmpty] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   const ServiceID = process.env.REACT_APP_SERVICE_ID;
   const TemplateID = process.env.REACT_APP_TEMPLATE_ID;
@@ -38,6 +46,7 @@ const ContactForm = () => {
 
   function sendEmail(event) {
     event.preventDefault();
+    handleDisabled();
 
     if (
       formName === "" ||
@@ -78,6 +87,11 @@ const ContactForm = () => {
       }
     );
   }
+
+  const handleDisabled = () => {
+    setDisabled(true);
+    setTimeout(setDisabled, 4000, false);
+  };
 
   return (
     <form onSubmit={sendEmail}>
@@ -126,11 +140,15 @@ const ContactForm = () => {
         />
       </Box>
       <Box sx={getButtonStyle}>
-        <Button size="large" type="submit">
+        <Button size="large" type="submit" id="enviar" disabled={disabled}>
           Enviar Contato
-          <Icon size="medium">
-            <FaRegPaperPlane />
-          </Icon>
+          {disabled ? (
+            <CircularProgress size={"24px"} sx={{ color: "#666666" }} />
+          ) : (
+            <Icon size="medium">
+              <FaRegPaperPlane />
+            </Icon>
+          )}
         </Button>
         <Snackbar open={isOpen}>
           <Alert>{"Email Enviado com sucesso!"}</Alert>

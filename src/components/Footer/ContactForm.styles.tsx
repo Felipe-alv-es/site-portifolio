@@ -32,6 +32,9 @@ export const getButtonStyle = () => ({
         transition: "ease 0.5s",
       },
     },
+    ":disabled": {
+      color: "#666666",
+    },
     "> span": {
       display: "flex",
       marginLeft: "8px",
