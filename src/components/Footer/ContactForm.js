@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { FaRegPaperPlane } from "react-icons/fa";
+import ReCAPTCHA from "react-google-recaptcha";
 import {
   Alert,
   Box,
@@ -7,14 +10,13 @@ import {
   Icon,
   Snackbar,
 } from "@mui/material";
-import emailjs from "@emailjs/browser";
-import { FaRegPaperPlane } from "react-icons/fa";
 import {
   StyledButtonIcon,
   StyledTextField,
   getTextfieldContainerStyle,
   StyledTextFieldMessage,
   getButtonStyle,
+  getRecaptchaContainerStyle,
 } from "./ContactForm.styles.tsx";
 
 const ContactForm = () => {
@@ -27,10 +29,12 @@ const ContactForm = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isEmpty, setIsEmpty] = useState(false);
   const [disabled, setDisabled] = useState(false);
+  const [reCaptcha, setReCaptcha] = useState(false);
 
   const ServiceID = process.env.REACT_APP_SERVICE_ID;
   const TemplateID = process.env.REACT_APP_TEMPLATE_ID;
   const PublicKey = process.env.REACT_APP_PUBLIC_KEY;
+  const RecaptchaKey = process.env.REACT_APP_RECAPTCHA_KEY;
 
   React.useEffect(() => {
     document
@@ -46,7 +50,6 @@ const ContactForm = () => {
 
   function sendEmail(event) {
     event.preventDefault();
-    handleDisabled();
 
     if (
       formName === "" ||
@@ -58,8 +61,13 @@ const ContactForm = () => {
       setIsEmpty(true);
       setTimeout(setIsEmpty, 4000, false);
       return;
+    } else if (reCaptcha === false) {
+      setIsEmpty(true);
+      setTimeout(setIsEmpty, 4000, false);
+      return;
     }
 
+    handleDisabled();
     const templaceParams = {
       from_name: formName,
       email: formEmail,
@@ -92,6 +100,10 @@ const ContactForm = () => {
     setDisabled(true);
     setTimeout(setDisabled, 4000, false);
   };
+
+  function onChange() {
+    setReCaptcha(true);
+  }
 
   return (
     <form onSubmit={sendEmail}>
@@ -139,6 +151,9 @@ const ContactForm = () => {
           onChange={(e) => setformMessage(e.target.value)}
         />
       </Box>
+      <Box sx={getRecaptchaContainerStyle}>
+        <ReCAPTCHA sitekey={RecaptchaKey} onChange={onChange} />
+      </Box>
       <Box sx={getButtonStyle}>
         <Button size="large" type="submit" id="enviar" disabled={disabled}>
           Enviar Contato
@@ -155,7 +170,9 @@ const ContactForm = () => {
         </Snackbar>
         <Snackbar open={isEmpty}>
           <Alert severity="error">
-            {"Preencha todos so campos do Formulário"}
+            {reCaptcha
+              ? "Preencha todos so campos do Formulário"
+              : "Verifique se não é um Robô"}
           </Alert>
         </Snackbar>
         ;

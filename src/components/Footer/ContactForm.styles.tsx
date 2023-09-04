@@ -46,6 +46,12 @@ export const getButtonStyle = () => ({
   },
 });
 
+export const getRecaptchaContainerStyle = () => ({
+  display: "flex",
+  justifyContent: "center",
+  marginTop: "16px",
+});
+
 export const StyledButtonIcon = (props) => {
   return (
     <Typography sx={{ color: "#e7e7e7", fontWeight: "medium" }} {...props} />
