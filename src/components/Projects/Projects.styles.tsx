@@ -10,6 +10,7 @@ export const getTitleStyle = (): SxProps => ({
   textAlign: "center",
   typography: "h5",
   color: "#089cd4",
+  fontWeight: "bold",
 });
 
 export const getSubtitleStyle = (): SxProps => ({
@@ -17,6 +18,7 @@ export const getSubtitleStyle = (): SxProps => ({
   textAlign: "center",
   typography: "h6",
   color: "#4F4F4F",
+  fontWeight: "bold",
 });
 
 export const getContentStyle = (): SxProps => ({
@@ -26,11 +28,11 @@ export const getContentStyle = (): SxProps => ({
 export const getSwiperStyle = (): SxProps => ({
   width: "44.5%",
   position: "absolute",
-  marginTop: "3.5%",
+  marginTop: "5%",
   "> div > div": {
     "> .swiper-slide": {
       transition: "350ms",
-      transform: "scale(0.95)",
+      transform: "scale(0.90)",
       marginTop: "2px",
       opacity: "80%",
     },
@@ -41,12 +43,19 @@ export const getSwiperStyle = (): SxProps => ({
     },
     ":hover": {
       ".swiper-slide": {
-        transform: "scale(0.90)",
+        transform: "scale(0.85)",
+        "@media(max-width: 544px)": {
+          transform: "scale(0.85)",
+        },
       },
       ".swiper-slide-active": {
         transform: "scale(1.02)",
       },
     },
+  },
+  "@media(max-width: 544px)": {
+    marginTop: "23%",
+    width: "72.1%",
   },
 });
 
@@ -61,6 +70,11 @@ export const getProjectNameStyle = (): SxProps => ({
   color: "white",
   typography: "h5",
   marginBottom: "4px",
+  userSelect: "none",
+  fontWeight: "bold",
+  "@media(max-width: 544px)": {
+    marginBottom: "12px",
+  },
 });
 
 export const getOverlayStyle = (): SxProps => ({
@@ -101,6 +115,11 @@ export const StyledTypography = (props) => {
         padding: "8px",
         fontSize: "12px",
         marginRight: "8px",
+        userSelect: "none",
+        "@media(max-width: 544px)": {
+          padding: "6px",
+          fontSize: "12px",
+        },
       }}
       {...props}
     />

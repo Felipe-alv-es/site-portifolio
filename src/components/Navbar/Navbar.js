@@ -10,12 +10,7 @@ import {
 import { HashLink } from "react-router-hash-link";
 import { getNavbarStyles, getDrawerMenuStyle } from "./Navbar.styles.ts";
 import { GiHamburgerMenu } from "react-icons/gi";
-import {
-  AiFillHome,
-  AiFillDatabase,
-  AiFillProject,
-  AiFillMessage,
-} from "react-icons/ai";
+import { navbarOptions } from "../../assets/utils/navbarOptions.tsx";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,13 +28,6 @@ const Navbar = () => {
   }, []);
 
   const isMobile = width <= 768;
-
-  const menuOptions = [
-    { text: "Home", icon: <AiFillHome /> },
-    { text: "Sobre", icon: <AiFillDatabase /> },
-    { text: "Projetos", icon: <AiFillProject /> },
-    { text: "Contato", icon: <AiFillMessage /> },
-  ];
 
   return (
     <>
@@ -70,7 +58,7 @@ const Navbar = () => {
                 <GiHamburgerMenu />
               </IconButton>
               <ul>
-                {menuOptions.map((item) => (
+                {navbarOptions.map((item) => (
                   <>
                     <li key={item.text}>
                       <Icon>{item.icon}</Icon>
@@ -97,12 +85,16 @@ const Navbar = () => {
           <Typography
             fontFamily={"roboto"}
             variant="h5"
-            sx={{ marginLeft: "1em", pointerEvents: "none" }}
+            sx={{
+              marginLeft: "1em",
+              pointerEvents: "none",
+              fontWeight: "bold",
+            }}
           >
             Felipe Alves
           </Typography>
           <ul>
-            {menuOptions.map((item) => (
+            {navbarOptions.map((item) => (
               <li key={item.text}>
                 <HashLink smooth to={`#${item.text}`}>
                   {item.text}
