@@ -26,7 +26,13 @@ const Footer = () => {
       <Divider sx={{ background: "white" }} />
       <Box sx={getFooterMenuStyle}>
         <Box
-          sx={{ width: "35%", height: "fit-content" }}
+          sx={{
+            width: "35%",
+            height: "fit-content",
+            "@media(max-width: 544px)": {
+              width: "70%",
+            },
+          }}
           component="img"
           src={Logo}
           alt="Man avatar generic image"

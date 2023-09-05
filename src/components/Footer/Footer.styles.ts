@@ -5,12 +5,23 @@ export const getContainerStyles = (): SxProps => ({
   borderStyle: "solid",
   borderColor: "#089cd4",
   borderWidth: "5px 0px 0px 0px",
-  padding: "3% 20% 3% 20%",
+  padding: "3% 25% 3% 25%",
+  "@media(max-width: 1700px)": {
+    padding: "3% 20% 3% 20%",
+  },
+  "@media(max-width: 544px)": {
+    padding: "32px 16px 16px 16px",
+  },
 });
 
 export const getFooterMenuStyle = (): SxProps => ({
   display: "flex",
   justifyContent: "space-between",
+  "@media(max-width: 544px)": {
+    flexDirection: "column",
+    padding: "32px",
+    placeItems: "center",
+  },
 });
 
 export const getTitleStyle = () => ({
@@ -34,6 +45,9 @@ export const getListStyle = (): SxProps => ({
     listStyle: "none",
     "> li": {
       margin: "16px 0px 16px 0px",
+      "@media(max-width: 544px)": {
+        textAlign: "center",
+      },
       "> *": {
         textDecoration: "none",
         color: "white",
@@ -49,4 +63,8 @@ export const getlistTitleStyle = (): SxProps => ({
   fontWeight: "bold",
   marginBottom: "16px",
   padding: "32px 0px 0px 0px",
+  "@media(max-width: 544px)": {
+    textAlign: "center",
+    padding: "12px 0px 0px 0px",
+  },
 });
