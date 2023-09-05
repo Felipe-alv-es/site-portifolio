@@ -9,6 +9,14 @@ export const getTextfieldContainerStyle = () => ({
     width: "100%",
     marginLeft: "16px",
   },
+  "@media(max-width: 544px)": {
+    flexDirection: "column",
+    "> :first-child": { width: "100%", marginRight: "0px" },
+    "> :last-child": {
+      width: "100%",
+      marginLeft: "0px",
+    },
+  },
 });
 
 export const getButtonStyle = () => ({
