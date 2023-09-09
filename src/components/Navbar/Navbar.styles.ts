@@ -12,21 +12,28 @@ export const getNavbarStyles = (): SxProps => ({
     cursor: "pointer",
     "> li": {
       display: "flex",
-      "> *": {
+      alignItems: "center",
+      ":hover": {
+        "> span": {
+          opacity: "100",
+          transition: "1s",
+        },
+      },
+      ":active": {
+        "> a": {
+          transition: ".5s",
+          color: "#089cd4",
+          borderRadius: "32px",
+        },
+      },
+      "> a": {
         color: "#1a1a1a",
         textDecoration: "none",
         fontWeight: "bold",
-        marginRight: "1em",
-        marginTop: "5px",
-        padding: "15px",
-        borderRadius: "5px",
-        transition: ".5s",
-        ":hover": {
-          background: "#DEDEDE",
-        },
-        ":active": {
-          background: "#C4C4C4",
-        },
+        padding: "16px 8px 16px 8px",
+      },
+      "> span": {
+        opacity: "0",
       },
     },
   },
