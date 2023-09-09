@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Typography,
-  Drawer,
-  IconButton,
-  Icon,
-  Divider,
-} from "@mui/material";
 import { HashLink } from "react-router-hash-link";
 import { getNavbarStyles, getDrawerMenuStyle } from "./Navbar.styles.ts";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { navbarOptions } from "../../assets/utils/navbarOptions.tsx";
+import FelitLogo from "../../assets/images/Logos/FelitLogoInvert.png";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Box, Drawer, IconButton, Icon, Divider } from "@mui/material";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,23 +77,24 @@ const Navbar = () => {
         </Box>
       ) : (
         <Box sx={getNavbarStyles}>
-          <Typography
-            fontFamily={"roboto"}
-            variant="h5"
-            sx={{
-              marginLeft: "1em",
-              pointerEvents: "none",
-              fontWeight: "bold",
-            }}
-          >
-            Felipe Alves
-          </Typography>
+          <Box
+            component="img"
+            src={FelitLogo}
+            alt="Man avatar generic image"
+            sx={{ width: "15%", userSelect: "none", marginLeft: "16px" }}
+          />
           <ul>
             {navbarOptions.map((item) => (
               <li key={item.text}>
+                <Icon>
+                  <FaChevronLeft color="#089cd4" />
+                </Icon>
                 <HashLink smooth to={`#${item.text}`}>
                   {item.text}
                 </HashLink>
+                <Icon>
+                  <FaChevronRight color="#089cd4" />
+                </Icon>
               </li>
             ))}
           </ul>
