@@ -80,7 +80,7 @@ const Navbar = () => {
           <Box
             component="img"
             src={FelitLogo}
-            alt="Man avatar generic image"
+            alt="Felit logo"
             sx={{ width: "15%", userSelect: "none", marginLeft: "16px" }}
           />
           <ul>

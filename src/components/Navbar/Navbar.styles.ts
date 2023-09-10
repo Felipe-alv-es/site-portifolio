@@ -31,6 +31,7 @@ export const getNavbarStyles = (): SxProps => ({
         textDecoration: "none",
         fontWeight: "bold",
         padding: "16px 8px 16px 8px",
+        fontSize: "20px",
       },
       "> span": {
         opacity: "0",
