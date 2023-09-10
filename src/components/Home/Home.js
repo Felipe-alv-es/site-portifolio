@@ -1,4 +1,11 @@
 import React from "react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { BsChevronUp } from "react-icons/bs";
+import { HashLink } from "react-router-hash-link";
+import FelipeAlves from "../../assets/images/CommumImages/FelipeAlves.jpg";
+import Figma from "../../assets/images/Icons/Figma.png";
+import Navbar from "../Navbar/Navbar";
+import { techSkillsOptions } from "../../assets/utils/techSkillsOptions.tsx";
 import {
   Typography,
   Box,
@@ -8,14 +15,6 @@ import {
   Tooltip,
   Fab,
 } from "@mui/material";
-import { FaLinkedin, FaGithub, FaReact } from "react-icons/fa";
-import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
-import { SiNextdotjs } from "react-icons/si";
-import { AiFillHtml5 } from "react-icons/ai";
-import { IoLogoCss3 } from "react-icons/io";
-import { BsChevronUp } from "react-icons/bs";
-import { HashLink } from "react-router-hash-link";
-import Navbar from "../Navbar/Navbar";
 import {
   getContentStyle,
   getContainerStyle,
@@ -25,19 +24,8 @@ import {
   getIconsStyle,
   getTechnicalSkillsStyle,
 } from "./Home.style.ts";
-import FelipeAlves from "../../assets/images/CommumImages/FelipeAlves.jpg";
-import Figma from "../../assets/images/Icons/Figma.png";
 
 const Home = () => {
-  const techSkillsOptions = [
-    { text: "React", icon: <FaReact color="#326D7D" /> },
-    { text: "TypeScript", icon: <BiLogoTypescript color="#266DAB" /> },
-    { text: "JavaScript", icon: <BiLogoJavascript color="#B5AA14" /> },
-    { text: "NextJs", icon: <SiNextdotjs color="#51948E" /> },
-    { text: "Html5", icon: <AiFillHtml5 color="#9C3F17" /> },
-    { text: "Css3", icon: <IoLogoCss3 color="#123075" /> },
-  ];
-
   return (
     <Box sx={getContainerStyle} id="Home">
       <Navbar />

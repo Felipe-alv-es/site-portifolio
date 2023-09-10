@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import LaptopBackground from "../../assets/images/CommumImages/LaptopBackground.png";
 import SmartphoneBackground from "../../assets/images/CommumImages/Smartphone.png";
 import { Box, Typography, Divider } from "@mui/material";
-import { techSkillsOptions } from "../../assets/utils/projectOptions.tsx";
+import { projectsOptions } from "../../assets/utils/projectOptions.tsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import {
@@ -94,7 +94,7 @@ const Projects = () => {
         )}
         <Box sx={getSwiperStyle}>
           <Swiper {...params}>
-            {techSkillsOptions.map((item) => (
+            {projectsOptions.map((item) => (
               <SwiperSlide
                 key={item.id}
                 style={{ display: "flex", userSelect: "none" }}
@@ -151,7 +151,7 @@ const Projects = () => {
             <BsChevronLeft />
           </StyledButtonIcon>
           <Swiper {...paramsTitle}>
-            {techSkillsOptions.map((item) => (
+            {projectsOptions.map((item) => (
               <SwiperSlide key={item.id}>
                 <Typography
                   variant="h6"
