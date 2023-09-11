@@ -23,9 +23,9 @@ import {
   getImageStyle,
   getIconsStyle,
   getTechnicalSkillsStyle,
-} from "./Home.style.ts";
+} from "./AboutMe.style.ts";
 
-const Home = () => {
+const AboutMe = () => {
   return (
     <Box sx={getContainerStyle} id="Home">
       <Navbar />
@@ -125,4 +125,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default AboutMe;
