@@ -4,7 +4,7 @@ import FictionalBankMobile from "../../assets/images/ProjectsMobileImages/Fictio
 import FictionalMobileMobile from "../../assets/images/ProjectsMobileImages/FictionalMobileMobile.png";
 import FictionalMobile from "../../assets/images/ProjectsImages/FictionalMobile.png";
 
-export const techSkillsOptions = [
+export const projectsOptions = [
   {
     title: "Fictional Mobile",
     text: "A loja de celulares online é uma plataforma na qual os usuários podem explorar uma variedade de opções, selecionar e comprar os celulares de sua escolha. Além disso, é possível verificar especificações técnicas, ler avaliações de clientes e aproveitar outras opções disponíveis na loja.",
