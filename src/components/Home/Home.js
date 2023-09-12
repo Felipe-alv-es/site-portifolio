@@ -20,19 +20,97 @@ const Home = () => {
         }}
       >
         <Box
-          sx={{ width: "85%", position: "absolute" }}
+          sx={{
+            width: "85%",
+            position: "absolute",
+            animation: "1.5s invisibleFrame, 2s swipeIn",
+            animationDelay: "0ms, 1.5s",
+            "@keyframes swipeIn": {
+              "0%": {
+                transform: "rotate(-90deg)",
+                opacity: "0",
+              },
+              "50%": {
+                opacity: "0",
+              },
+              "-100%": {
+                transform: "rotate(0deg)",
+                opacity: "100",
+              },
+            },
+            "@keyframes invisibleFrame": {
+              "0%": {
+                opacity: "0",
+              },
+              "100%": {
+                opacity: "0",
+              },
+            },
+          }}
           component="img"
           src={phone}
           alt="Man avatar generic image"
         />
         <Box
-          sx={{ width: "85%", position: "absolute", zIndex: 1 }}
+          sx={{
+            width: "85%",
+            position: "absolute",
+            zIndex: 1,
+            animation: "1s invisibleFrame, 1s slideIn",
+            animationDelay: "0ms, 1s",
+            "@keyframes slideIn": {
+              "0%": {
+                transform: "translateY(-100%)",
+                width: "50%",
+                opacity: "0",
+              },
+              "-100%": {
+                transform: "translateY(0)",
+                width: "100%",
+                opacity: "100",
+              },
+            },
+            "@keyframes invisibleFrame": {
+              "0%": {
+                opacity: "0",
+              },
+              "100%": {
+                opacity: "0",
+              },
+            },
+          }}
           component="img"
           src={laptop}
           alt="Man avatar generic image"
         />
         <Box
-          sx={{ width: "85%", position: "absolute" }}
+          sx={{
+            width: "85%",
+            position: "absolute",
+            animation: "2s invisibleFrame, 2s swipeInNotebook",
+            animationDelay: "0ms, 1.5s",
+            "@keyframes swipeInNotebook": {
+              "0%": {
+                transform: "rotate(90deg)",
+                opacity: "0",
+              },
+              "50%": {
+                opacity: "0",
+              },
+              "-100%": {
+                transform: "rotate(0deg)",
+                opacity: "100",
+              },
+            },
+            "@keyframes invisibleFrame": {
+              "0%": {
+                opacity: "0",
+              },
+              "100%": {
+                opacity: "0",
+              },
+            },
+          }}
           component="img"
           src={xiomiNote}
           alt="Man avatar generic image"
