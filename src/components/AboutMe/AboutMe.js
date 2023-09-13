@@ -23,7 +23,7 @@ import {
 
 const AboutMe = () => {
   return (
-    <Box sx={getContainerStyle} id="Home">
+    <Box sx={getContainerStyle} id="Sobre">
       <Box sx={getContentStyle}>
         <Box sx={getTitleStyle}>
           <Typography
