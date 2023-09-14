@@ -15,7 +15,7 @@ import {
 
 const Footer = () => {
   return (
-    <Box sx={getContainerStyles}>
+    <Box sx={getContainerStyles} id="Contato">
       <Typography sx={getTitleStyle}>Fale Comigo</Typography>
       <Typography sx={getSubtitleStyle}>
         Sobrou alguma dúvida? Preencha os campos abaixo com os seguintes dados

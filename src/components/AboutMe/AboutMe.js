@@ -28,7 +28,7 @@ const AboutMe = () => {
         <Box sx={getTitleStyle}>
           <Typography
             fontFamily={"roboto"}
-            variant="h3"
+            variant="h4"
             sx={{ fontWeight: "bold" }}
           >
             Olá, sou o Felipe, Desenvolvedor Front-End React
