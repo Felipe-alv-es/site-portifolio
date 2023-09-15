@@ -17,7 +17,7 @@ export const getPageTitleStyle = () => ({
   color: "#e7e7e7",
   typography: "h5",
   fontWeight: "medium",
-  marginRight: "32px",
+  marginRight: "20px",
 });
 
 interface StyledChipProps {
