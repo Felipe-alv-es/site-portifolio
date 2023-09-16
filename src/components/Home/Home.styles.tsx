@@ -133,6 +133,8 @@ export const getSubtitleStyle = (): SxProps => ({
   fontWeight: "bold",
   animation: "2s invisibleFrame, 1s swipeInLogo",
   animationDelay: "0ms, 2s",
+  whiteSpace: "pre-line",
+  textAlign: "center",
 });
 
 export const StyledFabIcon = (props) => {
