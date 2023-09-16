@@ -51,7 +51,7 @@ const Home = () => {
           alt="Man avatar generic image"
         />
         <Typography sx={getSubtitleStyle}>
-          {"A Cada linha de código é um passo em \n direção ao futuro "}
+          {"A Cada linha de código, um passo em \n direção ao futuro "}
         </Typography>
       </Box>
       <Box
