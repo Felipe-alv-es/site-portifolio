@@ -6,6 +6,9 @@ import Footer from "../../Footer/Footer";
 import { Box, Button, Icon, IconButton, Link, Typography } from "@mui/material";
 import { AiOutlineClose } from "react-icons/ai";
 import { GrReactjs } from "react-icons/gr";
+import { AiFillGithub } from "react-icons/ai";
+import { BiLogoFigma } from "react-icons/bi";
+import { IoMdExit } from "react-icons/io";
 import {
   getHeaderStyle,
   StyledChipIcon,
@@ -95,7 +98,7 @@ const FictionalMobile = () => {
                     height: "fit-content",
                   }}
                 >
-                  <AiOutlineClose style={{ height: "16px" }} />
+                  <IoMdExit style={{ height: "16px" }} />
                 </Icon>
               </Link>
               {" | "}
@@ -116,7 +119,7 @@ const FictionalMobile = () => {
                     height: "fit-content",
                   }}
                 >
-                  <AiOutlineClose style={{ height: "16px" }} />
+                  <AiFillGithub style={{ height: "16px" }} />
                 </Icon>
               </Link>
 
@@ -138,7 +141,7 @@ const FictionalMobile = () => {
                     height: "fit-content",
                   }}
                 >
-                  <AiOutlineClose style={{ height: "16px" }} />
+                  <BiLogoFigma style={{ height: "16px" }} />
                 </Icon>
               </Link>
             </Typography>
