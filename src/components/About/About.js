@@ -11,7 +11,7 @@ import ImagemEscritorio from "../../assets/images/CommumImages/ImagemEscritorio.
 
 const About = () => {
   return (
-    <Box sx={getContainerStyle} id="Sobre">
+    <Box sx={getContainerStyle}>
       <Box sx={getContentStyle}>
         <Box sx={getTitleStyle}>
           <Typography
