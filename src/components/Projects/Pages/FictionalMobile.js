@@ -7,6 +7,9 @@ import { GrReactjs } from "react-icons/gr";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLogoFigma } from "react-icons/bi";
 import { IoMdExit } from "react-icons/io";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { projectsOptions } from "../../../assets/utils/projectOptions.tsx";
+import { useNavigate } from "react-router-dom";
 import {
   getHeaderStyle,
   StyledChipIcon,
@@ -21,6 +24,26 @@ import {
 } from "./FictionalMobile.styles.tsx";
 
 const FictionalMobile = () => {
+  const demoLink = "https://fictionalmobile.netlify.app";
+  const gitHubLink = "https://github.com/Felipe-alv-es/smartphone-store";
+  const figmaLink =
+    "https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=55-27&mode=design&t=q47AFgMoONL1wXYO-4";
+
+  const params = {
+    autoplay: {
+      delay: 5000,
+    },
+    centeredSlides: true,
+    allowTouchMove: false,
+    loop: true,
+  };
+
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/");
+  }
+
   return (
     <>
       <Box sx={getHeaderStyle}>
@@ -36,7 +59,7 @@ const FictionalMobile = () => {
             icon={<GrReactjs color="#089cd4" />}
           />
         </Box>
-        <StyleCloseButton />
+        <StyleCloseButton onClick={handleClick} />
       </Box>
       <Box sx={getContentContainerStyle}>
         <Box
@@ -45,6 +68,28 @@ const FictionalMobile = () => {
           alt="Man avatar generic image"
           sx={{ width: "70%" }}
         />
+        <Box
+          sx={{
+            width: "43%",
+            position: "absolute",
+            transform: "translateY(23%)",
+          }}
+        >
+          <Swiper {...params}>
+            {projectsOptions.map((item) => (
+              <SwiperSlide key={item.id}>
+                <Box
+                  component="img"
+                  src={item.imageSrc}
+                  alt={item.imageAlt}
+                  sx={{
+                    width: "100%",
+                  }}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Box>
         <Box sx={getDescriptionContainerStyle}>
           <Box
             component="img"
@@ -57,11 +102,26 @@ const FictionalMobile = () => {
               Fictional Mobile Store
             </Typography>
             <Typography sx={getLinksStyle}>
-              <StyledLink label="Ver Demo" icon={<IoMdExit />} />
+              <StyledLink
+                label="Ver Demo"
+                icon={<IoMdExit />}
+                href={demoLink}
+                target="_blank"
+              />
               {" | "}
-              <StyledLink label="Github" icon={<AiFillGithub />} />
+              <StyledLink
+                label="Github"
+                icon={<AiFillGithub />}
+                href={gitHubLink}
+                target="_blank"
+              />
               {" | "}
-              <StyledLink label="Figma" icon={<BiLogoFigma />} />
+              <StyledLink
+                label="Figma"
+                icon={<BiLogoFigma />}
+                href={figmaLink}
+                target="_blank"
+              />
             </Typography>
           </Box>
         </Box>
@@ -72,7 +132,9 @@ const FictionalMobile = () => {
           ler avaliações de clientes e aproveitar outras opções disponíveis na
           loja.
         </Typography>
-        <Button sx={getButtonStyle}>Ver outros projetos</Button>
+        <Button sx={getButtonStyle} onClick={handleClick}>
+          Ver outros projetos
+        </Button>
       </Box>
       <Footer />
     </>

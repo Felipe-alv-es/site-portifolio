@@ -5,6 +5,7 @@ import { Box, Typography, Divider } from "@mui/material";
 import { projectsOptions } from "../../assets/utils/projectOptions.tsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 import {
   getContainerStyle,
   getTitleStyle,
@@ -66,6 +67,19 @@ const Projects = () => {
     swipePreviousTitle();
   }
 
+  const navigate = useNavigate();
+
+  // function handleSelectProject(selectedItem) {
+  //   switch (selectedItem) {
+  //     case "Fictional Mobile":
+  //       return navigate("/fm");
+  //     case "Fictional Bank":
+  //       return navigate("/am");
+  //     default:
+  //       return navigate("/");
+  //   }
+  // }
+
   return (
     <Box sx={getContainerStyle} id="Projetos">
       <Box sx={{ margin: "0 2em 0 2em" }}>
@@ -126,7 +140,7 @@ const Projects = () => {
                       <StyledTypography>TypeScript</StyledTypography>
                       <StyledTypography>JavaScript</StyledTypography>
                     </Box>
-                    <StyledOutlinedButton>
+                    <StyledOutlinedButton onClick={() => navigate(item.src)}>
                       Ver detalhes do Projeto
                     </StyledOutlinedButton>
                   </Box>
