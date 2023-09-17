@@ -4,6 +4,9 @@ export const getContainerStyle = (): SxProps => ({
   display: "grid",
   placeItems: "center",
   padding: "0 15% 0 15%",
+  "@media(max-width: 544px)": {
+    padding: "0",
+  },
 });
 
 export const getContentStyle = (): SxProps => ({
@@ -30,7 +33,6 @@ export const getTitleStyle = (): SxProps => ({
 });
 
 export const getSubtitleStyle = (): SxProps => ({
-  // maxWidth: "450px",
   minWidth: "296px",
   gridArea: "content",
 });
