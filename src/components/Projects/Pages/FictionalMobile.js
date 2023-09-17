@@ -38,10 +38,18 @@ const FictionalMobile = () => {
     loop: true,
   };
 
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const navigate = useNavigate();
 
   function handleClick() {
     navigate("/");
+    scrollUp();
   }
 
   return (

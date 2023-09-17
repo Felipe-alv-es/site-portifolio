@@ -21,6 +21,7 @@ import {
 } from "./Projects.styles.tsx";
 
 const Projects = () => {
+  const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
   const isMobile = width <= 768;
 
@@ -67,18 +68,17 @@ const Projects = () => {
     swipePreviousTitle();
   }
 
-  const navigate = useNavigate();
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
-  // function handleSelectProject(selectedItem) {
-  //   switch (selectedItem) {
-  //     case "Fictional Mobile":
-  //       return navigate("/fm");
-  //     case "Fictional Bank":
-  //       return navigate("/am");
-  //     default:
-  //       return navigate("/");
-  //   }
-  // }
+  function ProjectDetailsButton(navigateItem) {
+    scrollUp();
+    navigate(navigateItem);
+  }
 
   return (
     <Box sx={getContainerStyle} id="Projetos">
@@ -140,7 +140,9 @@ const Projects = () => {
                       <StyledTypography>TypeScript</StyledTypography>
                       <StyledTypography>JavaScript</StyledTypography>
                     </Box>
-                    <StyledOutlinedButton onClick={() => navigate(item.src)}>
+                    <StyledOutlinedButton
+                      onClick={() => ProjectDetailsButton(item.src)}
+                    >
                       Ver detalhes do Projeto
                     </StyledOutlinedButton>
                   </Box>
