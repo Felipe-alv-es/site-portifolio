@@ -122,6 +122,9 @@ export const getLogoStyle = (): SxProps => ({
       opacity: "0",
     },
   },
+  "@media(max-width: 544px)": {
+    top: "10%",
+  },
 });
 
 export const getSubtitleStyle = (): SxProps => ({
@@ -135,6 +138,13 @@ export const getSubtitleStyle = (): SxProps => ({
   animationDelay: "0ms, 2s",
   whiteSpace: "pre-line",
   textAlign: "center",
+  "@media(max-width: 544px)": {
+    top: "18%",
+    typography: "body2",
+    fontWeight: "medium",
+    width: "50%",
+    whiteSpace: "normal",
+  },
 });
 
 export const StyledFabIcon = (props) => {

@@ -26,12 +26,8 @@ const AboutMe = () => {
     <Box sx={getContainerStyle} id="Sobre">
       <Box sx={getContentStyle}>
         <Box sx={getTitleStyle}>
-          <Typography
-            fontFamily={"roboto"}
-            variant="h4"
-            sx={{ fontWeight: "bold" }}
-          >
-            Olá, sou o Felipe, Desenvolvedor Front-End React
+          <Typography fontFamily={"roboto"}>
+            {"Olá, sou o Felipe, \n Desenvolvedor \n Front-End React"}
           </Typography>
         </Box>
         <Box sx={getSubtitleStyle}>

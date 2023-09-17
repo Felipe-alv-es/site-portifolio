@@ -11,6 +11,7 @@ export const projectsOptions = [
     imageSrc: FictionalMobile,
     imageSrcMobile: FictionalMobileMobile,
     imageAlt: "Home page from cellphone Store Site",
+    src: "/fm",
   },
   {
     title: "Fictional Bank",
@@ -18,6 +19,7 @@ export const projectsOptions = [
     imageSrc: FictionalBank,
     imageSrcMobile: FictionalBankMobile,
     imageAlt: "Home page from bank Site",
+    src: "/fb",
   },
   {
     title: "Cripto Store",
@@ -25,5 +27,6 @@ export const projectsOptions = [
     imageSrc: CriptoStore,
     imageSrcMobile: FictionalMobileMobile,
     imageAlt: "Home page from criptoStore Site",
+    src: "/cs",
   },
 ];

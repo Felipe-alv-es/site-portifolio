@@ -5,6 +5,7 @@ import { Box, Typography, Divider } from "@mui/material";
 import { projectsOptions } from "../../assets/utils/projectOptions.tsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 import {
   getContainerStyle,
   getTitleStyle,
@@ -20,6 +21,7 @@ import {
 } from "./Projects.styles.tsx";
 
 const Projects = () => {
+  const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
   const isMobile = width <= 768;
 
@@ -64,6 +66,18 @@ const Projects = () => {
   function NavPrev() {
     swipePreviousPage();
     swipePreviousTitle();
+  }
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  function ProjectDetailsButton(navigateItem) {
+    scrollUp();
+    navigate(navigateItem);
   }
 
   return (
@@ -126,7 +140,9 @@ const Projects = () => {
                       <StyledTypography>TypeScript</StyledTypography>
                       <StyledTypography>JavaScript</StyledTypography>
                     </Box>
-                    <StyledOutlinedButton>
+                    <StyledOutlinedButton
+                      onClick={() => ProjectDetailsButton(item.src)}
+                    >
                       Ver detalhes do Projeto
                     </StyledOutlinedButton>
                   </Box>

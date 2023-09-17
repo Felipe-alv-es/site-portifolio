@@ -1,18 +1,57 @@
 import React from "react";
-import backImage from "../../../assets/images/CommumImages/wavesBackground.png";
 import NoteHd from "../../../assets/images/CommumImages/NoteHdScreen.png";
 import FictionalMobileLogo from "../../../assets/images/Logos/FM.png";
 import Footer from "../../Footer/Footer";
-import { Box, Button, Icon, IconButton, Link, Typography } from "@mui/material";
-import { AiOutlineClose } from "react-icons/ai";
+import { Box, Button, Typography } from "@mui/material";
 import { GrReactjs } from "react-icons/gr";
+import { AiFillGithub } from "react-icons/ai";
+import { BiLogoFigma } from "react-icons/bi";
+import { IoMdExit } from "react-icons/io";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { projectsOptions } from "../../../assets/utils/projectOptions.tsx";
+import { useNavigate } from "react-router-dom";
 import {
   getHeaderStyle,
   StyledChipIcon,
   getPageTitleStyle,
+  getContentContainerStyle,
+  getDescriptionContainerStyle,
+  StyleCloseButton,
+  StyledLink,
+  getLinksStyle,
+  getDescriptionStyle,
+  getButtonStyle,
 } from "./FictionalMobile.styles.tsx";
 
 const FictionalMobile = () => {
+  const demoLink = "https://fictionalmobile.netlify.app";
+  const gitHubLink = "https://github.com/Felipe-alv-es/smartphone-store";
+  const figmaLink =
+    "https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=55-27&mode=design&t=q47AFgMoONL1wXYO-4";
+
+  const params = {
+    autoplay: {
+      delay: 5000,
+    },
+    centeredSlides: true,
+    allowTouchMove: false,
+    loop: true,
+  };
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/");
+    scrollUp();
+  }
+
   return (
     <>
       <Box sx={getHeaderStyle}>
@@ -28,23 +67,9 @@ const FictionalMobile = () => {
             icon={<GrReactjs color="#089cd4" />}
           />
         </Box>
-        <IconButton sx={{ width: "fit-content", height: "fit-content" }}>
-          <AiOutlineClose color="#e7e7e7" />
-        </IconButton>
+        <StyleCloseButton onClick={handleClick} />
       </Box>
-      <Box
-        sx={{
-          backgroundImage: `url(${backImage})`,
-          backgroundSize: "50% 100%",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "right",
-          display: "flex",
-          flexDirection: "column",
-          placeItems: "center",
-          textAlign: "left",
-          padding: "32px",
-        }}
-      >
+      <Box sx={getContentContainerStyle}>
         <Box
           component="img"
           src={NoteHd}
@@ -53,12 +78,27 @@ const FictionalMobile = () => {
         />
         <Box
           sx={{
-            display: "flex",
-            alignItems: "center",
-            width: "100%",
-            marginTop: "16px",
+            width: "43%",
+            position: "absolute",
+            transform: "translateY(23%)",
           }}
         >
+          <Swiper {...params}>
+            {projectsOptions.map((item) => (
+              <SwiperSlide key={item.id}>
+                <Box
+                  component="img"
+                  src={item.imageSrc}
+                  alt={item.imageAlt}
+                  sx={{
+                    width: "100%",
+                  }}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Box>
+        <Box sx={getDescriptionContainerStyle}>
           <Box
             component="img"
             src={FictionalMobileLogo}
@@ -69,105 +109,38 @@ const FictionalMobile = () => {
             <Typography sx={{ typography: "h6", fontWeight: "bold" }}>
               Fictional Mobile Store
             </Typography>
-            <Typography
-              sx={{
-                typography: "overline",
-                fontSize: "14px",
-                color: "#949494",
-                fontWeight: "medium",
-                display: "flex",
-              }}
-            >
-              <Link
-                sx={{
-                  textDecoration: "none",
-                  color: "#949494",
-                  cursor: "pointer",
-                  marginLeft: "4px",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                Ver Demo
-                <Icon
-                  sx={{
-                    display: "flex",
-                    height: "fit-content",
-                  }}
-                >
-                  <AiOutlineClose style={{ height: "16px" }} />
-                </Icon>
-              </Link>
+            <Typography sx={getLinksStyle}>
+              <StyledLink
+                label="Ver Demo"
+                icon={<IoMdExit />}
+                href={demoLink}
+                target="_blank"
+              />
               {" | "}
-              <Link
-                sx={{
-                  textDecoration: "none",
-                  color: "#949494",
-                  cursor: "pointer",
-                  marginLeft: "4px",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                Github
-                <Icon
-                  sx={{
-                    display: "flex",
-                    height: "fit-content",
-                  }}
-                >
-                  <AiOutlineClose style={{ height: "16px" }} />
-                </Icon>
-              </Link>
-
+              <StyledLink
+                label="Github"
+                icon={<AiFillGithub />}
+                href={gitHubLink}
+                target="_blank"
+              />
               {" | "}
-              <Link
-                sx={{
-                  textDecoration: "none",
-                  color: "#949494",
-                  cursor: "pointer",
-                  marginLeft: "4px",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                Figma
-                <Icon
-                  sx={{
-                    display: "flex",
-                    height: "fit-content",
-                  }}
-                >
-                  <AiOutlineClose style={{ height: "16px" }} />
-                </Icon>
-              </Link>
+              <StyledLink
+                label="Figma"
+                icon={<BiLogoFigma />}
+                href={figmaLink}
+                target="_blank"
+              />
             </Typography>
           </Box>
         </Box>
-        <Typography
-          sx={{
-            width: "100%",
-            paddingRight: "50%",
-            marginTop: "20px",
-            color: "#1a1a1a",
-            textAlign: "justify",
-          }}
-        >
+        <Typography sx={getDescriptionStyle}>
           A loja de celulares online é uma plataforma na qual os usuários podem
           explorar uma variedade de opções, selecionar e comprar os celulares de
           sua escolha. Além disso, é possível verificar especificações técnicas,
           ler avaliações de clientes e aproveitar outras opções disponíveis na
           loja.
         </Typography>
-        <Button
-          sx={{
-            background: "#089cd4",
-            color: "#e7e7e7",
-            padding: "12px 32px 12px 32px",
-            borderRadius: "16px",
-            marginTop: "32px",
-          }}
-        >
+        <Button sx={getButtonStyle} onClick={handleClick}>
           Ver outros projetos
         </Button>
       </Box>
