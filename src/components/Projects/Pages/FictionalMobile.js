@@ -16,7 +16,7 @@ import {
   getPageTitleStyle,
   getContentContainerStyle,
   getDescriptionContainerStyle,
-  StyleCloseButton,
+  StyledCloseButton,
   StyledLink,
   getLinksStyle,
   getDescriptionStyle,
@@ -67,20 +67,20 @@ const FictionalMobile = () => {
             icon={<GrReactjs color="#089cd4" />}
           />
         </Box>
-        <StyleCloseButton onClick={handleClick} />
+        <StyledCloseButton onClick={handleClick} />
       </Box>
       <Box sx={getContentContainerStyle}>
         <Box
           component="img"
           src={NoteHd}
           alt="Man avatar generic image"
-          sx={{ width: "70%" }}
+          sx={{ width: "85%" }}
         />
         <Box
           sx={{
-            width: "43%",
+            width: "52.5%",
             position: "absolute",
-            transform: "translateY(23%)",
+            transform: "translateY(22.5%)",
           }}
         >
           <Swiper {...params}>
@@ -92,6 +92,7 @@ const FictionalMobile = () => {
                   alt={item.imageAlt}
                   sx={{
                     width: "100%",
+                    borderRadius: "4px",
                   }}
                 />
               </SwiperSlide>
