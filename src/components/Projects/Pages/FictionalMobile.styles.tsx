@@ -1,7 +1,6 @@
 import React from "react";
 import backImage from "../../../assets/images/CommumImages/wavesBackground.png";
-import { Box, Icon, IconButton, Link, Typography } from "@mui/material";
-import { AiOutlineClose } from "react-icons/ai";
+import { Box, Icon, Link, Typography } from "@mui/material";
 
 export const getHeaderStyle = () => ({
   display: "flex",
@@ -48,6 +47,9 @@ export const getLinksStyle = () => ({
   color: "#949494",
   fontWeight: "medium",
   display: "flex",
+  "> a": {
+    marginRight: "4px",
+  },
 });
 
 export const getDescriptionStyle = () => ({
@@ -140,14 +142,6 @@ export const StyledLink = React.forwardRef<HTMLDivElement, StyledLinkProps>(
     );
   }
 );
-
-// export const StyleCloseButton = (props) => {
-//   return (
-//     <IconButton sx={{ width: "fit-content", height: "fit-content" }} {...props}>
-//       <AiOutlineClose color="#e7e7e7" size={"30px"} />
-//     </IconButton>
-//   );
-// };
 
 export const StyledCloseButton = ({ isOpen, ...props }) => (
   <Box
