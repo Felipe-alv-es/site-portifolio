@@ -7,8 +7,9 @@ export const getHeaderStyle = () => ({
   display: "flex",
   justifyContent: "space-between",
   padding: "8px 16px 8px 16px",
-  background: "#089cd4",
   alignItems: "center",
+  position: "absolute",
+  width: "100%",
   "> div": {
     display: "flex",
     alignItems: "center",
@@ -16,9 +17,9 @@ export const getHeaderStyle = () => ({
 });
 
 export const getPageTitleStyle = () => ({
-  color: "#e7e7e7",
+  color: "#1a1a1a",
   typography: "h5",
-  fontWeight: "medium",
+  fontWeight: "bold",
   marginRight: "20px",
 });
 
@@ -80,10 +81,12 @@ export const StyledChipIcon = React.forwardRef<HTMLDivElement, StyledChipProps>(
         sx={{
           display: "flex",
           alignItems: "center",
-          background: "#e7e7e7",
           borderRadius: "16px",
           padding: " 0px 12px 0px 12px",
-          marginRight: "4px",
+          marginRight: "8px",
+          borderStyle: "solid",
+          borderColor: "#089cd4",
+          borderWidth: "1px",
         }}
         {...props}
         ref={ref}
@@ -138,10 +141,75 @@ export const StyledLink = React.forwardRef<HTMLDivElement, StyledLinkProps>(
   }
 );
 
-export const StyleCloseButton = (props) => {
-  return (
-    <IconButton sx={{ width: "fit-content", height: "fit-content" }} {...props}>
-      <AiOutlineClose color="#e7e7e7" />
-    </IconButton>
-  );
-};
+// export const StyleCloseButton = (props) => {
+//   return (
+//     <IconButton sx={{ width: "fit-content", height: "fit-content" }} {...props}>
+//       <AiOutlineClose color="#e7e7e7" size={"30px"} />
+//     </IconButton>
+//   );
+// };
+
+export const StyledCloseButton = ({ isOpen, ...props }) => (
+  <Box
+    sx={{
+      height: "40px",
+      width: "40px",
+      padding: "8px",
+      margin: "8px 8px 8px 8px",
+      borderRadius: "4px",
+      justifyContent: "space-between",
+      display: "flex",
+      flexDirection: "column",
+
+      ":hover": {
+        "> :first-of-type": {
+          transform: "rotate(-45deg) scale(0.7)",
+          translate: "0em 0.25em",
+        },
+        "> :nth-of-type(2)": {
+          translate: "0.30em 0em",
+          transform: "rotate(0deg)",
+        },
+        "> :nth-of-type(3)": {
+          transform: "rotate(45deg) scale(0.7)",
+          translate: "0em -0.25em",
+        },
+      },
+    }}
+    {...props}
+  >
+    <Box
+      {...props}
+      sx={{
+        width: "100%",
+        height: "2px",
+        background: "#f3f3f3",
+        borderRadius: "4px",
+        transition: "ease-out 0.3s",
+        transform: "rotate(45deg)",
+        translate: "0em 0.70em",
+      }}
+    />
+    <Box
+      sx={{
+        width: "100%",
+        height: "2px",
+        background: "#f3f3f3",
+        borderRadius: "4px",
+        transition: "ease-out 0.3s",
+        transform: "rotate(45deg)",
+      }}
+    />
+    <Box
+      sx={{
+        width: "100%",
+        height: "2px",
+        background: "#f3f3f3",
+        borderRadius: "4px",
+        transition: "ease-out 0.3s",
+        transform: "rotate(-45deg)",
+        translate: "0em -0.70em",
+      }}
+    />
+  </Box>
+);
