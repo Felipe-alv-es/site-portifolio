@@ -81,6 +81,9 @@ const FictionalMobile = () => {
             width: "52.5%",
             position: "absolute",
             transform: "translateY(22.5%)",
+            "@media(max-width: 544px)": {
+              width: "63.7%",
+            },
           }}
         >
           <Swiper {...params}>
@@ -104,7 +107,14 @@ const FictionalMobile = () => {
             component="img"
             src={FictionalMobileLogo}
             alt="Man avatar generic image"
-            sx={{ width: "80px", borderRadius: "8px", marginRight: "16px" }}
+            sx={{
+              width: "5%",
+              borderRadius: "8px",
+              marginRight: "16px",
+              "@media(max-width: 544px)": {
+                width: "20%",
+              },
+            }}
           />
           <Box>
             <Typography sx={{ typography: "h6", fontWeight: "bold" }}>
