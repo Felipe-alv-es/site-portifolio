@@ -20,6 +20,10 @@ export const getPageTitleStyle = () => ({
   typography: "h5",
   fontWeight: "bold",
   marginRight: "20px",
+  "@media(max-width: 544px)": {
+    typography: "body1",
+    fontWeight: "bold",
+  },
 });
 
 export const getContentContainerStyle = () => ({
@@ -31,7 +35,10 @@ export const getContentContainerStyle = () => ({
   flexDirection: "column",
   placeItems: "center",
   textAlign: "left",
-  padding: "32px",
+  padding: "32px 32px 32px 32px",
+  "@media(max-width: 544px)": {
+    padding: "64px 32px 32px 32px",
+  },
 });
 
 export const getDescriptionContainerStyle = () => ({
@@ -101,6 +108,9 @@ export const StyledChipIcon = React.forwardRef<HTMLDivElement, StyledChipProps>(
             fontSize: "16px",
             marginRight: "8px",
             textTransform: "none",
+            "@media(max-width: 544px)": {
+              display: "none",
+            },
           }}
         >
           {label}
