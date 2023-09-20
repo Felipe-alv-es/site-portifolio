@@ -20,6 +20,10 @@ export const getPageTitleStyle = () => ({
   typography: "h5",
   fontWeight: "bold",
   marginRight: "20px",
+  "@media(max-width: 544px)": {
+    typography: "body1",
+    fontWeight: "bold",
+  },
 });
 
 export const getContentContainerStyle = () => ({
@@ -31,7 +35,13 @@ export const getContentContainerStyle = () => ({
   flexDirection: "column",
   placeItems: "center",
   textAlign: "left",
-  padding: "32px",
+  padding: "32px 32px 32px 32px",
+  "@media(max-width: 544px)": {
+    padding: "64px 0px 0px 0px",
+    "> img": {
+      width: "100%",
+    },
+  },
 });
 
 export const getDescriptionContainerStyle = () => ({
@@ -39,6 +49,10 @@ export const getDescriptionContainerStyle = () => ({
   alignItems: "center",
   width: "100%",
   marginTop: "16px",
+  "@media(max-width: 544px)": {
+    flexDirection: "column",
+    textAlign: "center",
+  },
 });
 
 export const getLinksStyle = () => ({
@@ -58,6 +72,9 @@ export const getDescriptionStyle = () => ({
   marginTop: "20px",
   color: "#1a1a1a",
   textAlign: "justify",
+  "@media(max-width: 544px)": {
+    padding: "0 10% 0 10%",
+  },
 });
 
 export const getButtonStyle = () => ({
@@ -68,6 +85,9 @@ export const getButtonStyle = () => ({
   marginTop: "32px",
   ":hover": {
     background: "#078ABA",
+  },
+  "@media(max-width: 544px)": {
+    marginBottom: "16px",
   },
 });
 
@@ -89,6 +109,9 @@ export const StyledChipIcon = React.forwardRef<HTMLDivElement, StyledChipProps>(
           borderStyle: "solid",
           borderColor: "#089cd4",
           borderWidth: "1px",
+          "@media(max-width: 544px)": {
+            padding: "8px",
+          },
         }}
         {...props}
         ref={ref}
@@ -101,6 +124,9 @@ export const StyledChipIcon = React.forwardRef<HTMLDivElement, StyledChipProps>(
             fontSize: "16px",
             marginRight: "8px",
             textTransform: "none",
+            "@media(max-width: 544px)": {
+              display: "none",
+            },
           }}
         >
           {label}
