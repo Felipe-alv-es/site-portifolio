@@ -3,7 +3,11 @@ import NoteHd from "../../../assets/images/CommumImages/NoteHdScreen.png";
 import FictionalMobileLogo from "../../../assets/images/Logos/FM.png";
 import Footer from "../../Footer/Footer";
 import { Box, Button, Typography } from "@mui/material";
-import { GrReactjs } from "react-icons/gr";
+import {
+  BiLogoJavascript,
+  BiLogoTypescript,
+  BiLogoReact,
+} from "react-icons/bi";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLogoFigma } from "react-icons/bi";
 import { IoMdExit } from "react-icons/io";
@@ -21,6 +25,8 @@ import {
   getLinksStyle,
   getDescriptionStyle,
   getButtonStyle,
+  getLogoStyle,
+  getSwiperboxStyle,
 } from "./FictionalMobile.styles.tsx";
 
 const FictionalMobile = () => {
@@ -57,14 +63,17 @@ const FictionalMobile = () => {
       <Box sx={getHeaderStyle}>
         <Box>
           <Typography sx={getPageTitleStyle}>Fictional Mobile</Typography>
-          <StyledChipIcon label="React" icon={<GrReactjs color="#089cd4" />} />
+          <StyledChipIcon
+            label="React"
+            icon={<BiLogoReact color="#089cd4" />}
+          />
           <StyledChipIcon
             label="JavaScript"
-            icon={<GrReactjs color="#089cd4" />}
+            icon={<BiLogoJavascript color="#089cd4" />}
           />
           <StyledChipIcon
             label="TypeScript"
-            icon={<GrReactjs color="#089cd4" />}
+            icon={<BiLogoTypescript color={"#089cd4"} />}
           />
         </Box>
         <StyledCloseButton onClick={handleClick} />
@@ -76,16 +85,7 @@ const FictionalMobile = () => {
           alt="Man avatar generic image"
           sx={{ width: "85%" }}
         />
-        <Box
-          sx={{
-            width: "52.5%",
-            position: "absolute",
-            transform: "translateY(22.5%)",
-            "@media(max-width: 544px)": {
-              width: "63.7%",
-            },
-          }}
-        >
+        <Box sx={getSwiperboxStyle}>
           <Swiper {...params}>
             {projectsOptions.map((item) => (
               <SwiperSlide key={item.id}>
@@ -107,14 +107,7 @@ const FictionalMobile = () => {
             component="img"
             src={FictionalMobileLogo}
             alt="Man avatar generic image"
-            sx={{
-              width: "5%",
-              borderRadius: "8px",
-              marginRight: "16px",
-              "@media(max-width: 544px)": {
-                width: "20%",
-              },
-            }}
+            sx={getLogoStyle}
           />
           <Box>
             <Typography sx={{ typography: "h6", fontWeight: "bold" }}>

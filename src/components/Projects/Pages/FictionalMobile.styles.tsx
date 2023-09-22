@@ -42,6 +42,28 @@ export const getContentContainerStyle = () => ({
       width: "100%",
     },
   },
+  "> img": {
+    animation: "1s invisibleFrame, 1s swipeInLogo",
+    animationDelay: "0ms, 1s",
+    "@keyframes swipeInLogo": {
+      "0%": {
+        transform: "translateX(-100%)",
+        opacity: "0",
+      },
+      "-100%": {
+        transform: "translateX(0)",
+        opacity: "100",
+      },
+    },
+    "@keyframes invisibleFrame": {
+      "0%": {
+        opacity: "0",
+      },
+      "100%": {
+        opacity: "0",
+      },
+    },
+  },
 });
 
 export const getDescriptionContainerStyle = () => ({
@@ -49,9 +71,10 @@ export const getDescriptionContainerStyle = () => ({
   alignItems: "center",
   width: "100%",
   marginTop: "16px",
+  whiteSpace: "noWrap",
   "@media(max-width: 544px)": {
-    flexDirection: "column",
     textAlign: "center",
+    justifyContent: "center",
   },
 });
 
@@ -63,17 +86,59 @@ export const getLinksStyle = () => ({
   display: "flex",
   "> a": {
     marginRight: "4px",
+    "@media(max-width: 544px)": {
+      flexDirection: "column",
+    },
   },
 });
 
 export const getDescriptionStyle = () => ({
   width: "100%",
   paddingRight: "50%",
-  marginTop: "20px",
+  marginTop: "2%",
   color: "#1a1a1a",
   textAlign: "justify",
   "@media(max-width: 544px)": {
     padding: "0 10% 0 10%",
+    marginTop: "10%",
+  },
+});
+
+export const getLogoStyle = () => ({
+  width: "5%",
+  borderRadius: "8px",
+  marginRight: "16px",
+  "@media(max-width: 544px)": {
+    width: "15%",
+  },
+});
+
+export const getSwiperboxStyle = () => ({
+  width: "52.5%",
+  position: "absolute",
+  transform: "translateY(22.5%)",
+  animation: "1s invisibleFrame, 1s swipeInImage",
+  animationDelay: "0ms, 1s",
+  "@keyframes swipeInImage": {
+    "0%": {
+      transform: "translateY(22.5%) translateX(-155%) ",
+      opacity: "0",
+    },
+    "-100%": {
+      transform: "translateY(22.5%) translateX(0) ",
+      opacity: "100",
+    },
+  },
+  "@keyframes invisibleFrame": {
+    "0%": {
+      opacity: "0",
+    },
+    "100%": {
+      opacity: "0",
+    },
+  },
+  "@media(max-width: 544px)": {
+    width: "63.7%",
   },
 });
 
