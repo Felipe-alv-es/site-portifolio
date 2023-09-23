@@ -12,7 +12,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { BiLogoFigma } from "react-icons/bi";
 import { IoMdExit } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { projectsOptions } from "../../../assets/utils/projectOptions.tsx";
+import { fmImages } from "../../../assets/utils/fictionalMobileImages.tsx";
 import { useNavigate } from "react-router-dom";
 import {
   getHeaderStyle,
@@ -87,7 +87,7 @@ const FictionalMobile = () => {
         />
         <Box sx={getSwiperboxStyle}>
           <Swiper {...params}>
-            {projectsOptions.map((item) => (
+            {fmImages.map((item) => (
               <SwiperSlide key={item.id}>
                 <Box
                   component="img"
