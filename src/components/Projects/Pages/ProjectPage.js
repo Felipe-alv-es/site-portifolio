@@ -121,29 +121,40 @@ const FictionalMobile = () => {
           />
           <Box>
             <Typography sx={{ typography: "h6", fontWeight: "bold" }}>
-              Fictional Mobile Store
+              {currentPage().pageTitle}
             </Typography>
             <Typography sx={getLinksStyle}>
-              <StyledLink
-                label="Ver Demo"
-                icon={<IoMdExit />}
-                href={currentPage().demoLink}
-                target="_blank"
-              />
-              {" | "}
-              <StyledLink
-                label="Github"
-                icon={<AiFillGithub />}
-                href={currentPage().gitHubLink}
-                target="_blank"
-              />
-              {" | "}
-              <StyledLink
-                label="Figma"
-                icon={<BiLogoFigma />}
-                href={currentPage().figmaLink}
-                target="_blank"
-              />
+              {currentPage().demoLink ? (
+                <StyledLink
+                  label="Ver Demo"
+                  icon={<IoMdExit />}
+                  href={currentPage().demoLink}
+                  target="_blank"
+                />
+              ) : null}
+
+              {currentPage().gitHubLink ? (
+                <>
+                  {" | "}
+                  <StyledLink
+                    label="Github"
+                    icon={<AiFillGithub />}
+                    href={currentPage().gitHubLink}
+                    target="_blank"
+                  />
+                </>
+              ) : null}
+              {currentPage().figmaLink ? (
+                <>
+                  {" | "}
+                  <StyledLink
+                    label="Figma"
+                    icon={<BiLogoFigma />}
+                    href={currentPage().figmaLink}
+                    target="_blank"
+                  />
+                </>
+              ) : null}
             </Typography>
           </Box>
         </Box>

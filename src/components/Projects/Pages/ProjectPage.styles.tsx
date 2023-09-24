@@ -1,6 +1,6 @@
 import React from "react";
 import backImage from "../../../assets/images/CommumImages/wavesBackground.png";
-import { Box, Icon, Link, Typography } from "@mui/material";
+import { Box, Icon, Link, Typography, SxProps } from "@mui/material";
 
 export const getHeaderStyle = () => ({
   display: "flex",
@@ -205,9 +205,10 @@ export const StyledChipIcon = React.forwardRef<HTMLDivElement, StyledChipProps>(
 interface StyledLinkProps {
   label: string;
   icon: React.ReactNode;
+  sx: SxProps;
 }
 export const StyledLink = React.forwardRef<HTMLDivElement, StyledLinkProps>(
-  ({ icon, label, ...props }, ref) => {
+  ({ icon, label, sx, ...props }, ref) => {
     return (
       <Link
         sx={{
@@ -217,6 +218,7 @@ export const StyledLink = React.forwardRef<HTMLDivElement, StyledLinkProps>(
           marginLeft: "4px",
           display: "flex",
           alignItems: "center",
+          ...sx,
         }}
         {...props}
       >
