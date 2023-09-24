@@ -58,6 +58,8 @@ const FictionalMobile = () => {
     scrollUp();
   }
 
+  const first = fmImages[0];
+
   return (
     <>
       <Box sx={getHeaderStyle}>
@@ -87,7 +89,7 @@ const FictionalMobile = () => {
         />
         <Box sx={getSwiperboxStyle}>
           <Swiper {...params}>
-            {fmImages.map((item) => (
+            {first.imageSrc.map((item) => (
               <SwiperSlide key={item.id}>
                 <Box
                   component="img"
