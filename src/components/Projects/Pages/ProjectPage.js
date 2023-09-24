@@ -1,6 +1,5 @@
 import React from "react";
 import NoteHd from "../../../assets/images/CommumImages/NoteHdScreen.png";
-import FictionalMobileLogo from "../../../assets/images/Logos/FM.png";
 import Footer from "../../Footer/Footer";
 import { Box, Button, Typography } from "@mui/material";
 import {
@@ -12,7 +11,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { BiLogoFigma } from "react-icons/bi";
 import { IoMdExit } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { fmImages } from "../../../assets/utils/fictionalMobileImages.tsx";
+import { pagesContent } from "../../../assets/utils/projectPagesContent.tsx";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
   getHeaderStyle,
@@ -30,11 +29,6 @@ import {
 } from "./ProjectPage.styles.tsx";
 
 const FictionalMobile = () => {
-  const demoLink = "https://fictionalmobile.netlify.app";
-  const gitHubLink = "https://github.com/Felipe-alv-es/smartphone-store";
-  const figmaLink =
-    "https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=55-27&mode=design&t=q47AFgMoONL1wXYO-4";
-
   const params = {
     autoplay: {
       delay: 5000,
@@ -62,13 +56,13 @@ const FictionalMobile = () => {
   const currentPage = () => {
     switch (location.pathname) {
       case "/fictional-mobile":
-        return fmImages[0];
+        return pagesContent[0];
       case "/fictional-bank":
-        return fmImages[1];
+        return pagesContent[1];
       case "/cripto-store":
-        return fmImages[2];
+        return pagesContent[2];
       default:
-        return fmImages[0];
+        return pagesContent[0];
     }
   };
 
@@ -121,7 +115,7 @@ const FictionalMobile = () => {
         <Box sx={getDescriptionContainerStyle}>
           <Box
             component="img"
-            src={FictionalMobileLogo}
+            src={currentPage().logo}
             alt="Man avatar generic image"
             sx={getLogoStyle}
           />
@@ -133,32 +127,28 @@ const FictionalMobile = () => {
               <StyledLink
                 label="Ver Demo"
                 icon={<IoMdExit />}
-                href={demoLink}
+                href={currentPage().demoLink}
                 target="_blank"
               />
               {" | "}
               <StyledLink
                 label="Github"
                 icon={<AiFillGithub />}
-                href={gitHubLink}
+                href={currentPage().gitHubLink}
                 target="_blank"
               />
               {" | "}
               <StyledLink
                 label="Figma"
                 icon={<BiLogoFigma />}
-                href={figmaLink}
+                href={currentPage().figmaLink}
                 target="_blank"
               />
             </Typography>
           </Box>
         </Box>
         <Typography sx={getDescriptionStyle}>
-          A loja de celulares online é uma plataforma na qual os usuários podem
-          explorar uma variedade de opções, selecionar e comprar os celulares de
-          sua escolha. Além disso, é possível verificar especificações técnicas,
-          ler avaliações de clientes e aproveitar outras opções disponíveis na
-          loja.
+          {currentPage().pageDescription}
         </Typography>
         <Button sx={getButtonStyle} onClick={handleClick}>
           Ver outros projetos
