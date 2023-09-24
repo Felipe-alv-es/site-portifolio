@@ -1,32 +1,24 @@
-import Img1 from "../../assets/images/ProjectsImages/FictionalMobileImages/FM1.png";
-import Img2 from "../../assets/images/ProjectsImages/FictionalMobileImages/FM2.png";
-import Img3 from "../../assets/images/ProjectsImages/FictionalMobileImages/FM3.png";
-import FictionalBankMobile from "../../assets/images/ProjectsMobileImages/FictionalBankMobile.png";
-import FictionalMobileMobile from "../../assets/images/ProjectsMobileImages/FictionalMobileMobile.png";
-import FictionalMobile from "../../assets/images/ProjectsImages/FictionalMobile.png";
+import FM1 from "../../assets/images/ProjectsImages/FictionalMobileImages/FM1.png";
+import FM2 from "../../assets/images/ProjectsImages/FictionalMobileImages/FM2.png";
+import FM3 from "../../assets/images/ProjectsImages/FictionalMobileImages/FM3.png";
+import FB1 from "../../assets/images/ProjectsImages/FictionalBankImages/FB1.png";
+import FB2 from "../../assets/images/ProjectsImages/FictionalBankImages/FB2.png";
+import FB3 from "../../assets/images/ProjectsImages/FictionalBankImages/FB3.png";
 
 export const fmImages = [
   {
     id: 1,
-    imageAlt: "FictionalMobile site homepage",
-    imageSrc: [{ imageSrc: Img1 }, { imageSrc: Img2 }, { imageSrc: Img3 }],
+    pageTitle: "Fictional Mobile",
+    imageArray: [{ imageSrc: FM1 }, { imageSrc: FM2 }, { imageSrc: FM3 }],
   },
   {
     id: 2,
-    imageAlt: "FictionalMobile itens Page",
-    imageSrc: [
-      { imageSrc: FictionalBankMobile },
-      { imageSrc: FictionalMobileMobile },
-      { imageSrc: FictionalMobile },
-    ],
+    pageTitle: "Fictional Bank",
+    imageArray: [{ imageSrc: FB1 }, { imageSrc: FB2 }, { imageSrc: FB3 }],
   },
   {
     id: 3,
-    imageAlt: "FictionalMobile bottom page",
-    imageSrc: [
-      { imageSrc: FictionalBankMobile },
-      { imageSrc: FictionalMobileMobile },
-      { imageSrc: FictionalMobile },
-    ],
+    pageTitle: "Cripto Store",
+    imageArray: [{ imageSrc: FB1 }, { imageSrc: FB2 }, { imageSrc: FB3 }],
   },
 ];

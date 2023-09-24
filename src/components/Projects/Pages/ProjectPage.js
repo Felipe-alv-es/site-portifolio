@@ -29,7 +29,7 @@ import {
   getSwiperboxStyle,
 } from "./ProjectPage.styles.tsx";
 
-export const FictionalMobile = () => {
+const FictionalMobile = () => {
   const demoLink = "https://fictionalmobile.netlify.app";
   const gitHubLink = "https://github.com/Felipe-alv-es/smartphone-store";
   const figmaLink =
@@ -59,15 +59,25 @@ export const FictionalMobile = () => {
   }
 
   const location = useLocation();
-  const currentPage =
-    location.pathname === "/fictional-mobile" ? fmImages[0] : fmImages[2];
-  // const currentPage = location.pathname === "/fictional-mobile" ? fmImages[0] : fmImages[2];
+  const currentPage = () => {
+    switch (location.pathname) {
+      case "/fictional-mobile":
+        return fmImages[0];
+      case "/fictional-bank":
+        return fmImages[1];
+      case "/cripto-store":
+        return fmImages[2];
+      default:
+        return fmImages[0];
+    }
+  };
+
   return (
     <>
       <Box sx={getHeaderStyle}>
         <Box>
           <Typography sx={getPageTitleStyle}>
-            {currentPage.pageTitle}
+            {currentPage().pageTitle}
           </Typography>
           <StyledChipIcon
             label="React"
@@ -93,7 +103,7 @@ export const FictionalMobile = () => {
         />
         <Box sx={getSwiperboxStyle}>
           <Swiper {...params}>
-            {currentPage.imageArray.map((item) => (
+            {currentPage().imageArray.map((item) => (
               <SwiperSlide key={item.id}>
                 <Box
                   component="img"
@@ -158,3 +168,5 @@ export const FictionalMobile = () => {
     </>
   );
 };
+
+export default FictionalMobile;
