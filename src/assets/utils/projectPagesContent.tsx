@@ -6,6 +6,10 @@ import FB1 from "../../assets/images/ProjectsImages/FictionalBankImages/FB1.png"
 import FB2 from "../../assets/images/ProjectsImages/FictionalBankImages/FB2.png";
 import FB3 from "../../assets/images/ProjectsImages/FictionalBankImages/FB3.png";
 import FBLogo from "../../assets/images/Logos/FB.png";
+import DS1 from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDesignSystem.png";
+import DS2 from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDesignSystem1.png";
+import DS3 from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDesignSystem2.png";
+import DSLogo from "../../assets/images/Logos/DS.png";
 
 export const pagesContent = [
   {
@@ -43,5 +47,16 @@ export const pagesContent = [
     gitHubLink: "",
     figmaLink:
       "https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=123-203&mode=design&t=OFbwufJU6Yp3b2BO-4",
+  },
+  {
+    id: 4,
+    pageTitle: "Alma Design System",
+    imageArray: [{ imageSrc: DS1 }, { imageSrc: DS2 }, { imageSrc: DS3 }],
+    logo: DSLogo,
+    pageDescription:
+      "A corretora de criptomoedas é uma plataforma online que oferece aos usuários a possibilidade de acompanhar o mercado de criptomoedas em tempo real. Através dela, é possível acessar informações atualizadas sobre diversas criptomoedas, como cotações, gráficos de desempenho, volumes de negociação e outras estatísticas relevantes.",
+    demoLink: "",
+    gitHubLink: "",
+    figmaLink: "",
   },
 ];

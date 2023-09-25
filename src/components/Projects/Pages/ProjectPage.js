@@ -61,6 +61,8 @@ const FictionalMobile = () => {
         return pagesContent[1];
       case "/cripto-store":
         return pagesContent[2];
+      case "/alma-ds":
+        return pagesContent[3];
       default:
         return pagesContent[0];
     }
