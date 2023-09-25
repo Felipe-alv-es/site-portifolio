@@ -6,6 +6,10 @@ import FB1 from "../../assets/images/ProjectsImages/FictionalBankImages/FB1.png"
 import FB2 from "../../assets/images/ProjectsImages/FictionalBankImages/FB2.png";
 import FB3 from "../../assets/images/ProjectsImages/FictionalBankImages/FB3.png";
 import FBLogo from "../../assets/images/Logos/FB.png";
+import DS1 from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDesignSystem.png";
+import DS2 from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDesignSystem1.png";
+import DS3 from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDesignSystem2.png";
+import DSLogo from "../../assets/images/Logos/DS.png";
 
 export const pagesContent = [
   {
@@ -43,5 +47,16 @@ export const pagesContent = [
     gitHubLink: "",
     figmaLink:
       "https://www.figma.com/file/IckaEZtrblVM49Bn7rvVKi/Site-Portif%C3%B3lio?type=design&node-id=123-203&mode=design&t=OFbwufJU6Yp3b2BO-4",
+  },
+  {
+    id: 4,
+    pageTitle: "Alma Design System",
+    imageArray: [{ imageSrc: DS1 }, { imageSrc: DS2 }, { imageSrc: DS3 }],
+    logo: DSLogo,
+    pageDescription:
+      "Robusto Design System amplamente adotado por diversas Equipes (Squads), visando a padronização de estilos, elementos e componentes em todo o ecossistema da empresa. O Design System resultante otimizou a eficiência do desenvolvimento, reduziu inconsistências visuais e acelerou a entrega de projetos. Além de estabelecer uma base solida para colaboração entre as Squads.",
+    demoLink: "https://alma-react.dasa.com.br/",
+    gitHubLink: "",
+    figmaLink: "",
   },
 ];

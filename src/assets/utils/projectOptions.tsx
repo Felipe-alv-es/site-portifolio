@@ -1,4 +1,5 @@
 import CriptoStore from "../../assets/images/ProjectsImages/CriptoStoreSite.png";
+import AlmaDS from "../../assets/images/ProjectsImages/AlmaDesignSystem.png";
 import FictionalBank from "../../assets/images/ProjectsImages/FictionalBank.png";
 import FictionalBankMobile from "../../assets/images/ProjectsMobileImages/FictionalBankMobile.png";
 import FictionalMobileMobile from "../../assets/images/ProjectsMobileImages/FictionalMobileMobile.png";
@@ -11,6 +12,13 @@ export const projectsOptions = [
     imageSrcMobile: FictionalMobileMobile,
     imageAlt: "Home page from cellphone Store Site",
     src: "/fictional-mobile",
+  },
+  {
+    title: "Alma Design System",
+    imageSrc: AlmaDS,
+    imageSrcMobile: FictionalMobileMobile,
+    imageAlt: "Home page from cellphone Store Site",
+    src: "/alma-ds",
   },
   {
     title: "Fictional Bank",
