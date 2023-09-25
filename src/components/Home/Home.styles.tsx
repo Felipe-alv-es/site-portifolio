@@ -122,6 +122,12 @@ export const getLogoStyle = (): SxProps => ({
       opacity: "0",
     },
   },
+  "@media(max-width: 1000px)": {
+    top: "25%",
+  },
+  "@media(max-width: 820px)": {
+    top: "20%",
+  },
   "@media(max-width: 544px)": {
     top: "10%",
   },
@@ -138,6 +144,16 @@ export const getSubtitleStyle = (): SxProps => ({
   animationDelay: "0ms, 2s",
   whiteSpace: "pre-line",
   textAlign: "center",
+  "@media(max-width: 1000px)": {
+    top: "45%",
+    typography: "h5",
+    fontWeight: "bold",
+  },
+  "@media(max-width: 820px)": {
+    top: "37%",
+    typography: "h5",
+    fontWeight: "bold",
+  },
   "@media(max-width: 544px)": {
     top: "18%",
     typography: "body2",
