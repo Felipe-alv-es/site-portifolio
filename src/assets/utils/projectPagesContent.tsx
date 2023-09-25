@@ -54,8 +54,8 @@ export const pagesContent = [
     imageArray: [{ imageSrc: DS1 }, { imageSrc: DS2 }, { imageSrc: DS3 }],
     logo: DSLogo,
     pageDescription:
-      "A corretora de criptomoedas é uma plataforma online que oferece aos usuários a possibilidade de acompanhar o mercado de criptomoedas em tempo real. Através dela, é possível acessar informações atualizadas sobre diversas criptomoedas, como cotações, gráficos de desempenho, volumes de negociação e outras estatísticas relevantes.",
-    demoLink: "",
+      "Robusto Design System amplamente adotado por diversas Equipes (Squads), visando a padronização de estilos, elementos e componentes em todo o ecossistema da empresa. O Design System resultante otimizou a eficiência do desenvolvimento, reduziu inconsistências visuais e acelerou a entrega de projetos. Além de estabelecer uma base solida para colaboração entre as Squads.",
+    demoLink: "https://alma-react.dasa.com.br/",
     gitHubLink: "",
     figmaLink: "",
   },
