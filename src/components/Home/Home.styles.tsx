@@ -1,23 +1,51 @@
 import React from "react";
-import backImage from "../../assets/images/CommumImages/wavesBackground.png";
 import { Fab, SxProps } from "@mui/material/";
 import { HashLink } from "react-router-hash-link/dist/react-router-hash-link.cjs.production";
 import { BsChevronUp } from "react-icons/bs";
 
-export const getContainerStyle = (): SxProps => ({
+export const getContainerStyle = (scrollValue: number): SxProps => ({
   display: "grid",
   placeItems: "center",
-  backgroundImage: `url(${backImage})`,
-  backgroundSize: "50% 100%",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "right",
+  background: "linear-gradient(to right, #D2E2FB 30%, #86A8D8)",
+  position: "relative",
+  overflow: "hidden",
+  "> div:nth-of-type(2n)": {
+    "> img": {
+      position: "absolute",
+      bottom: 0,
+      left: 0,
+      width: "100%",
+      pointerEvents: "none",
+      zIndex: 1,
+      transition: "0.5s",
+    },
+    "> .Mount2": {
+      marginBottom: `-${scrollValue * 1.2}px`,
+    },
+    "> .Mount1": {
+      marginBottom: `-${scrollValue * 1.1}px`,
+    },
+    "> .Bush2": {
+      marginBottom: `-${scrollValue}px`,
+    },
+    "> .Leaf2": {
+      transform: `translateX(${scrollValue}px)`,
+    },
+    "> .Leaf1": {
+      transform: `translateX(-${scrollValue}px)`,
+    },
+  },
 });
 
-export const getSmartphoneStyle = (): SxProps => ({
-  width: "85%",
+export const getSmartphoneStyle = (scrollValue: number): SxProps => ({
+  width: "65%",
+  bottom: 170,
+  transition: "0.5s",
   position: "absolute",
   animation: "0.5s invisibleFrame, 2s swipeIn",
   animationDelay: "0ms, 0.5s",
+  transform: `translateY(${scrollValue * 2}px)`,
+  zIndex: 1,
   "@keyframes swipeIn": {
     "0%": {
       transform: "rotate(-90deg)",
@@ -41,12 +69,15 @@ export const getSmartphoneStyle = (): SxProps => ({
   },
 });
 
-export const getLaptopStyle = (): SxProps => ({
-  width: "85%",
+export const getLaptopStyle = (scrollValue: number): SxProps => ({
+  width: "65%",
+  bottom: 170,
+  transition: "0.5s",
   position: "absolute",
   zIndex: 1,
   animation: "0.5s invisibleFrame, 1s slideIn",
   animationDelay: "0ms, 0.5s",
+  transform: `translateY(${scrollValue * 2}px)`,
   "@keyframes slideIn": {
     "0%": {
       transform: "translateY(-100%)",
@@ -69,11 +100,15 @@ export const getLaptopStyle = (): SxProps => ({
   },
 });
 
-export const getXiomiNoteStyle = (): SxProps => ({
-  width: "85%",
+export const getXiomiNoteStyle = (scrollValue: number): SxProps => ({
+  width: "65%",
+  bottom: 170,
+  transition: "0.5s",
+  zIndex: 1,
   position: "absolute",
   animation: "0.5s invisibleFrame, 2s swipeInNotebook",
   animationDelay: "0ms, 0.5s",
+  transform: `translateY(${scrollValue * 2}px)`,
   "@keyframes swipeInNotebook": {
     "0%": {
       transform: "rotate(90deg)",
@@ -97,13 +132,15 @@ export const getXiomiNoteStyle = (): SxProps => ({
   },
 });
 
-export const getLogoStyle = (): SxProps => ({
-  width: "50%",
+export const getLogoStyle = (scrollValue: number): SxProps => ({
+  width: "40%",
   position: "absolute",
-  zIndex: "2",
-  top: "30%",
+  transition: "0.5s",
+  zIndex: 1,
+  bottom: 350,
   animation: "2s invisibleFrame, 1s swipeInLogo",
   animationDelay: "0ms, 2s",
+  transform: `translateY(${scrollValue * 2}px)`,
   "@keyframes swipeInLogo": {
     "0%": {
       transform: "translateX(-100%)",
@@ -133,17 +170,19 @@ export const getLogoStyle = (): SxProps => ({
   },
 });
 
-export const getSubtitleStyle = (): SxProps => ({
-  typography: "h4",
+export const getSubtitleStyle = (scrollValue: number): SxProps => ({
+  typography: "h5",
   color: "white",
-  zIndex: "2",
+  zIndex: 1,
+  transition: "0.5s",
   position: "absolute",
-  top: "55%",
+  bottom: 340,
   fontWeight: "bold",
   animation: "2s invisibleFrame, 1s swipeInLogo",
   animationDelay: "0ms, 2s",
   whiteSpace: "pre-line",
   textAlign: "center",
+  transform: `translateY(${scrollValue * 2}px)`,
   "@media(max-width: 1000px)": {
     top: "45%",
     typography: "h5",
