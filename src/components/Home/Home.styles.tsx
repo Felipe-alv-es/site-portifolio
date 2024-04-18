@@ -20,19 +20,19 @@ export const getContainerStyle = (scrollValue: number): SxProps => ({
       transition: "0.5s",
     },
     "> .Mount2": {
-      marginBottom: `-${scrollValue * 1.2}px`,
+      marginBottom: `-${(scrollValue / 2) * 1.2}px`,
     },
     "> .Mount1": {
-      marginBottom: `-${scrollValue * 1.1}px`,
+      marginBottom: `-${(scrollValue / 2) * 1.1}px`,
     },
     "> .Bush2": {
-      marginBottom: `-${scrollValue}px`,
+      marginBottom: `-${scrollValue / 2}px`,
     },
     "> .Leaf2": {
-      transform: `translateX(${scrollValue}px)`,
+      transform: `translateX(${scrollValue / 2}px)`,
     },
     "> .Leaf1": {
-      transform: `translateX(-${scrollValue}px)`,
+      transform: `translateX(-${scrollValue / 2}px)`,
     },
   },
 });
@@ -44,7 +44,7 @@ export const getSmartphoneStyle = (scrollValue: number): SxProps => ({
   position: "absolute",
   animation: "0.5s invisibleFrame, 2s swipeIn",
   animationDelay: "0ms, 0.5s",
-  transform: `translateY(${scrollValue * 2}px)`,
+  transform: `translateY(${scrollValue * 1.5}px)`,
   zIndex: 1,
   "@keyframes swipeIn": {
     "0%": {
@@ -77,7 +77,7 @@ export const getLaptopStyle = (scrollValue: number): SxProps => ({
   zIndex: 1,
   animation: "0.5s invisibleFrame, 1s slideIn",
   animationDelay: "0ms, 0.5s",
-  transform: `translateY(${scrollValue * 2}px)`,
+  transform: `translateY(${scrollValue * 1.5}px)`,
   "@keyframes slideIn": {
     "0%": {
       transform: "translateY(-100%)",
@@ -108,7 +108,7 @@ export const getXiomiNoteStyle = (scrollValue: number): SxProps => ({
   position: "absolute",
   animation: "0.5s invisibleFrame, 2s swipeInNotebook",
   animationDelay: "0ms, 0.5s",
-  transform: `translateY(${scrollValue * 2}px)`,
+  transform: `translateY(${scrollValue * 1.5}px)`,
   "@keyframes swipeInNotebook": {
     "0%": {
       transform: "rotate(90deg)",
@@ -137,10 +137,10 @@ export const getLogoStyle = (scrollValue: number): SxProps => ({
   position: "absolute",
   transition: "0.5s",
   zIndex: 1,
-  bottom: 350,
+  bottom: 370,
   animation: "2s invisibleFrame, 1s swipeInLogo",
   animationDelay: "0ms, 2s",
-  transform: `translateY(${scrollValue * 2}px)`,
+  transform: `translateY(${scrollValue * 1.5}px)`,
   "@keyframes swipeInLogo": {
     "0%": {
       transform: "translateX(-100%)",
@@ -176,13 +176,13 @@ export const getSubtitleStyle = (scrollValue: number): SxProps => ({
   zIndex: 1,
   transition: "0.5s",
   position: "absolute",
-  bottom: 340,
+  bottom: 360,
   fontWeight: "bold",
   animation: "2s invisibleFrame, 1s swipeInLogo",
   animationDelay: "0ms, 2s",
   whiteSpace: "pre-line",
   textAlign: "center",
-  transform: `translateY(${scrollValue * 2}px)`,
+  transform: `translateY(${scrollValue * 1.5}px)`,
   "@media(max-width: 1000px)": {
     top: "45%",
     typography: "h5",

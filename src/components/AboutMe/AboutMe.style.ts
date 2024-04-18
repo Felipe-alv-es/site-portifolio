@@ -3,9 +3,39 @@ import { SxProps } from "@mui/material/";
 export const getContainerStyle = (): SxProps => ({
   display: "grid",
   placeItems: "center",
-  padding: "0 15% 0 15%",
+  padding: "0% 15% 0 15%",
+  marginTop: "10%",
+  position: "relative",
   "@media(max-width: 544px)": {
     padding: 0,
+  },
+  "::after": {
+    content: '""',
+    borderTopLeftRadius: "70% 100%",
+    borderTopRightRadius: "70% 100%",
+    position: "absolute",
+    top: "-35%",
+    height: "25%",
+    width: "100%",
+    backgroundColor: "#e7e7e7",
+    zIndex: 1,
+  },
+  "::before": {
+    content: '""',
+    position: "absolute",
+    top: "-55%",
+    height: "45%",
+    width: "100%",
+    backgroundColor: "#3a3290",
+    zIndex: 1,
+  },
+  "@media(max-width: 1920px)": {
+    "::after": {
+      top: "-18%",
+    },
+    "::before": {
+      top: "-45%",
+    },
   },
 });
 
@@ -25,6 +55,7 @@ export const getContentStyle = (): SxProps => ({
 
 export const getTitleStyle = (): SxProps => ({
   gridArea: "title",
+  whiteSpace: "pre-wrap",
   "> p": {
     typography: "h4",
     fontWeight: "bold",

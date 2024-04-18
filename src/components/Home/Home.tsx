@@ -22,16 +22,12 @@ import {
   StyledFabIcon,
 } from "./Home.styles.tsx";
 const Home = () => {
-  // const title = document.querySelector(".logoContainer");
-
   const [scrollValue, setScrollValue] = useState(0);
 
   document.addEventListener("scroll", function () {
     const value = window.scrollY;
     setScrollValue(value);
   });
-
-  console.log(scrollValue);
 
   return (
     <Box sx={getContainerStyle(scrollValue)} id="Home">
