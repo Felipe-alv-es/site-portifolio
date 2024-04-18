@@ -38,14 +38,18 @@ export const getContainerStyle = (scrollValue: number): SxProps => ({
 });
 
 export const getSmartphoneStyle = (scrollValue: number): SxProps => ({
-  width: "65%",
-  bottom: 170,
+  width: "55%",
+  bottom: 450,
   transition: "0.5s",
   position: "absolute",
   animation: "0.5s invisibleFrame, 2s swipeIn",
   animationDelay: "0ms, 0.5s",
   transform: `translateY(${scrollValue * 1.5}px)`,
   zIndex: 1,
+  "@media(max-width: 1920px)": {
+    bottom: 230,
+    width: "65%",
+  },
   "@keyframes swipeIn": {
     "0%": {
       transform: "rotate(-90deg)",
@@ -70,14 +74,18 @@ export const getSmartphoneStyle = (scrollValue: number): SxProps => ({
 });
 
 export const getLaptopStyle = (scrollValue: number): SxProps => ({
-  width: "65%",
-  bottom: 170,
+  width: "55%",
+  bottom: 450,
   transition: "0.5s",
   position: "absolute",
   zIndex: 1,
   animation: "0.5s invisibleFrame, 1s slideIn",
   animationDelay: "0ms, 0.5s",
   transform: `translateY(${scrollValue * 1.5}px)`,
+  "@media(max-width: 1920px)": {
+    bottom: 230,
+    width: "65%",
+  },
   "@keyframes slideIn": {
     "0%": {
       transform: "translateY(-100%)",
@@ -101,14 +109,18 @@ export const getLaptopStyle = (scrollValue: number): SxProps => ({
 });
 
 export const getXiomiNoteStyle = (scrollValue: number): SxProps => ({
-  width: "65%",
-  bottom: 170,
+  width: "55%",
+  bottom: 450,
   transition: "0.5s",
   zIndex: 1,
   position: "absolute",
   animation: "0.5s invisibleFrame, 2s swipeInNotebook",
   animationDelay: "0ms, 0.5s",
   transform: `translateY(${scrollValue * 1.5}px)`,
+  "@media(max-width: 1920px)": {
+    bottom: 230,
+    width: "65%",
+  },
   "@keyframes swipeInNotebook": {
     "0%": {
       transform: "rotate(90deg)",
@@ -133,14 +145,18 @@ export const getXiomiNoteStyle = (scrollValue: number): SxProps => ({
 });
 
 export const getLogoStyle = (scrollValue: number): SxProps => ({
-  width: "40%",
+  width: "30%",
+  bottom: 800,
   position: "absolute",
   transition: "0.5s",
   zIndex: 1,
-  bottom: 370,
   animation: "2s invisibleFrame, 1s swipeInLogo",
   animationDelay: "0ms, 2s",
   transform: `translateY(${scrollValue * 1.5}px)`,
+  "@media(max-width: 1920px)": {
+    bottom: 500,
+    width: "40%",
+  },
   "@keyframes swipeInLogo": {
     "0%": {
       transform: "translateX(-100%)",
@@ -159,46 +175,23 @@ export const getLogoStyle = (scrollValue: number): SxProps => ({
       opacity: "0",
     },
   },
-  "@media(max-width: 1000px)": {
-    top: "25%",
-  },
-  "@media(max-width: 820px)": {
-    top: "20%",
-  },
-  "@media(max-width: 544px)": {
-    top: "10%",
-  },
 });
 
 export const getSubtitleStyle = (scrollValue: number): SxProps => ({
+  bottom: 800,
   typography: "h5",
   color: "white",
   zIndex: 1,
   transition: "0.5s",
   position: "absolute",
-  bottom: 360,
   fontWeight: "bold",
   animation: "2s invisibleFrame, 1s swipeInLogo",
   animationDelay: "0ms, 2s",
   whiteSpace: "pre-line",
   textAlign: "center",
   transform: `translateY(${scrollValue * 1.5}px)`,
-  "@media(max-width: 1000px)": {
-    top: "45%",
-    typography: "h5",
-    fontWeight: "bold",
-  },
-  "@media(max-width: 820px)": {
-    top: "37%",
-    typography: "h5",
-    fontWeight: "bold",
-  },
-  "@media(max-width: 544px)": {
-    top: "18%",
-    typography: "body2",
-    fontWeight: "medium",
-    width: "50%",
-    whiteSpace: "normal",
+  "@media(max-width: 1920px)": {
+    bottom: 500,
   },
 });
 
