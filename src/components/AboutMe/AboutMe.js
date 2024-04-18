@@ -23,11 +23,11 @@ import {
 
 const AboutMe = () => {
   return (
-    <Box sx={getContainerStyle} id="Sobre">
+    <Box sx={getContainerStyle} id="Sobre" className="conteiner">
       <Box sx={getContentStyle}>
         <Box sx={getTitleStyle}>
           <Typography fontFamily={"roboto"}>
-            {"Olá, sou o Felipe, \n Desenvolvedor \n Front-End React"}
+            {"Olá, sou o Felipe, \nDesenvolvedor Web React"}
           </Typography>
         </Box>
         <Box sx={getSubtitleStyle}>
