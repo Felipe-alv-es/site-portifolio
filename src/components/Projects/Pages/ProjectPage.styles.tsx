@@ -1,5 +1,4 @@
 import React from "react";
-import backImage from "../../../assets/images/CommumImages/wavesBackground.png";
 import { Box, Icon, Link, Typography, SxProps } from "@mui/material";
 
 export const getHeaderStyle = () => ({
@@ -27,41 +26,24 @@ export const getPageTitleStyle = () => ({
 });
 
 export const getContentContainerStyle = () => ({
-  backgroundImage: `url(${backImage})`,
-  backgroundSize: "50% 100%",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "right",
   display: "flex",
   flexDirection: "column",
   placeItems: "center",
-  textAlign: "left",
-  padding: "32px 32px 32px 32px",
-  "@media(max-width: 544px)": {
-    padding: "64px 0px 0px 0px",
-    "> img": {
-      width: "100%",
-    },
+  padding: "5% 1% 5% 1%",
+  "> div:first-of-type": {
+    width: "100%",
+    paddingTop: "40px",
   },
-  "> img": {
-    animation: "1s invisibleFrame, 1s swipeInLogo",
-    animationDelay: "0ms, 1s",
-    "@keyframes swipeInLogo": {
-      "0%": {
-        transform: "translateX(-100%)",
-        opacity: "0",
-      },
-      "-100%": {
-        transform: "translateX(0)",
-        opacity: "100",
-      },
-    },
-    "@keyframes invisibleFrame": {
-      "0%": {
-        opacity: "0",
-      },
-      "100%": {
-        opacity: "0",
-      },
+  ".swiper": {
+    paddinTop: "50px",
+    paddingBottom: "50px",
+  },
+  ".swiper-slide": {
+    width: "60%",
+    borderRadius: "32px",
+    "> img": {
+      borderRadius: "32px",
+      boxShadow: "rgba(0, 0, 0, 0.65) 0px 5px 15px",
     },
   },
 });
@@ -110,35 +92,6 @@ export const getLogoStyle = () => ({
   marginRight: "16px",
   "@media(max-width: 544px)": {
     width: "15%",
-  },
-});
-
-export const getSwiperboxStyle = () => ({
-  width: "52.5%",
-  position: "absolute",
-  transform: "translateY(22.5%)",
-  animation: "1s invisibleFrame, 1s swipeInImage",
-  animationDelay: "0ms, 1s",
-  "@keyframes swipeInImage": {
-    "0%": {
-      transform: "translateY(22.5%) translateX(-155%) ",
-      opacity: "0",
-    },
-    "-100%": {
-      transform: "translateY(22.5%) translateX(0) ",
-      opacity: "100",
-    },
-  },
-  "@keyframes invisibleFrame": {
-    "0%": {
-      opacity: "0",
-    },
-    "100%": {
-      opacity: "0",
-    },
-  },
-  "@media(max-width: 544px)": {
-    width: "63.7%",
   },
 });
 

@@ -1,5 +1,4 @@
 import React from "react";
-import NoteHd from "../../../assets/images/CommumImages/NoteHdScreen.png";
 import Footer from "../../Footer/Footer";
 import { Box, Button, Typography } from "@mui/material";
 import {
@@ -25,17 +24,27 @@ import {
   getDescriptionStyle,
   getButtonStyle,
   getLogoStyle,
-  getSwiperboxStyle,
 } from "./ProjectPage.styles.tsx";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 
-const FictionalMobile = () => {
+const ProjectPage = () => {
   const params = {
     autoplay: {
       delay: 5000,
     },
     centeredSlides: true,
-    allowTouchMove: false,
-    loop: true,
+    effect: "coverflow",
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: true,
+    modules: [EffectCoverflow, Pagination],
+    className: "mySwiper",
   };
 
   const scrollUp = () => {
@@ -55,14 +64,12 @@ const FictionalMobile = () => {
   const location = useLocation();
   const currentPage = () => {
     switch (location.pathname) {
-      case "/fictional-mobile":
+      case "/twelve-hours":
         return pagesContent[0];
-      case "/fictional-bank":
-        return pagesContent[1];
-      case "/cripto-store":
-        return pagesContent[2];
       case "/alma-ds":
-        return pagesContent[3];
+        return pagesContent[1];
+      case "/fictional-mobile":
+        return pagesContent[2];
       default:
         return pagesContent[0];
     }
@@ -91,13 +98,7 @@ const FictionalMobile = () => {
         <StyledCloseButton onClick={handleClick} />
       </Box>
       <Box sx={getContentContainerStyle}>
-        <Box
-          component="img"
-          src={NoteHd}
-          alt="Man avatar generic image"
-          sx={{ width: "85%" }}
-        />
-        <Box sx={getSwiperboxStyle}>
+        <Box>
           <Swiper {...params}>
             {currentPage().imageArray.map((item) => (
               <SwiperSlide key={item.id}>
@@ -107,7 +108,6 @@ const FictionalMobile = () => {
                   alt={item.imageAlt}
                   sx={{
                     width: "100%",
-                    borderRadius: "4px",
                   }}
                 />
               </SwiperSlide>
@@ -172,4 +172,4 @@ const FictionalMobile = () => {
   );
 };
 
-export default FictionalMobile;
+export default ProjectPage;
