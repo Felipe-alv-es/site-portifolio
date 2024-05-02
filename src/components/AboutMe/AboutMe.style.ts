@@ -6,9 +6,6 @@ export const getContainerStyle = (): SxProps => ({
   padding: "0% 15% 0 15%",
   marginTop: "10%",
   position: "relative",
-  "@media(max-width: 544px)": {
-    padding: 0,
-  },
   "::after": {
     content: '""',
     borderTopLeftRadius: "70% 100%",
@@ -35,6 +32,39 @@ export const getContainerStyle = (): SxProps => ({
     },
     "::before": {
       top: "-45%",
+    },
+  },
+  "@media(max-width: 544px)": {
+    padding: 0,
+    "::after": {
+      marginTop: "15%",
+      height: "10%",
+    },
+    "::before": {
+      marginTop: "43%",
+      height: "11%",
+    },
+  },
+  "@media(max-width: 390px)": {
+    padding: 0,
+    "::after": {
+      marginTop: "15%",
+      height: "10%",
+    },
+    "::before": {
+      marginTop: "47%",
+      height: "11%",
+    },
+  },
+  "@media(max-width: 375px)": {
+    padding: 0,
+    "::after": {
+      marginTop: "15%",
+      height: "10%",
+    },
+    "::before": {
+      marginTop: "51%",
+      height: "11%",
     },
   },
 });
