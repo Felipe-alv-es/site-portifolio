@@ -24,10 +24,9 @@ function App() {
               </>
             }
           />
-          <Route path="/fictional-mobile" exact element={<ProjectPage />} />
+          <Route path="/twelve-hours" exact element={<ProjectPage />} />
           <Route path="/alma-ds" exact element={<ProjectPage />} />
-          <Route path="/fictional-bank" exact element={<ProjectPage />} />
-          <Route path="/cripto-store" exact element={<ProjectPage />} />
+          <Route path="/fictional-mobile" exact element={<ProjectPage />} />
         </Routes>
       </BrowserRouter>
     </div>
