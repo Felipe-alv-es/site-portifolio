@@ -50,6 +50,10 @@ export const getSmartphoneStyle = (scrollValue: number): SxProps => ({
     bottom: 240,
     width: "65%",
   },
+  "@media(max-width: 1360px)": {
+    bottom: 140,
+    width: "65%",
+  },
   "@keyframes swipeIn": {
     "0%": {
       transform: "rotate(-90deg)",
@@ -86,6 +90,10 @@ export const getLaptopStyle = (scrollValue: number): SxProps => ({
     bottom: 240,
     width: "65%",
   },
+  "@media(max-width: 1360px)": {
+    bottom: 140,
+    width: "65%",
+  },
   "@keyframes slideIn": {
     "0%": {
       transform: "translateY(-100%)",
@@ -119,6 +127,10 @@ export const getXiomiNoteStyle = (scrollValue: number): SxProps => ({
   transform: `translateY(${scrollValue * 1.5}px)`,
   "@media(max-width: 1920px)": {
     bottom: 240,
+    width: "65%",
+  },
+  "@media(max-width: 1360px)": {
+    bottom: 140,
     width: "65%",
   },
   "@keyframes swipeInNotebook": {
@@ -157,6 +169,10 @@ export const getLogoStyle = (scrollValue: number): SxProps => ({
     bottom: 500,
     width: "40%",
   },
+  "@media(max-width: 1360px)": {
+    bottom: 350,
+    width: "40%",
+  },
   "@keyframes swipeInLogo": {
     "0%": {
       transform: "translateX(-100%)",
@@ -192,6 +208,9 @@ export const getSubtitleStyle = (scrollValue: number): SxProps => ({
   transform: `translateY(${scrollValue * 1.5}px)`,
   "@media(max-width: 1920px)": {
     bottom: 490,
+  },
+  "@media(max-width: 1360px)": {
+    bottom: 340,
   },
 });
 
