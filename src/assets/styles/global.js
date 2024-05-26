@@ -7,6 +7,7 @@ export default createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Open Sans', sans-serif;
         font-family: 'Roboto', sans-serif;
+        scroll-behavior: smooth;
     }
 
     body {
