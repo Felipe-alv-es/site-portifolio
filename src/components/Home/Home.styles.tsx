@@ -17,7 +17,7 @@ export const getContainerStyle = (scrollValue: number): SxProps => ({
       width: "100%",
       pointerEvents: "none",
       zIndex: 1,
-      transition: "0.5s",
+      transition: "0.2s",
     },
     "> .Mount2": {
       marginBottom: `-${(scrollValue / 2) * 1.2}px`,
@@ -40,7 +40,7 @@ export const getContainerStyle = (scrollValue: number): SxProps => ({
 export const getSmartphoneStyle = (scrollValue: number): SxProps => ({
   width: "55%",
   bottom: 450,
-  transition: "0.5s",
+  transition: "0.2s",
   position: "absolute",
   animation: "0.5s invisibleFrame, 2s swipeIn",
   animationDelay: "0ms, 0.5s",
@@ -83,7 +83,7 @@ export const getSmartphoneStyle = (scrollValue: number): SxProps => ({
 export const getLaptopStyle = (scrollValue: number): SxProps => ({
   width: "55%",
   bottom: 450,
-  transition: "0.5s",
+  transition: "0.2s",
   position: "absolute",
   zIndex: 1,
   animation: "0.5s invisibleFrame, 1s slideIn",
@@ -125,7 +125,7 @@ export const getLaptopStyle = (scrollValue: number): SxProps => ({
 export const getXiomiNoteStyle = (scrollValue: number): SxProps => ({
   width: "55%",
   bottom: 450,
-  transition: "0.5s",
+  transition: "0.2s",
   zIndex: 1,
   position: "absolute",
   animation: "0.5s invisibleFrame, 2s swipeInNotebook",
@@ -169,7 +169,7 @@ export const getLogoStyle = (scrollValue: number): SxProps => ({
   width: "30%",
   bottom: 800,
   position: "absolute",
-  transition: "0.5s",
+  transition: "0.2s",
   zIndex: 1,
   animation: "2s invisibleFrame, 1s swipeInLogo",
   animationDelay: "0ms, 2s",
@@ -210,7 +210,7 @@ export const getSubtitleStyle = (scrollValue: number): SxProps => ({
   typography: "h5",
   color: "white",
   zIndex: 1,
-  transition: "0.5s",
+  transition: "0.2s",
   position: "absolute",
   fontWeight: "bold",
   animation: "2s invisibleFrame, 1s swipeInLogo",
