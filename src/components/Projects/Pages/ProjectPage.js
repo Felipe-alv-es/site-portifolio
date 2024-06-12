@@ -64,12 +64,14 @@ const ProjectPage = () => {
   const location = useLocation();
   const currentPage = () => {
     switch (location.pathname) {
-      case "/twelve-hours":
+      case "/felit-courses":
         return pagesContent[0];
-      case "/alma-ds":
+      case "/twelve-hours":
         return pagesContent[1];
-      case "/fictional-mobile":
+      case "/alma-ds":
         return pagesContent[2];
+      case "/fictional-mobile":
+        return pagesContent[3];
       default:
         return pagesContent[0];
     }

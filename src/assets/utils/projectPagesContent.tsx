@@ -10,10 +10,31 @@ import TW1 from "../../assets/images/ProjectsImages/TwelveHours/Imagem1.png";
 import TW2 from "../../assets/images/ProjectsImages/TwelveHours/Imagem2.png";
 import TW3 from "../../assets/images/ProjectsImages/TwelveHours/Imagem3.png";
 import TWLogo from "../../assets/images/ProjectsImages/TwelveHours/TwelveHours.png";
+import FC1 from "../../assets/images/ProjectsImages/LandingPageImages/FC1.png";
+import FC2 from "../../assets/images/ProjectsImages/LandingPageImages/FC2.png";
+import FC3 from "../../assets/images/ProjectsImages/LandingPageImages/FC3.png";
+import FC4 from "../../assets/images/ProjectsImages/LandingPageImages/FC4.png";
+import FCLogo from "../../assets/images/ProjectsImages/LandingPageImages/LogoSM.png";
 
 export const pagesContent = [
   {
     id: 1,
+    pageTitle: "Cursos de TI",
+    imageArray: [
+      { imageSrc: FC1 },
+      { imageSrc: FC2 },
+      { imageSrc: FC3 },
+      { imageSrc: FC4 },
+    ],
+    logo: FCLogo,
+    pageDescription:
+      "Você está desempregado e não está conseguindo uma re-colocação no mercado de trabalho? Isso ocorre por diversos motivos, deste a falta de organização de tempo, até a errada priorização das atividades, e para isso, a tecnica das 12 horas poderá te ajudar! \n\n Este é um projeto pessoal desenvolvido como uma plataforma para organização do seu tempo do dia a dia, a fim de evitar tempos ociosos ou mal administrados.",
+    demoLink: "https://felitcourses.netlify.app/",
+    gitHubLink: "https://github.com/Felipe-alv-es/LandingPage",
+    figmaLink: "",
+  },
+  {
+    id: 2,
     pageTitle: "Técnica das 12 Horas",
     imageArray: [{ imageSrc: TW1 }, { imageSrc: TW2 }, { imageSrc: TW3 }],
     logo: TWLogo,
@@ -24,7 +45,7 @@ export const pagesContent = [
     figmaLink: "",
   },
   {
-    id: 2,
+    id: 3,
     pageTitle: "Alma Design System",
     imageArray: [{ imageSrc: DS1 }, { imageSrc: DS2 }, { imageSrc: DS3 }],
     logo: DSLogo,
@@ -35,7 +56,7 @@ export const pagesContent = [
     figmaLink: "",
   },
   {
-    id: 3,
+    id: 4,
     pageTitle: "Fictional Mobile",
     imageArray: [{ imageSrc: FM1 }, { imageSrc: FM2 }, { imageSrc: FM3 }],
     logo: FMLogo,
