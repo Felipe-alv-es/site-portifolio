@@ -1,11 +1,19 @@
 import AlmaDS from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDesignSystem.png";
 import TwelveHours from "../../assets/images/ProjectsImages/TwelveHours/Imagem1.png";
+import FelitCourses from "../../assets/images/ProjectsImages/LandingPageImages/FelitCourses.png";
 import FictionalMobileMobile from "../../assets/images/ProjectsImages/FictionalMobileImages/FictionalMobileMobile.png";
 import FictionalMobile from "../../assets/images/ProjectsImages/FictionalMobileImages/FictionalMobile.png";
 import TwelveHoursMobile from "../../assets/images/ProjectsImages/TwelveHours/TwelveHoursMobile.png";
 import AlmaDSMobile from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDSMobile.png";
 
 export const projectsOptions = [
+  {
+    title: "Cursos de TI",
+    imageSrc: FelitCourses,
+    imageSrcMobile: TwelveHoursMobile,
+    imageAlt: "Homepage of FelitCourses Site",
+    src: "/felit-courses",
+  },
   {
     title: "Técnica das 12 Horas",
     imageSrc: TwelveHours,

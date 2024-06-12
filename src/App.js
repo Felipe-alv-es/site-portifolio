@@ -24,6 +24,7 @@ function App() {
               </>
             }
           />
+          <Route path="/felit-courses" exact element={<ProjectPage />} />
           <Route path="/twelve-hours" exact element={<ProjectPage />} />
           <Route path="/alma-ds" exact element={<ProjectPage />} />
           <Route path="/fictional-mobile" exact element={<ProjectPage />} />
