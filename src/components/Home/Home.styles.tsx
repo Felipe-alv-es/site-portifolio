@@ -50,12 +50,23 @@ export const getSmartphoneStyle = (scrollValue: number): SxProps => ({
     bottom: 240,
     width: "65%",
   },
+  "@media(max-width: 1440px)": {
+    bottom: 160,
+    width: "65%",
+  },
   "@media(max-width: 1360px)": {
     bottom: 140,
     width: "65%",
   },
-  "@media(max-width: 544px)": {
+  "@media(max-width: 950px)": {
+    bottom: 110,
+  },
+  "@media(max-width: 768px)": {
+    bottom: 90,
+  },
+  "@media(max-width: 428px)": {
     bottom: 50,
+    width: "80%",
   },
   "@keyframes swipeIn": {
     "0%": {
@@ -93,12 +104,23 @@ export const getLaptopStyle = (scrollValue: number): SxProps => ({
     bottom: 240,
     width: "65%",
   },
+  "@media(max-width: 1440px)": {
+    bottom: 160,
+    width: "65%",
+  },
   "@media(max-width: 1360px)": {
     bottom: 140,
     width: "65%",
   },
-  "@media(max-width: 544px)": {
+  "@media(max-width: 950px)": {
+    bottom: 110,
+  },
+  "@media(max-width: 768px)": {
+    bottom: 90,
+  },
+  "@media(max-width: 428px)": {
     bottom: 50,
+    width: "80%",
   },
   "@keyframes slideIn": {
     "0%": {
@@ -135,12 +157,23 @@ export const getXiomiNoteStyle = (scrollValue: number): SxProps => ({
     bottom: 240,
     width: "65%",
   },
+  "@media(max-width: 1440px)": {
+    bottom: 160,
+    width: "65%",
+  },
   "@media(max-width: 1360px)": {
     bottom: 140,
     width: "65%",
   },
-  "@media(max-width: 544px)": {
+  "@media(max-width: 950px)": {
+    bottom: 110,
+  },
+  "@media(max-width: 768px)": {
+    bottom: 90,
+  },
+  "@media(max-width: 428px)": {
     bottom: 50,
+    width: "80%",
   },
   "@keyframes swipeInNotebook": {
     "0%": {
@@ -178,12 +211,21 @@ export const getLogoStyle = (scrollValue: number): SxProps => ({
     bottom: 500,
     width: "40%",
   },
-  "@media(max-width: 1360px)": {
+  "@media(max-width: 1440px)": {
     bottom: 350,
-    width: "40%",
   },
-  "@media(max-width: 544px)": {
-    bottom: 110,
+  "@media(max-width: 1360px)": {
+    bottom: 370,
+  },
+  "@media(max-width: 950px)": {
+    bottom: 250,
+  },
+  "@media(max-width: 768px)": {
+    bottom: 220,
+  },
+  "@media(max-width: 428px)": {
+    bottom: 135,
+    width: "45%",
   },
   "@keyframes swipeInLogo": {
     "0%": {
@@ -221,12 +263,24 @@ export const getSubtitleStyle = (scrollValue: number): SxProps => ({
   "@media(max-width: 1920px)": {
     bottom: 490,
   },
+  "@media(max-width: 1440px)": {
+    bottom: 350,
+  },
   "@media(max-width: 1360px)": {
     bottom: 340,
   },
-  "@media(max-width: 544px)": {
-    bottom: 100,
-    fontSize: "8px",
+  "@media(max-width: 950px)": {
+    bottom: 220,
+    typography: "h6",
+    fontWeight: "bold",
+  },
+  "@media(max-width: 768px)": {
+    bottom: 190,
+    fontSize: "16px",
+  },
+  "@media(max-width: 428px)": {
+    bottom: 120,
+    fontSize: "10px",
   },
 });
 

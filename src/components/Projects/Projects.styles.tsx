@@ -53,6 +53,14 @@ export const getSwiperStyle = (): SxProps => ({
       },
     },
   },
+  "@media(max-width: 950px)": {
+    width: "54%",
+    marginTop: "8%",
+  },
+  "@media(max-width: 768px)": {
+    width: "69.4%",
+    marginTop: "10%",
+  },
   "@media(max-width: 544px)": {
     marginTop: "23%",
     width: "72.1%",

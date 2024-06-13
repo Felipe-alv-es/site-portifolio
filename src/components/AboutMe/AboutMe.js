@@ -69,7 +69,7 @@ const AboutMe = () => {
           <Typography
             fontFamily={"roboto"}
             variant="overline"
-            sx={{ display: "flex", fontWeight: "bold" }}
+            sx={{ display: "flex", fontWeight: "bold", whiteSpace: "nowrap" }}
           >
             Habilidades Técnicas
           </Typography>

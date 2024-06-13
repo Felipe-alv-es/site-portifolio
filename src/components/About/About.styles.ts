@@ -4,6 +4,9 @@ export const getContainerStyle = (): SxProps => ({
   display: "grid",
   placeItems: "center",
   padding: "0 15% 0 15%",
+  "@media(max-width: 768px)": {
+    padding: "0% 5% 0 5%",
+  },
   "@media(max-width: 544px)": {
     padding: "0",
   },
@@ -17,6 +20,9 @@ export const getContentStyle = (): SxProps => ({
   maxWidth: "900px",
   marginLeft: "2em",
   marginRight: "2em",
+  "@media(max-width: 950px)": {
+    alignItems: "center",
+  },
   "@media(max-width: 544px)": {
     gridTemplateAreas: `'title''content''icons''image'`,
     placeItems: "center",

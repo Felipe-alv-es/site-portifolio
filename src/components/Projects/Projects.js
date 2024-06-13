@@ -23,7 +23,7 @@ import {
 const Projects = () => {
   const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
-  const isMobile = width <= 768;
+  const isMobile = width <= 428;
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -96,14 +96,26 @@ const Projects = () => {
             component="img"
             src={SmartphoneBackground}
             alt="Man avatar generic image"
-            sx={{ width: "80%", userSelect: "none" }}
+            sx={{
+              width: "80%",
+              userSelect: "none",
+            }}
           />
         ) : (
           <Box
             component="img"
             src={LaptopBackground}
             alt="Man avatar generic image"
-            sx={{ width: "70%", userSelect: "none" }}
+            sx={{
+              width: "70%",
+              userSelect: "none",
+              "@media(max-width: 950px)": {
+                width: "85%",
+              },
+              "@media(max-width: 768px)": {
+                width: "110%",
+              },
+            }}
           />
         )}
         <Box sx={getSwiperStyle}>
@@ -158,6 +170,9 @@ const Projects = () => {
           sx={{
             display: "flex",
             width: "30%",
+            "@media(max-width: 950px)": {
+              width: "40%",
+            },
             "@media(max-width: 544px)": {
               width: "70%",
             },

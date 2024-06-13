@@ -34,37 +34,27 @@ export const getContainerStyle = (): SxProps => ({
       top: "-45%",
     },
   },
-  "@media(max-width: 544px)": {
-    padding: 0,
+  "@media(max-width: 950px)": {
+    padding: "5% 15% 0 15%",
     "::after": {
-      marginTop: "15%",
-      height: "10%",
+      top: "-5%",
     },
     "::before": {
-      marginTop: "43%",
-      height: "11%",
+      top: "-25%",
     },
   },
-  "@media(max-width: 390px)": {
-    padding: 0,
-    "::after": {
-      marginTop: "15%",
-      height: "10%",
-    },
-    "::before": {
-      marginTop: "47%",
-      height: "11%",
-    },
+  "@media(max-width: 768px)": {
+    padding: "0% 5% 0 5%",
   },
-  "@media(max-width: 375px)": {
-    padding: 0,
+  "@media(max-width: 428px)": {
+    padding: "0% 0% 5% 0%",
     "::after": {
-      marginTop: "15%",
-      height: "10%",
+      top: "-8%",
+      height: "5%",
     },
     "::before": {
-      marginTop: "51%",
-      height: "11%",
+      top: "-8%",
+      height: "5%",
     },
   },
 });
@@ -115,6 +105,9 @@ export const getImageStyle = (): SxProps => ({
   borderWidth: "1px",
   borderColor: "#1a1a1a",
   borderStyle: "solid",
+  "@media(max-width: 768px)": {
+    width: "200px",
+  },
   "@media(max-width: 544px)": {
     maxWidth: "none",
     width: "20%",
@@ -131,6 +124,10 @@ export const getTechnicalSkillsStyle = (): SxProps => ({
   marginTop: "1em",
   justifyContent: "space-between",
   gridArea: "tech",
+  "@media(max-width: 950px)": {
+    "> div": { display: "flex" },
+    "> hr": { margin: "0px 16px 0px 16px" },
+  },
   "@media(max-width: 544px)": {
     display: "grid",
     gridTemplateAreas: `'skillsTitle''skillsIcons'`,
