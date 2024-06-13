@@ -17,6 +17,11 @@ export const getContainerStyles = (): SxProps => ({
 export const getFooterMenuStyle = (): SxProps => ({
   display: "flex",
   justifyContent: "space-between",
+  "@media(max-width: 950px)": {
+    flexDirection: "column",
+    placeItems: "center",
+    textAlign: "center",
+  },
   "@media(max-width: 544px)": {
     flexDirection: "column",
     padding: "32px",
