@@ -80,6 +80,9 @@ export const getDescriptionStyle = () => ({
   marginTop: "2%",
   color: "#1a1a1a",
   textAlign: "justify",
+  "@media(max-width: 950px)": {
+    paddingRight: "30%",
+  },
   "@media(max-width: 544px)": {
     padding: "0 10% 0 10%",
     marginTop: "10%",

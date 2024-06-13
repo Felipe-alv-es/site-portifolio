@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../../Footer/Footer";
 import { Box, Button, Typography } from "@mui/material";
 import {
@@ -28,13 +28,27 @@ import {
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 const ProjectPage = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  const isMobile = width <= 428;
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
   const params = {
     autoplay: {
       delay: 5000,
     },
     centeredSlides: true,
-    effect: "coverflow",
-    slidesPerView: "auto",
+    effect: isMobile ? "" : "coverflow",
+    slidesPerView: isMobile ? 1 : "auto",
     coverflowEffect: {
       rotate: 50,
       stretch: 0,
