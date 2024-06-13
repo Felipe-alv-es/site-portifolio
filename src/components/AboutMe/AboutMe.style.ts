@@ -46,6 +46,17 @@ export const getContainerStyle = (): SxProps => ({
   "@media(max-width: 768px)": {
     padding: "0% 5% 0 5%",
   },
+  "@media(max-width: 428px)": {
+    padding: "0% 0% 5% 0%",
+    "::after": {
+      top: "-8%",
+      height: "5%",
+    },
+    "::before": {
+      top: "-8%",
+      height: "5%",
+    },
+  },
 });
 
 export const getContentStyle = (): SxProps => ({
