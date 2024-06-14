@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Footer from "../../Footer/Footer";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Modal, Typography } from "@mui/material";
 import {
   BiLogoJavascript,
   BiLogoTypescript,
@@ -28,6 +28,7 @@ import {
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 const ProjectPage = () => {
+  const [open, setOpen] = useState();
   const [width, setWidth] = useState(window.innerWidth);
   const isMobile = width <= 428;
 
@@ -125,11 +126,42 @@ const ProjectPage = () => {
                   sx={{
                     width: "100%",
                   }}
+                  onClick={() => setOpen(!open)}
                 />
               </SwiperSlide>
             ))}
           </Swiper>
         </Box>
+
+        <Box>
+          <Modal
+            open={open}
+            onClick={() => setOpen(false)}
+            sx={{ margin: "32px" }}
+          >
+            <Box
+              sx={{
+                borderRadius: "16px",
+                height: "95%",
+                overflow: "scroll",
+              }}
+            >
+              {currentPage().imageArray.map((item) => (
+                <Box
+                  key={item.id}
+                  component="img"
+                  src={item.imageSrc}
+                  alt={item.imageAlt}
+                  sx={{
+                    width: "100%",
+                    margin: "8px 0px 8px 0px",
+                  }}
+                />
+              ))}
+            </Box>
+          </Modal>
+        </Box>
+
         <Box sx={getDescriptionContainerStyle}>
           <Box
             component="img"
