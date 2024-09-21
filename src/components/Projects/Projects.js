@@ -48,24 +48,12 @@ const Projects = () => {
     allowTouchMove: false,
   };
 
-  const [swiperTitle, setSwiperTitle] = useState();
-  const swipePreviousTitle = () => swiperTitle.slidePrev();
-  const swipeNextTitle = () => swiperTitle.slideNext();
-
-  const paramsTitle = {
-    onSwiper: setSwiperTitle,
-    slidesPerView: 1,
-    allowTouchMove: false,
-  };
-
   function NavNext() {
     swipeNextPage();
-    swipeNextTitle();
   }
 
   function NavPrev() {
     swipePreviousPage();
-    swipePreviousTitle();
   }
 
   const scrollUp = () => {
@@ -170,6 +158,7 @@ const Projects = () => {
           sx={{
             display: "flex",
             width: "30%",
+            justifyContent: "space-between",
             "@media(max-width: 950px)": {
               width: "40%",
             },
@@ -181,19 +170,13 @@ const Projects = () => {
           <StyledButtonIcon onClick={NavPrev}>
             <BsChevronLeft />
           </StyledButtonIcon>
-          <Swiper {...paramsTitle}>
-            {projectsOptions.map((item) => (
-              <SwiperSlide key={item.id}>
-                <Typography
-                  variant="h6"
-                  color={"#089cd4"}
-                  sx={{ userSelect: "none", fontWeight: "bold" }}
-                >
-                  {item.title}
-                </Typography>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <Typography
+            variant="h6"
+            color={"#089cd4"}
+            sx={{ userSelect: "none", fontWeight: "bold" }}
+          >
+            {"Selecione o projeto"}
+          </Typography>
           <StyledButtonIcon onClick={NavNext}>
             <BsChevronRight />
           </StyledButtonIcon>
