@@ -2,7 +2,7 @@ import DS1 from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDesignSyste
 import DS2 from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDesignSystem1.png";
 import DS3 from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDesignSystem2.png";
 import DSLogo from "../../assets/images/ProjectsImages/AlmaDsImages/DS.png";
-import FC1 from "../../assets/images/ProjectsImages/LandingPageImages/FC1.png";
+import FC1 from "../../assets/images/ProjectsImages/LandingPageImages/FelitCourses.png";
 import FC2 from "../../assets/images/ProjectsImages/LandingPageImages/FC2.png";
 import FC3 from "../../assets/images/ProjectsImages/LandingPageImages/FC3.png";
 import FC4 from "../../assets/images/ProjectsImages/LandingPageImages/FC4.png";
