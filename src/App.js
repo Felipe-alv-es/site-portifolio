@@ -24,6 +24,7 @@ function App() {
               </>
             }
           />
+          <Route path="/drink-e-desgraca" exact element={<ProjectPage />} />
           <Route path="/encanto-artesanal" exact element={<ProjectPage />} />
           <Route path="/felit-courses" exact element={<ProjectPage />} />
           <Route path="/alma-ds" exact element={<ProjectPage />} />

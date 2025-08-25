@@ -4,8 +4,16 @@ import FelitCourses from "../../assets/images/ProjectsImages/LandingPageImages/F
 import FelitCoursesMobile from "../../assets/images/ProjectsImages/LandingPageImages/FelitCoursesMobile.jpg";
 import Encanto from "../../assets/images/ProjectsImages/EncantoArtesanal/Encanto1.png";
 import EncantoMobile from "../../assets/images/ProjectsImages/EncantoArtesanal/EncantoMobile.jpg";
+import DeD from "../../assets/images/ProjectsImages/DrinkEDesgraça/1.png";
 
 export const projectsOptions = [
+  {
+    title: "Drink & Desgraça",
+    imageSrc: DeD,
+    imageSrcMobile: EncantoMobile,
+    imageAlt: "Homepage of FelitCourses Site",
+    src: "/drink-e-desgraca",
+  },
   {
     title: "Encanto Artesanal",
     imageSrc: Encanto,

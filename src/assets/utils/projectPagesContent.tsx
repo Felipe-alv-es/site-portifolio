@@ -13,8 +13,28 @@ import Page1 from "../../assets/images/ProjectsImages/EncantoArtesanal/Page1.png
 import Page2 from "../../assets/images/ProjectsImages/EncantoArtesanal/Page2.png";
 import Page3 from "../../assets/images/ProjectsImages/EncantoArtesanal/Page3.png";
 import Page4 from "../../assets/images/ProjectsImages/EncantoArtesanal/Page4.png";
+import DeD1 from "../../assets/images/ProjectsImages/DrinkEDesgraça/1.png";
+import DeD2 from "../../assets/images/ProjectsImages/DrinkEDesgraça/2.png";
+import DeD3 from "../../assets/images/ProjectsImages/DrinkEDesgraça/3.png";
+import DeD4 from "../../assets/images/ProjectsImages/DrinkEDesgraça/4.png";
+import DeDLogo from "../../assets/images/ProjectsImages/DrinkEDesgraça/Logo.png";
 
 export const pagesContent = [
+  {
+    pageTitle: "Drink & Descraça",
+    imageArray: [
+      { imageSrc: DeD1 },
+      { imageSrc: DeD2 },
+      { imageSrc: DeD3 },
+      { imageSrc: DeD4 },
+    ],
+    logo: DeDLogo,
+    pageDescription:
+      "Bem-vindo ao Drink & Desgraça, o jogo que vai transformar qualquer encontro em uma verdadeira montanha-russa de risadas, desafios e, claro, alguns goles a mais! aqui você encontra uma mistura insana de prendas, desafios e missões malucas que vão testar sua coragem, criatividade e resistência etílica.",
+    demoLink: "",
+    gitHubLink: "https://github.com/Felipe-alv-es/drink-game-app",
+    figmaLink: "",
+  },
   {
     pageTitle: "Encanto Artesanal",
     imageArray: [
