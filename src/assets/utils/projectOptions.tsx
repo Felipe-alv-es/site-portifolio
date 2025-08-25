@@ -1,25 +1,23 @@
 import AlmaDS from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDesignSystem.png";
-import TwelveHours from "../../assets/images/ProjectsImages/TwelveHours/Imagem1.png";
-import FelitCourses from "../../assets/images/ProjectsImages/LandingPageImages/FelitCourses.png";
-import FictionalMobileMobile from "../../assets/images/ProjectsImages/FictionalMobileImages/FictionalMobileMobile.png";
-import FictionalMobile from "../../assets/images/ProjectsImages/FictionalMobileImages/FictionalMobile.png";
-import TwelveHoursMobile from "../../assets/images/ProjectsImages/TwelveHours/TwelveHoursMobile.png";
 import AlmaDSMobile from "../../assets/images/ProjectsImages/AlmaDsImages/AlmaDSMobile.png";
+import FelitCourses from "../../assets/images/ProjectsImages/LandingPageImages/FelitCourses.png";
+import Encanto from "../../assets/images/ProjectsImages/EncantoArtesanal/Encanto1.png";
+import EncantoMobile from "../../assets/images/ProjectsImages/EncantoArtesanal/EncantoMobile.jpg";
 
 export const projectsOptions = [
   {
-    title: "Cursos de TI",
-    imageSrc: FelitCourses,
-    imageSrcMobile: TwelveHoursMobile,
+    title: "Encanto Artesanal",
+    imageSrc: Encanto,
+    imageSrcMobile: EncantoMobile,
     imageAlt: "Homepage of FelitCourses Site",
-    src: "/felit-courses",
+    src: "/encanto-artesanal",
   },
   {
-    title: "Técnica das 12 Horas",
-    imageSrc: TwelveHours,
-    imageSrcMobile: TwelveHoursMobile,
-    imageAlt: "Homepage of TwelveHours Site",
-    src: "/twelve-hours",
+    title: "Cursos de TI",
+    imageSrc: FelitCourses,
+    imageSrcMobile: AlmaDSMobile,
+    imageAlt: "Homepage of FelitCourses Site",
+    src: "/felit-courses",
   },
   {
     title: "Alma Design System",
@@ -27,12 +25,5 @@ export const projectsOptions = [
     imageSrcMobile: AlmaDSMobile,
     imageAlt: "Logo do Alma DS",
     src: "/alma-ds",
-  },
-  {
-    title: "Fictional Mobile",
-    imageSrc: FictionalMobile,
-    imageSrcMobile: FictionalMobileMobile,
-    imageAlt: "Home page from cellphone Store Site",
-    src: "/fictional-mobile",
   },
 ];
