@@ -85,7 +85,7 @@ const Projects = () => {
             src={SmartphoneBackground}
             alt="Man avatar generic image"
             sx={{
-              width: "80%",
+              width: "82%",
               userSelect: "none",
             }}
           />
