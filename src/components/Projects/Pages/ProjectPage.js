@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import Footer from "../../Footer/Footer";
-import { Box, Button, Modal, Typography } from "@mui/material";
-import {
-  BiLogoJavascript,
-  BiLogoTypescript,
-  BiLogoReact,
-} from "react-icons/bi";
+import { Box, Button, Modal, Typography, Tooltip, Icon } from "@mui/material";
+import { FaReact } from "react-icons/fa";
+import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLogoFigma } from "react-icons/bi";
 import { IoMdExit } from "react-icons/io";
@@ -14,7 +11,6 @@ import { pagesContent } from "../../../assets/utils/projectPagesContent.tsx";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
   getHeaderStyle,
-  StyledChipIcon,
   getPageTitleStyle,
   getContentContainerStyle,
   getDescriptionContainerStyle,
@@ -99,18 +95,29 @@ const ProjectPage = () => {
           <Typography sx={getPageTitleStyle}>
             {currentPage().pageTitle}
           </Typography>
-          <StyledChipIcon
-            label="React"
-            icon={<BiLogoReact color="#089cd4" />}
-          />
-          <StyledChipIcon
-            label="JavaScript"
-            icon={<BiLogoJavascript color="#089cd4" />}
-          />
-          <StyledChipIcon
-            label="TypeScript"
-            icon={<BiLogoTypescript color={"#089cd4"} />}
-          />
+          <Tooltip arrow title={"React"}>
+            <Icon key={"React"} fontSize="large" sx={{ marginRight: "4px" }}>
+              {<FaReact color="#326D7D" />}
+            </Icon>
+          </Tooltip>
+          <Tooltip arrow title={"JavaScript"}>
+            <Icon
+              key={"JavaScript"}
+              fontSize="large"
+              sx={{ marginRight: "4px" }}
+            >
+              {<BiLogoJavascript color="#B5AA14" />}
+            </Icon>
+          </Tooltip>
+          <Tooltip arrow title={"TypeScript"}>
+            <Icon
+              key={"TypeScript"}
+              fontSize="large"
+              sx={{ marginRight: "4px" }}
+            >
+              {<BiLogoTypescript color="#266DAB" />}
+            </Icon>
+          </Tooltip>
         </Box>
         <StyledCloseButton onClick={handleClick} />
       </Box>
@@ -132,7 +139,6 @@ const ProjectPage = () => {
             ))}
           </Swiper>
         </Box>
-
         <Box>
           <Modal
             open={open}
@@ -208,12 +214,16 @@ const ProjectPage = () => {
             </Typography>
           </Box>
         </Box>
-        <Typography sx={getDescriptionStyle}>
-          {currentPage().pageDescription}
-        </Typography>
-        <Button sx={getButtonStyle} onClick={handleClick}>
-          Ver outros projetos
-        </Button>
+        <Box sx={getDescriptionStyle}>
+          <Box>
+            <Typography>{currentPage().pageDescription}</Typography>
+          </Box>
+        </Box>
+        <Box sx={{ width: "100%", paddingLeft: "32px" }}>
+          <Button sx={getButtonStyle} onClick={handleClick}>
+            Ver outros projetos
+          </Button>
+        </Box>
       </Box>
       <Footer />
     </>

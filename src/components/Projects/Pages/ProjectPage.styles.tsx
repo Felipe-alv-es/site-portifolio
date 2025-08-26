@@ -16,8 +16,8 @@ export const getHeaderStyle = () => ({
 
 export const getPageTitleStyle = () => ({
   color: "#1a1a1a",
-  typography: "h5",
-  fontWeight: "bold",
+  fontWeight: "600",
+  fontSize: "32px",
   marginRight: "20px",
   "@media(max-width: 544px)": {
     typography: "body1",
@@ -31,7 +31,7 @@ export const getContentContainerStyle = () => ({
   placeItems: "center",
   padding: "5% 1% 5% 1%",
   "> div:first-of-type": {
-    width: "100%",
+    width: "70%",
     paddingTop: "40px",
   },
   ".swiper": {
@@ -75,11 +75,16 @@ export const getLinksStyle = () => ({
 });
 
 export const getDescriptionStyle = () => ({
+  // background: "coral",
   width: "100%",
-  paddingRight: "50%",
   marginTop: "2%",
   color: "#1a1a1a",
   textAlign: "justify",
+  fontSize: "16px",
+  "> div": {
+    width: "30%",
+    paddingLeft: "32px",
+  },
   "@media(max-width: 950px)": {
     paddingRight: "30%",
   },
@@ -104,6 +109,7 @@ export const getButtonStyle = () => ({
   padding: "12px 32px 12px 32px",
   borderRadius: "16px",
   marginTop: "32px",
+  width: "30%",
   ":hover": {
     background: "#078ABA",
   },
@@ -111,52 +117,6 @@ export const getButtonStyle = () => ({
     marginBottom: "16px",
   },
 });
-
-interface StyledChipProps {
-  label: string;
-  icon: React.ReactNode;
-}
-
-export const StyledChipIcon = React.forwardRef<HTMLDivElement, StyledChipProps>(
-  ({ icon, label, ...props }, ref) => {
-    return (
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          borderRadius: "16px",
-          padding: " 0px 12px 0px 12px",
-          marginRight: "8px",
-          borderStyle: "solid",
-          borderColor: "#089cd4",
-          borderWidth: "1px",
-          "@media(max-width: 544px)": {
-            padding: "8px",
-          },
-        }}
-        {...props}
-        ref={ref}
-      >
-        <Typography
-          sx={{
-            color: "#089cd4",
-            typography: "overline",
-            fontWeight: "medium",
-            fontSize: "16px",
-            marginRight: "8px",
-            textTransform: "none",
-            "@media(max-width: 544px)": {
-              display: "none",
-            },
-          }}
-        >
-          {label}
-        </Typography>
-        <Icon>{icon}</Icon>
-      </Box>
-    );
-  }
-);
 
 interface StyledLinkProps {
   label: string;

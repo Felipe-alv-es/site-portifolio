@@ -5,12 +5,12 @@ import phone from "../../assets/images/CommumImages/HomepageImages/OnlyPhone.png
 import xiomiNote from "../../assets/images/CommumImages/HomepageImages/OnlyXiomiNote.png";
 import noteBack from "../../assets/images/CommumImages/HomepageImages/HomePageImage.png";
 import Logo from "../../assets/images/Logos/felitLogoWhite.png";
-import Bush1 from "../../assets/images/BackgroundImages/bush1.png";
-import Bush2 from "../../assets/images/BackgroundImages/bush2.png";
-import leaf1 from "../../assets/images/BackgroundImages/leaf1.png";
-import leaf2 from "../../assets/images/BackgroundImages/leaf2.png";
-import mount1 from "../../assets/images/BackgroundImages/mount1.png";
-import mount2 from "../../assets/images/BackgroundImages/mount2.png";
+import Bush1 from "../../assets/images/BackgroundImages/bush1.webp";
+import Bush2 from "../../assets/images/BackgroundImages/bush2.webp";
+import leaf1 from "../../assets/images/BackgroundImages/leaf1.webp";
+import leaf2 from "../../assets/images/BackgroundImages/leaf2.webp";
+import mount1 from "../../assets/images/BackgroundImages/mount1.webp";
+import mount2 from "../../assets/images/BackgroundImages/mount2.webp";
 import { Box, Typography } from "@mui/material";
 import {
   getContainerStyle,
