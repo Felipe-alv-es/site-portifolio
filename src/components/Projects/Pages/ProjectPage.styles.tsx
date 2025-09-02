@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Icon, Link, Typography, SxProps } from "@mui/material";
+import { Box, Icon, Link, SxProps } from "@mui/material";
 
 export const getHeaderStyle = () => ({
   display: "flex",
