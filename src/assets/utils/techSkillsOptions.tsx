@@ -8,7 +8,7 @@ export const techSkillsOptions = [
   { text: "React", icon: <FaReact color="#326D7D" /> },
   { text: "TypeScript", icon: <BiLogoTypescript color="#266DAB" /> },
   { text: "JavaScript", icon: <BiLogoJavascript color="#B5AA14" /> },
-  { text: "NextJs", icon: <FaAws color="#51948E" /> },
+  { text: "AWS", icon: <FaAws color="#51948E" /> },
   { text: "Html5", icon: <AiFillHtml5 color="#9C3F17" /> },
   { text: "Css3", icon: <IoLogoCss3 color="#123075" /> },
 ];

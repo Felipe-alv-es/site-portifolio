@@ -48,6 +48,7 @@ export const getSubtitleStyle = () => ({
 export const getListStyle = (): SxProps => ({
   "> ul": {
     listStyle: "none",
+    pointerEvents: "none",
     "> li": {
       margin: "16px 0px 16px 0px",
       "@media(max-width: 544px)": {
