@@ -19,7 +19,6 @@ import {
   getXiomiNoteStyle,
   getLogoStyle,
   getSubtitleStyle,
-  StyledFabIcon,
 } from "./Home.styles.tsx";
 const Home = () => {
   const [scrollValue, setScrollValue] = useState(0);
@@ -110,7 +109,6 @@ const Home = () => {
           alt="Man avatar generic image"
         />
       </Box>
-      <StyledFabIcon />
     </Box>
   );
 };

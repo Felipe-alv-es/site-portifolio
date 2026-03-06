@@ -1,8 +1,4 @@
-import AboutMe from "./components/AboutMe/AboutMe";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import Footer from "./components/Footer/Footer";
-import Home from "./components/Home/Home.tsx";
+import LandingPage from "../src/components/LandingPage/landingPage.tsx";
 import ProjectPage from "./components/Projects/Pages/ProjectPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -11,23 +7,11 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route
-            path="/"
-            exact
-            element={
-              <>
-                <Home />
-                <AboutMe />
-                <About />
-                <Projects />
-                <Footer />
-              </>
-            }
-          />
-          <Route path="/drink-e-desgraca" exact element={<ProjectPage />} />
-          <Route path="/encanto-artesanal" exact element={<ProjectPage />} />
-          <Route path="/felit-courses" exact element={<ProjectPage />} />
-          <Route path="/alma-ds" exact element={<ProjectPage />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/drink-e-desgraca" element={<ProjectPage />} />
+          <Route path="/encanto-artesanal" element={<ProjectPage />} />
+          <Route path="/felit-courses" element={<ProjectPage />} />
+          <Route path="/alma-ds" element={<ProjectPage />} />
         </Routes>
       </BrowserRouter>
     </div>

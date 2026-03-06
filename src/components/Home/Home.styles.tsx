@@ -1,7 +1,4 @@
-import React from "react";
-import { Fab, SxProps } from "@mui/material/";
-import { HashLink } from "react-router-hash-link/dist/react-router-hash-link.cjs.production";
-import { BsChevronUp } from "react-icons/bs";
+import { SxProps } from "@mui/material/";
 
 export const getContainerStyle = (scrollValue: number): SxProps => ({
   display: "grid",
@@ -42,7 +39,7 @@ export const getSmartphoneStyle = (scrollValue: number): SxProps => ({
   bottom: 450,
   transition: "0.2s",
   position: "absolute",
-  animation: "0.5s invisibleFrame, 2s swipeIn",
+  animation: "1s invisibleFrame, 2s swipeIn",
   animationDelay: "0ms, 0.5s",
   transform: `translateY(${scrollValue * 1.5}px)`,
   zIndex: 1,
@@ -97,7 +94,7 @@ export const getLaptopStyle = (scrollValue: number): SxProps => ({
   transition: "0.2s",
   position: "absolute",
   zIndex: 1,
-  animation: "0.5s invisibleFrame, 1s slideIn",
+  animation: "1s invisibleFrame, 1s slideIn",
   animationDelay: "0ms, 0.5s",
   transform: `translateY(${scrollValue * 1.5}px)`,
   "@media(max-width: 1920px)": {
@@ -150,7 +147,7 @@ export const getXiomiNoteStyle = (scrollValue: number): SxProps => ({
   transition: "0.2s",
   zIndex: 1,
   position: "absolute",
-  animation: "0.5s invisibleFrame, 2s swipeInNotebook",
+  animation: "1s invisibleFrame, 2s swipeInNotebook",
   animationDelay: "0ms, 0.5s",
   transform: `translateY(${scrollValue * 1.5}px)`,
   "@media(max-width: 1920px)": {
@@ -204,7 +201,7 @@ export const getLogoStyle = (scrollValue: number): SxProps => ({
   position: "absolute",
   transition: "0.2s",
   zIndex: 1,
-  animation: "2s invisibleFrame, 1s swipeInLogo",
+  animation: "2.5s invisibleFrame, 1s swipeInLogo",
   animationDelay: "0ms, 2s",
   transform: `translateY(${scrollValue * 1.5}px)`,
   "@media(max-width: 1920px)": {
@@ -255,7 +252,7 @@ export const getSubtitleStyle = (scrollValue: number): SxProps => ({
   transition: "0.2s",
   position: "absolute",
   fontWeight: "bold",
-  animation: "2s invisibleFrame, 1s swipeInLogo",
+  animation: "2.5s invisibleFrame, 1s swipeInLogo",
   animationDelay: "0ms, 2s",
   whiteSpace: "pre-line",
   textAlign: "center",
@@ -283,31 +280,3 @@ export const getSubtitleStyle = (scrollValue: number): SxProps => ({
     fontSize: "10px",
   },
 });
-
-export const StyledFabIcon = (props) => {
-  return (
-    <Fab
-      sx={{
-        position: "fixed",
-        bottom: 0,
-        right: 0,
-        margin: "1em",
-      }}
-    >
-      <HashLink
-        smooth
-        to={"#Home"}
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          paddingBottom: "4px",
-        }}
-      >
-        <BsChevronUp style={{ height: "50%", width: "50%" }} fill="#1c1c1c" />
-      </HashLink>
-    </Fab>
-  );
-};
