@@ -1,8 +1,6 @@
-import React from "react";
 import { Box, Divider, Link, Typography } from "@mui/material";
 import ContactForm from "./ContactForm.js";
 import { navbarOptions } from "../../assets/utils/navbarOptions.tsx";
-import { HashLink } from "react-router-hash-link";
 import Logo from "../../assets/images/Logos/FelitLogo.png";
 import {
   getContainerStyles,
