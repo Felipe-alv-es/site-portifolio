@@ -10,6 +10,7 @@ import {
   getListStyle,
   getlistTitleStyle,
 } from "./Footer.styles.ts";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
